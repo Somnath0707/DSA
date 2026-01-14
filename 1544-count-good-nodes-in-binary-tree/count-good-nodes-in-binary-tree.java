@@ -25,9 +25,14 @@ class Solution {
             return ;
         }
 
+        //Keep the previous max before checking with current 
         int oldMax = max;
+
+        // check between previous max and curr val if 
         max = Math.max(max,node.val);
 
+
+        // We know if the max gets updated then the value is greater i.e. if max == node.value
         if(node.val==max){
             count++;
         }
@@ -35,6 +40,7 @@ class Solution {
         countGood(node.left);
         countGood(node.right);
 
+        // restore the parent’s max
         max= oldMax;
 
 
