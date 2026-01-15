@@ -14,21 +14,21 @@
  * }
  */
 class Solution {
-    int res = 0 ;// Store the result 
-    public int diameterOfBinaryTree(TreeNode root) {
-        dfs(root); //Function to get the diameter using depth first search 
-        return res;
+    int result = 0 ;
+
+    private int diameter(TreeNode node){
+        if(node == null) return 0 ; 
+
+        int left = diameter(node.left);
+        int right = diameter(node.right);
+
+        result = Math.max(result,left+right);
+
+        return 1 + Math.max(left,right);
     }
-
-    private int dfs(TreeNode node){
-        if(node == null) return 0;  // Check until the leaf node 
-
-        int l = dfs(node.left); // Goes to the most left leaf nod 
-        int r = dfs(node.right);
-
-
-        res = Math.max(res, l+r); 
-
-        return 1 + Math.max(l,r);
+    public int diameterOfBinaryTree(TreeNode root) {
+        diameter(root);
+        return result ;
+        
     }
 }
