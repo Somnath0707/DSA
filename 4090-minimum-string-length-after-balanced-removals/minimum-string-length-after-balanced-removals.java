@@ -1,14 +1,21 @@
 class Solution {
     public int minLengthAfterRemovals(String s) {
-        
-        int countA = 0 ;
-        int countB = 0 ; 
+        Stack<Character> stack = new Stack<>();
 
         for(char ch : s.toCharArray()){
-            if(ch == 'a') countA++;
-            else countB++;
+            if(stack.isEmpty()) {
+                stack.push(ch);
+            }
+
+            else if(stack.peek() != ch){
+                stack.pop();
+            }
+            else{
+                stack.push(ch);
+            }
         }
 
-        return Math.abs(countA - countB);
+
+        return stack.size();
     }
 }
