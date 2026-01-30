@@ -1,17 +1,17 @@
 class Solution {
     public int distributeCandies(int n, int limit) {
-        int res=0;
-        for(int i=0; i<=limit; i++)
-        {
-            for(int j=0; j<=limit; j++)
-            {
-                for(int k=0; k<=limit; k++)
-                {
-                    if(i+j+k==n)
-                        res++;
-                }
+        int count = 0;
+
+        for (int i = 0; i <= limit; i++) {
+            for (int j = 0; j <= limit; j++) {
+
+                int k = n - i - j; 
+
+                if (0 <= k && k <= limit)
+                    count++;
             }
         }
-        return res;
+
+        return count;
     }
 }
