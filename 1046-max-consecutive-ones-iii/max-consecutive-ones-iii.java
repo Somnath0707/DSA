@@ -9,6 +9,10 @@ class Solution {
             map.put(rhs , map.getOrDefault(rhs , 0 ) + 1);
             while(map.getOrDefault(0, 0)>k){
                 map.put(nums[left] , map.getOrDefault(nums[left] , 0) -1);
+                int lf = nums[left];
+                if(map.get(lf) == 0){
+                    map.remove(lf);
+                }
                 left ++;
             }
             ans = Math.max(ans , right - left + 1);
