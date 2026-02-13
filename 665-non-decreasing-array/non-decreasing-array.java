@@ -33,3 +33,16 @@ class Solution {
 
 // ts problem sucks fck it boi 
 
+
+// [3,4,2,3]
+// At i=1:
+// 4>2
+
+// Check:
+// 3 <= 2 → false
+
+// So raise right → [3,4,4,3]
+
+// Still violation later → fail
+// Return false
+
