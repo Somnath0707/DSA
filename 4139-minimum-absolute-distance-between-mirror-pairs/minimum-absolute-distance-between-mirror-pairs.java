@@ -24,12 +24,12 @@ class Solution {
         if (ans == Integer.MAX_VALUE) return -1;
         return ans;
     }
-    public int reverse(int num){
-        StringBuilder sb = new StringBuilder(String.valueOf(num));
-
-        sb.reverse();
-
-        int reversed = Integer.parseInt(sb.toString());
-        return reversed;
+    private int reverse(int num) {
+        int rev = 0;
+        while (num > 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        return rev;
     }
 }
