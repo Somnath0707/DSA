@@ -4,7 +4,7 @@ class Solution {
         int dp[][] = new int[total][total];
         for(int j =0 ; j< total ; j++){
             dp[total-1][j] = list.get(total-1).get(j);
-            
+        }
             for(int i = total-2 ; i>=0 ;i--){
                 int down = 0; 
                 int diagonal =0 ; 
@@ -15,7 +15,7 @@ class Solution {
                     dp[i][k] = Math.min(down , diagonal);
                 }
             }
-        }
+        
         return dp[0][0];
     }
 }
