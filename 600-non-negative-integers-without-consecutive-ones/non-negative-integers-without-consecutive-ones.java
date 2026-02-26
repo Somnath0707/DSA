@@ -16,16 +16,16 @@ class Solution {
             if(digit == 1 && prev == 1 ) {
                 continue;
             }
-            ans += f(s, i + 1, nextTight, digit ,dp);
+            ans += f(s, i + 1, nextTight, digit ,dp );
         }
         return dp[i][tight][prev] = ans ; 
     }
     public int findIntegers(int n) {
         String s = Integer.toBinaryString(n);
-        int dp[][][] = new int [35][2][2];
+        int dp[][][] = new int [32][2][2];
 
         
-        for(int i = 0; i < 35 ; i++){
+        for(int i = 0; i < 32 ; i++){
             for(int j =0 ; j < 2 ; j++){
                 Arrays.fill(dp[i][j] , -1 ) ;
             }
