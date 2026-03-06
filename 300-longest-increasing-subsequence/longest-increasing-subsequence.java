@@ -1,22 +1,29 @@
 class Solution {
-    
-    public int f(int i , int prev , int [] nums , int dp[][]){
-        if(i == nums.length ) return 0 ; 
 
-        if(dp[i][prev + 1] != -1 ) return dp[i][prev + 1];
-        int len = f(i+1, prev , nums ,dp);
-
-        if(prev == -1 ||nums[i] > nums[prev]){
-            len= Math.max(len ,  1 + f(i+ 1, i , nums ,dp) );
-        }
-        return dp[i][prev + 1] = len;
-    }
     public int lengthOfLIS(int[] nums) {
-        int n = nums.length;
-        int dp[][] = new int [n][n+1];
-        for(int i =0 ; i< n ; i ++){
-            Arrays.fill(dp[i] , - 1) ; 
+
+        List<Integer> tails = new ArrayList<>();
+
+        for(int num : nums){
+
+            int l = 0, r = tails.size();
+
+            while(l < r){
+
+                int mid = (l+r)/2;
+
+                if(tails.get(mid) < num)
+                    l = mid + 1;
+                else
+                    r = mid;
+            }
+
+            if(l == tails.size())
+                tails.add(num);
+            else
+                tails.set(l, num);
         }
-        return f(0 , -1 , nums ,dp);
+
+        return tails.size();
     }
 }
