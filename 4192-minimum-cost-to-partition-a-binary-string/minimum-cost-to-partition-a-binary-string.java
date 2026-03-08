@@ -1,37 +1,34 @@
 class Solution {
-    public long f(int left , int right  ,int []prefixOnes,  int enCost , int flatCost ){
-        int totalLen = right - left + 1 ; 
+    public long f(int left , int right , int[] prefixOnes,int encCost , int flat){
+        int totalLen = right - left + 1 ;   
 
-        int ones = prefixOnes[right] - (left > 0 ? prefixOnes[left - 1] : 0);;
-
-        long costWithOutsplit;
-
-        if(ones == 0) return flatCost;
-        else costWithOutsplit = (long)totalLen * enCost * ones;
-
-        if(totalLen % 2 != 0) return costWithOutsplit;
         
+        int Ones = prefixOnes[right] - (left >0 ?  prefixOnes[left - 1] :0);
+
+        long costWithOutSplit ;
+        if(Ones == 0 ) return flat;
+        else costWithOutSplit = (long) totalLen * Ones * encCost;
+
+        if(totalLen % 2 != 0) return costWithOutSplit;
         int mid = left + (right - left ) / 2; 
-        long split = f(left , mid , prefixOnes , enCost , flatCost ) + f( mid+1 , right , prefixOnes , enCost , flatCost );
+        long split = f(left , mid , prefixOnes , encCost , flat ) + f(mid + 1 , right , prefixOnes , encCost , flat );
 
-        return Math.min(split , costWithOutsplit);
-
-
-
+        return Math.min(split , costWithOutSplit);
     }
     public long minCost(String s, int encCost, int flatCost) {
-        int [] prefixOnes = new int[s.length()];
-        int oneCount = 0; 
-        for(int i = 0; i < s.length() ; i++){
-            char curr = s.charAt(i);
-            if( curr ==  '1'){
-                oneCount ++;
-                prefixOnes[i] = oneCount ;
+        int n = s.length();
+        int prefixOnes[] = new int [n];
+
+        int ones = 0; 
+
+        for(int i = 0; i< n ; i++){
+            char ch = s.charAt(i);
+            if(ch == '1'){
+                prefixOnes[i] = ones++;
             }
-            prefixOnes[i] = oneCount ;
+            prefixOnes[i] = ones;
         }
 
-
-        return f(0 , s.length()-1 , prefixOnes , encCost , flatCost);
+        return f(0 , n-1 , prefixOnes , encCost , flatCost);
     }
 }
