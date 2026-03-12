@@ -3,7 +3,7 @@ class Solution {
         int totalLen = right - left + 1 ;   
 
         
-        int Ones = prefixOnes[right] - (left >0 ?  prefixOnes[left - 1] :0);
+        int Ones = prefixOnes[right] - (left > 0 ?  prefixOnes[left - 1] :0);
 
         long costWithOutSplit ;
         if(Ones == 0 ) return flat;
