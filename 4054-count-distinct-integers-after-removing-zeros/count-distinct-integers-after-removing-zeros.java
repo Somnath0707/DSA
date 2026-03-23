@@ -1,7 +1,8 @@
 class Solution {
-    
-    public long f(String s , int i , int tight , int leadZero , long dp[][][]){
+    Map<String , Long> dp ;
+    public long f(String s , int i , int tight , int leadZero ){
         int n = s.length ();
+        String key = i + "," + tight + "," + leadZero;
 
         if(i >= n ){
             if(leadZero == 1){
@@ -9,7 +10,7 @@ class Solution {
             }
             return 1 ; 
         }
-        if(dp[i][tight][leadZero] != -1) return dp[i][tight][leadZero] ;
+        if(dp.containsKey(key)) return dp.get(key);
 
 
         int limit = (tight == 1 ) ? s.charAt(i) -'0' : 9 ;
@@ -18,24 +19,21 @@ class Solution {
         for(int dig = 0  ; dig <= limit ; dig++){
             int nextTight = (tight == 1 && dig == limit) ? 1 : 0 ; 
             if(leadZero == 1 && dig == 0){
-                ans += f(s , i + 1 , nextTight , 1 , dp);
+                ans += f(s , i + 1 , nextTight , 1 );
             }
             else{
                 if(dig == 0 ) continue;
-                ans += f(s , i+1 , nextTight , 0 , dp );
+                ans += f(s , i+1 , nextTight , 0 );
             }
         }
-        return dp[i][tight][leadZero] = ans ;
+        dp.put(key , ans );
+        return ans;
     }
     public long countDistinct(long n) {
         
         String s = String.valueOf(n);
-        long dp[][][] = new long[20][2][2];
-        for(int i =0 ;i < 20 ; i ++){
-            for(int j = 0 ;  j < 2 ; j++){
-                Arrays.fill(dp[i][j] , -1);
-            }
-        }
-        return f(s , 0 , 1 , 1 , dp);
+        dp = new HashMap<>();
+        
+        return f(s , 0 , 1 , 1 );
     }
 }
