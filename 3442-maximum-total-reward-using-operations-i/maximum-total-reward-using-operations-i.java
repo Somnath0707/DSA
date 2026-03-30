@@ -18,7 +18,7 @@ class Solution {
     public int maxTotalReward(int[] rewardValues) {
         
         Arrays.sort(rewardValues);
-        dp = new int[rewardValues.length][4001];
+        dp = new int[rewardValues.length][20100];
         for(int i = 0 ; i < rewardValues.length ; i++){
             Arrays.fill(dp[i] , -1);
         }
