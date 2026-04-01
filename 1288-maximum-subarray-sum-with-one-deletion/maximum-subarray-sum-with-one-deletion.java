@@ -1,11 +1,11 @@
 class Solution {
-    Map<String , Integer> dp; 
+    Integer[][] dp;
     public int f(int i , int canDelete , int arr[]){
         if(i >= arr.length) return Integer.MIN_VALUE ; 
 
         String key = i + "#" + canDelete;
 
-        if(dp.containsKey(key)) return dp.get(key);
+        if(dp[i][canDelete ] != null) return dp[i][canDelete];
 
         int take = arr[i]; 
 
@@ -20,14 +20,14 @@ class Solution {
 
         int ans =  Math.max(take , skip ) ; 
 
-        dp.put(key , ans ) ; 
+        dp[i][canDelete] = ans ; 
         return ans; 
     }
     public int maximumSum(int[] arr) {
         
         int n = arr.length ;
         int ans = Integer.MIN_VALUE; 
-        dp = new HashMap<>();
+        dp = new Integer[n][2];
         for(int i = 0 ; i < n ; i ++){
             ans = Math.max( ans , f(i , 1 , arr));
         }
