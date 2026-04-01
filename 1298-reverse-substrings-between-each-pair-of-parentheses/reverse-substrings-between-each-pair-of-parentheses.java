@@ -12,7 +12,7 @@ class Solution {
 
                 // pop the (
                 stack.pop();
-
+                
                 for(char c : temp.toString().toCharArray()){
                     stack.push(c);
                 }
@@ -30,3 +30,6 @@ class Solution {
         return ans.reverse().toString();
     }
 }
+
+
+//(abcd) -> dcba
