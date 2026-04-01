@@ -10,7 +10,7 @@ class Solution {
         int take = arr[i]; 
 
         if(i + 1 < arr.length){
-            take = Math.max(take , arr[i] + f(i+ 1 , canDelete , arr));
+            take = Math.max(take , arr[i] + f(i+ 1, canDelete , arr));
         }
 
         int skip = Integer.MIN_VALUE;
