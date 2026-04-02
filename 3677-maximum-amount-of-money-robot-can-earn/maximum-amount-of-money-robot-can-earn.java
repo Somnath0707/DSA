@@ -46,3 +46,8 @@ class Solution {
 // or do we have to do the one for right one for the down and get max between them lmao wtf 
 // solution has to be one of them 
 // so what the best or correct taking sum , taking down and right and max of them , or sum = max(right , down ) every step ??
+
+// conclusion take and skip just skip if the nums[i][j] < 0 and k>0 then we dont take nums[i][j] int that sum 
+// take = nums[i][j] + max (down , right);
+
+// take max (skip , take );
