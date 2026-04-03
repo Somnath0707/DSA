@@ -4,7 +4,7 @@ class FrequencyTracker {
 
     public FrequencyTracker() {
         map = new HashMap<>();
-        freqCount = new HashMap<>(); // ✅ fix
+        freqCount = new HashMap<>(); 
     }
     
     public void add(int number) {
@@ -36,12 +36,12 @@ class FrequencyTracker {
         if(newFreq == 0){
             map.remove(number);
         } else {
-            map.put(number , newFreq); // ✅ fix
+            map.put(number , newFreq); 
             freqCount.put(newFreq , freqCount.getOrDefault(newFreq , 0 ) + 1 );
         }
     }
     
     public boolean hasFrequency(int frequency) {
-        return freqCount.getOrDefault(frequency, 0) > 0; // ✅ fix
+        return freqCount.getOrDefault(frequency, 0) > 0; 
     }
 }
