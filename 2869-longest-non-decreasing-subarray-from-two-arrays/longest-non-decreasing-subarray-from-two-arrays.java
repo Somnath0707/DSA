@@ -2,7 +2,7 @@ class Solution {
     Map<String , Integer> map ;
     public int f(int i  , int prev , int count ,  int nums1[] , int nums2[] ){
         if(i >= nums1.length ) return count;
-        String key = i + "#" + prev;
+        String key = i + "#" + prev ;
         int take1 = 0, take2 = 0;
 
         if(map.containsKey(key)) return map.get(key);
