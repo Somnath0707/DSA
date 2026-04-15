@@ -1,23 +1,33 @@
 class Solution {
     public int longestOnes(int[] nums, int k) {
-        int left = 0; 
-        Map<Integer , Integer> map = new HashMap<>();
-        int ans = 0; 
-
-        for(int right = 0 ; right < nums.length ; right++){
-            int rhs = nums[right];
-            map.put(rhs , map.getOrDefault(rhs , 0 ) + 1);
-            while(map.getOrDefault(0, 0)>k){
-                int lf = nums[left];
-                map.put(lf , map.get(lf) - 1);
-                if(map.get(lf) == 0){
-                    map.remove(lf);
+        
+        int i = 0, j = 0;
+        int count = 0;
+        int countZeros = 0;
+        int max = 0;
+        
+        while (j < nums.length) {
+            
+            if (nums[j] == 1) {
+                j++;
+                count++;
+            } 
+            else if (nums[j] == 0 && countZeros < k) {
+                countZeros++;
+                j++;
+                count++;
+            } 
+            else {
+                if (nums[i] == 0) {
+                    countZeros--;
                 }
-                left++;
-
+                count--;
+                i++;
             }
-            ans = Math.max(ans , right - left + 1);
+            
+            max = Math.max(count, max);
         }
-        return ans ;
+        
+        return max;
     }
 }
