@@ -29,25 +29,27 @@ class Solution {
             if(stack.size() >= 2*k){
                 boolean valid = true;
 
-                // check last k ')'
-                for(int j = 0; j < k; j++){
-                    if(stack.get(stack.size()-1-j) != ')'){
+                // check last k are ')'
+                for(int t = 0; t < k; t++){
+                    if(stack.get(stack.size() - 1 - t) != ')'){
                         valid = false;
                         break;
                     }
                 }
 
-                // check previous k '('
-                for(int j = k; j < 2*k && valid; j++){
-                    if(stack.get(stack.size()-1-j) != '('){
+                // check previous k are '('
+                for(int t = k; t < 2*k && valid; t++){
+                    if(stack.get(stack.size() - 1 - t) != '('){
                         valid = false;
                         break;
                     }
                 }
 
                 if(valid){
-                    for(int j = 0; j < 2*k; j++){
-                        stack.pop();
+                    for(int t = 0; t < 2*k; t++){
+                        char temp = stack.pop();
+                        if(temp == '(') open--;
+                        else close--;
                     }
                 }
             }
