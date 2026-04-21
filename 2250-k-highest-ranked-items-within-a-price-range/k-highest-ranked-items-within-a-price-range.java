@@ -21,10 +21,10 @@ class Solution {
 
         int startRow = start[0];
         int startCol = start[1];
-        if(grid[startRow][startCol] == 0 ){
-            // while puting in the list we will just ignore the one with value one or should I just make them integerMax
-            return ans ;
-        }
+        // if(grid[startRow][startCol] == 0 ){
+        //     // while puting in the list we will just ignore the one with value one or should I just make them integerMax
+        //     return ans ;
+        // }
         pq.offer(new int[]{0 , grid[startRow][startCol] , startRow , startCol});
         vis[startRow][startCol] = true;
 
