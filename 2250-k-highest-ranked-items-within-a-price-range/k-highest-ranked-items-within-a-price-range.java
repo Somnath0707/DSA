@@ -46,6 +46,7 @@ class Solution {
 
             if( ans.size() < k && price != 1 && price >= pricing[0] && price <= pricing[1]){
                 ans.add(new ArrayList<>(Arrays.asList(currRow , currCol)));
+                if (ans.size() == k) return ans;
             }
 
             for(int[] d : dir){
