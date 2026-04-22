@@ -1,18 +1,23 @@
 class Solution {
     public int maxProduct(int[] nums) {
-        int prefixMul = 1; 
-        int suffixMul = 1; 
-        int maxProduct = Integer.MIN_VALUE;
+        
         int n = nums.length;
+        
+        int max = Integer.MIN_VALUE;
+        int maxLeft = 1; 
+        int maxRight = 1;
+        int i = 0 ; 
+        int j = n -1 ; 
 
-        for(int i =0 ; i < nums.length ; i++){
-            if(prefixMul == 0) prefixMul = 1 ; 
-            if(suffixMul == 0 ) suffixMul = 1; 
-            prefixMul = nums[i] * prefixMul;
-            suffixMul= nums[n - i-1] * suffixMul;
+        while(i < n && j >= 0 ){
+            maxLeft *= nums[i++];
+            maxRight *= nums[j--];
 
-            maxProduct = Math.max(maxProduct  , Math.max(suffixMul , prefixMul));
+            max = Math.max(max , Math.max(maxLeft , maxRight));
+            if(maxLeft == 0) maxLeft = 1 ; 
+            if(maxRight == 0) maxRight = 1 ;
         }
-        return maxProduct ; 
+
+        return max;
     }
 }
