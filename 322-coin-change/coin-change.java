@@ -1,35 +1,25 @@
 class Solution {
-    public int f(int n , int coins[] , int amount , int dp[][]){
-        if( n == 0 ){
-            if(amount % coins[n] == 0 ) return amount /coins[n];
-            else return Integer.MAX_VALUE / 2;
+    Map<String , Integer> map ; 
+    public int f(int i , int total, int coins[] , int amount){
+        if(total == amount) return 0 ; 
+        String key = i + "#" + total ;
+        if(i == coins.length) return (int)1e9 ; 
+        if(map.containsKey(key)) return map.get(key);
+        
+        int take = (int) 1e9 ; 
+        if(coins[i]+ total <= amount){
+            take = 1 + f(i , total + coins[i] , coins ,amount);
         }
+        int notTake = f(i+1 , total , coins , amount);
 
-        if(dp[n][amount] != -1 )  return dp[n][amount];
-
-        int notTake = 0 + f(n-1 , coins , amount , dp );
-
-        int take = Integer.MAX_VALUE / 2;
-        if(coins[n]<= amount){
-            take = 1 + f(n , coins , amount - coins[n] , dp);
-        }
-
-        return dp[n][amount] = Math.min(take , notTake ) ;
+        int ans =  Math.min(take , notTake);
+        map.put(key , ans );
+        return ans ;
     }
     public int coinChange(int[] coins, int amount) {
-        int n = coins.length;
-
-        int dp[][] = new int [n][amount +1 ];
-
-        for(int i = 0; i< n ; i++){
-            Arrays.fill(dp[i] , -1 ) ; 
-        }
-
-        int ans = f(n-1 ,coins , amount , dp);
-
-        if(ans >= Integer.MAX_VALUE /2)
-        return -1;
-
-        return ans ;
+        map = new HashMap<>();
+        int ans =  f(0 , 0 , coins , amount);
+        if( ans == 1e9)return -1 ; 
+        return ans;
     }
 }
