@@ -1,51 +1,30 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int ans[] = new int[2];
+        int firstOcc = -1 ; 
+        boolean isFirst = true;
+        int lastOcc = -1 ; 
+        boolean isLast = true; 
+        int left = 0; 
+        int right = nums.length -1; 
 
-        ans[0] = getFirst(nums , target);
-        ans[1] = getLast(nums , target);
-
-        return ans ;
-    }
-
-    public int getFirst(int[] nums, int target){
-        int left = 0 ; 
-        int right = nums.length-1 ; 
-        int ans = -1; 
         while(left <= right){
-            int mid = left + (right - left) /  2;
-
-            if(nums[mid] == target ){
-                ans = mid;
-                right = mid -1 ; 
+            if(nums[left] == target && isFirst) {
+                firstOcc = left; 
+                isFirst = false;
             }
-            else if(nums[mid] > target){
-                right = mid -1 ; 
+            if(nums[right] == target && isLast){
+                lastOcc = right ; 
+                isLast = false; 
             }
-            else{
-                left = mid + 1 ; 
+            if(!isLast && !isFirst){
+                break; 
             }
+            if(isFirst)
+            left ++; 
+            if(isLast)
+            right--; 
         }
-        return ans ; 
-    }
 
-    public int getLast(int[] nums , int target){
-        int left = 0 ; 
-        int right = nums.length-1 ; 
-        int ans = -1; 
-        while(left <= right){
-            int mid = left + (right - left ) / 2; 
-
-            if(nums[mid] == target){
-                ans = mid ;
-                left = mid + 1 ; 
-            }
-            else if ( nums[mid] > target) {
-                right = mid -1;
-            }else{
-                left = mid + 1; 
-            }
-        }
-        return ans ; 
+        return new int[]{firstOcc , lastOcc};
     }
 }
