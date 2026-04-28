@@ -21,7 +21,7 @@ class Solution {
             }
             
             else if(!stA.isEmpty()){
-               if(stA.peek() >= att || stB.peek() >= def){
+               if(stA.peek() >= att &&  stB.peek() >= def){
                 stA.push(att);
                 stB.push(def);
                }
