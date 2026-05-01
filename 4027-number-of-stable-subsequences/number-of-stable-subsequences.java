@@ -1,37 +1,31 @@
 class Solution {
-    int MOD = 1000000007;
-    Integer[][][] dp;
+    Integer dp[][][];
+    int MOD = 1000_000_007;
+    public int f(int i , int currParity , int count , int[] nums){
+        if(i == nums.length ) return 1 ; 
 
-    public int countStableSubsequences(int[] nums) {
-        dp = new Integer[nums.length][3][3];
-        return f(0, 2, 0, nums) - 1; // start with no parity
-    }
+        if(dp[i][currParity][count] != null) return dp[i][currParity][count];
 
-    public int f(int i, int last, int count, int[] nums) {
-        if (i == nums.length) {
-            return 1; // valid subsequence
-        }
+        int notTake = f(i+1 , currParity , count , nums);
 
-        if (dp[i][last][count] != null) return dp[i][last][count];
+        int newParity = nums[i] % 2; 
+        int take = 0 ; 
 
-        // skip
-        int notTake = f(i + 1, last, count, nums);
-
-        // take
-        int currParity = nums[i] % 2;
-        int take = 0;
-
-        if (last == 2) {
-            // first element
-            take = f(i + 1, currParity, 1, nums);
-        } else if (currParity == last) {
-            if (count < 2) {
-                take = f(i + 1, last, count + 1, nums);
+        if(currParity == 2){
+            take = f(i+1 , newParity , 1 , nums);
+        }else if(currParity == newParity){
+            if(count < 2 ){
+                take = f(i+1 , newParity , count + 1 , nums);
             }
-        } else {
-            take = f(i + 1, currParity, 1, nums);
+        }
+        else{
+            take = f(i+1 , newParity , 1 , nums);
         }
 
-        return (dp[i][last][count] = (take + notTake) % MOD) ;
+        return dp[i][currParity][count] = (take + notTake ) % MOD; 
+    }
+    public int countStableSubsequences(int[] nums) {
+        dp = new Integer[nums.length + 1 ][4][4];
+        return f(0 , 2 , 0 , nums) - 1 ;
     }
 }
