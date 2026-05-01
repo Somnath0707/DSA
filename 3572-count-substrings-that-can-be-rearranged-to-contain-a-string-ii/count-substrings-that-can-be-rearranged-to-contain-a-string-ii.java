@@ -16,7 +16,6 @@ class Solution {
 
         long count = 0 ; 
         int i = 0 ;  
-        boolean added = false;
 
         for(int j = 0; j < word1.length(); j++){
             char ch = word1.charAt(j);
