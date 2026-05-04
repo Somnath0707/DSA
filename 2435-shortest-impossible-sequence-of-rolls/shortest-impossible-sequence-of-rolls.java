@@ -1,7 +1,7 @@
 class Solution {
     public int shortestSequence(int[] rolls, int k) {
         Set<Integer> set = new HashSet<>();
-        int layers = 0;
+        int layers = 1;
 
         for(int x : rolls){
             set.add(x);
@@ -12,6 +12,6 @@ class Solution {
             }
         }
 
-        return layers + 1;
+        return layers;
     }
 }
