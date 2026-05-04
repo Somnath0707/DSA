@@ -10,7 +10,7 @@ class Solution {
         // Prefix/Suffix arrays
         int[] prefixZ = new int[m];
         int[] suffixZ = new int[m];
-        int[] prefixO = new int[m];
+            // int[] prefixO = new int[m];
         int[] suffixO = new int[m];
 
         // Build prefix arrays on t
@@ -18,9 +18,9 @@ class Solution {
             char ch = str.charAt(i);
             if (ch == '0') {
                 prefixZ[i] = (i > 0 ? prefixZ[i - 1] : 0) + 1;
-                prefixO[i] = 0;
+                // prefixO[i] = 0;
             } else {
-                prefixO[i] = (i > 0 ? prefixO[i - 1] : 0) + 1;
+                // prefixO[i] = (i > 0 ? prefixO[i - 1] : 0) + 1;
                 prefixZ[i] = 0;
             }
         }
