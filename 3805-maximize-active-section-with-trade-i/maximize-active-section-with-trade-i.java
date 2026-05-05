@@ -1,68 +1,81 @@
 class Solution {
     public int maxActiveSectionsAfterTrade(String s) {
+        String temp  = "1" + s + "1";
+        int m = temp.length(); 
+
+        //prefixZero
+        //pOne
+        // sZero
+        //sONe
         int n = s.length();
+        int prefixZero[] = new int[n];
+        int prefixOne[] = new int[n];
+        int suffixOne[] = new int[n]; 
+        int suffixZero[] = new int[n];
+        if(s.charAt(0) == '0'){
+            prefixZero[0] = 1; 
+            prefixOne[0] = 0 ; 
+        }else{
+            prefixZero[0] = 0 ; 
+            prefixOne[0] = 1;
+        }
 
-        // Augmented string
-        StringBuilder str = new StringBuilder();
-        str.append('1').append(s).append('1');
-        int m = str.length();
+        for(int i = 1 ; i < n ; i++){
+            char ch = s.charAt(i);
+            if(ch =='0'){
+                prefixZero[i] = prefixZero[i-1] + 1; 
+                prefixOne[i] = 0 ; 
+            }else{
+                prefixZero[i] = 0 ; 
+                prefixOne[i] = prefixOne[i-1] + 1; 
+            }
+        }
+        // count one 
+        int ones = 0 ; 
+        for(char ch : s.toCharArray()){
+            if(ch == '1') ones++;
+        }
 
-        // Prefix/Suffix arrays
-        int[] prefixZ = new int[m];
-        int[] suffixZ = new int[m];
-            // int[] prefixO = new int[m];
-        int[] suffixO = new int[m];
+        if(s.charAt(n-1) == '0'){
+            suffixZero[n-1] = 1; 
+            suffixOne[n-1] = 0 ; 
+        }else{
+            suffixZero[n-1] = 0 ; 
+            suffixOne[n-1] = 1;
+        }
 
-        // Build prefix arrays on t
-        for (int i = 0; i < m; i++) {
-            char ch = str.charAt(i);
-            if (ch == '0') {
-                prefixZ[i] = (i > 0 ? prefixZ[i - 1] : 0) + 1;
-                // prefixO[i] = 0;
-            } else {
-                // prefixO[i] = (i > 0 ? prefixO[i - 1] : 0) + 1;
-                prefixZ[i] = 0;
+
+        for(int i = n - 2; i >= 0 ; i--){
+            char ch = s.charAt(i);
+            if(ch =='0'){
+                suffixZero[i] = suffixZero[i+1] + 1; 
+                suffixOne[i] = 0 ; 
+            }else{
+                suffixZero[i] = 0 ; 
+                suffixOne[i] = suffixOne[i+1] + 1; 
             }
         }
 
-        // Build suffix arrays on t
-        for (int i = m - 1; i >= 0; i--) {
-            char ch = str.charAt(i);
-            if (ch == '0') {
-                suffixZ[i] = (i + 1 < m ? suffixZ[i + 1] : 0) + 1;
-                suffixO[i] = 0;
-            } else {
-                suffixO[i] = (i + 1 < m ? suffixO[i + 1] : 0) + 1;
-                suffixZ[i] = 0;
-            }
-        }
+        int ans = ones ; 
+        // 0111110
 
-        // Base answer = existing number of '1's in original s
-        int ones = 0;
-        for (int i = 0; i < n; i++) {
-            if (s.charAt(i) == '1') ones++;
-        }
+        for(int i = 1 ; i < m-1 ; i++){
+            if(temp.charAt(i) == '1' && temp.charAt(i-1) == '0'){
 
-        int ans = ones;
+                int si = i - 1; // map to s
+                if(si < 0 || si >= n) continue;
+                int lenOne = suffixOne[si]; // length of 1 block
+                int rightEnd = si + lenOne; // index in s
 
-        // Check every 1-block in t
-        for (int i = 1; i < m - 1; i++) {
-            // start of a 1-block (left char is 0)
-            if (str.charAt(i) == '1' && str.charAt(i - 1) == '0') {
-                int lenOneBlock = suffixO[i];   // length of this 1-block
-                int rightIndex = i + lenOneBlock;
-
-                // must have 0 on the right side too
-                if (rightIndex < m && str.charAt(rightIndex) == '0') {
-                    int leftZero = prefixZ[i - 1];
-                    int rightZero = suffixZ[rightIndex];
-
-                    // net gain = left zero block + right zero block
+                if(rightEnd < n && s.charAt(rightEnd) == '0'){
+                    int leftZero = prefixZero[si - 1 >= 0 ? si - 1 : 0];
+                    if(si - 1 < 0) leftZero = 0;
+                    int rightZero = suffixZero[rightEnd];
                     ans = Math.max(ans, ones + leftZero + rightZero);
                 }
             }
         }
 
-        return ans;
+        return ans; 
     }
 }
