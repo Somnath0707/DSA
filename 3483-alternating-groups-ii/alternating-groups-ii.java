@@ -15,24 +15,27 @@ class Solution {
         int prev = nums[i];
         int size = list.size();
         while(j < size){
-            boolean alter = true;
+            boolean alter = false;
             while(j-i+1 <= k && j < size){
-                if(list.get(j-1) == list.get(j)){
+                if(prev != list.get(j)){
+                    prev = list.get(j);
+                    j++;
+                    alter = true; 
+                }
+                else{ 
                     alter = false;
                     break;
                 }
-                j++;
             }
             if(alter == true && j-i == k){
                 ans++;
+                prev = list.get(j-1);
             }
             i++;
 
-             if(j < i + 1){
-                j = i + 1;
+            if(j< i+1){
+                j++;
             }
-        
-
 
         }
         return ans; 
