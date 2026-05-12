@@ -1,51 +1,50 @@
 class Solution {
-    public int minimumEffort(int[][] tasks) {
+    public boolean isAns(int n , int[][] nums){
+        for(int i = 0 ; i < nums.length; i++){
+            int min = nums[i][1];
+            int act = nums[i][0];
+            int diff = nums[i][2];
 
-        // Each task is [actual, minimum]
-        // actual  -> energy lost after completing task
-        // minimum -> energy required to start task
-
-        // Sort tasks by (minimum - actual) in ascending order.
-        // Later we iterate from back so effectively largest gap first.
-        // Tasks with bigger gap (minimum - actual) are more restrictive.
-        Arrays.sort(tasks , (a,b) ->
-            Integer.compare(a[1] - a[0], b[1] - b[0])
-        );
-
-        // ans = minimum initial energy required so far
-        // Start from the most restrictive task (last after sorting)
-        int ans = tasks[tasks.length - 1][1];
-
-        // diff represents remaining energy AFTER completing
-        // the previously considered task
-        // diff = currentEnergyAfterDoingPreviousTask
-        int diff = tasks[tasks.length - 1][1] - tasks[tasks.length - 1][0];
-
-        // Now process remaining tasks from high gap to low gap
-        for(int i = tasks.length - 2; i >= 0; i--) {
-
-            // If the current remaining energy (diff)
-            // is not enough to satisfy this task's minimum requirement,
-            // we must increase initial energy.
-
-            if(tasks[i][1] > diff){
-
-                // We need extra energy so that:
-                // diff becomes equal to tasks[i][1]
-                ans += tasks[i][1] - diff;
-
-                // After doing this task,
-                // remaining energy becomes:
-                diff = tasks[i][1] - tasks[i][0];
-
-            } else {
-
-                // We have enough energy to start this task.
-                // Just subtract actual cost.
-                diff = diff - tasks[i][0];
+            if(n >= min){
+                n -= act;
+                continue;
+            }
+            if(n < min){
+                return false;
             }
         }
+        return true; 
+    }
+    public int minimumEffort(int[][] tasks) {
+        int n = tasks.length;
+        int temp[][] = new int[n][3];
+        for(int i = 0 ; i < n ; i++){
+            temp[i][0] = tasks[i][0];
+            temp[i][1] = tasks[i][1];
+            int diff = tasks[i][1] - tasks[i][0];
+            temp[i][2] = diff;
+        }
 
-        return ans;
+        Arrays.sort(temp , (a,b) ->{
+            if(a[2] != b[2]) return b[2] - a[2];
+            else if(a[1] != b[1]) return b[1] - a[1];
+            else return b[0] - a[0];
+        });
+
+        int left = 1 ; 
+        int right = 1000000000;
+        int ans = 0  ;
+
+        while(left <= right){
+            int mid = left + (right - left) / 2; 
+
+            if(isAns(mid , temp)){
+                ans = mid ; 
+                right = mid - 1 ; 
+            }else {
+                left = mid + 1 ;
+            }
+        }
+        return ans; 
     }
 }
