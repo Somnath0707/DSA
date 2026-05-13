@@ -60,7 +60,6 @@ class Solution {
             if(!map.containsKey(list.get(i)))
             map.put(list.get(i) , ind++);
         }
-        // int OFFSET = 1000000;
         int max = 2000000;
         int count = 0 ; 
         SegmentTree st = new SegmentTree(max+1);
@@ -82,4 +81,5 @@ class Solution {
 
         return count; 
     }
+    //2
 }
