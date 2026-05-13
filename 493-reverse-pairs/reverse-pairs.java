@@ -1,85 +1,88 @@
 class SegmentTree{
-    int tree[];
+    int tree[] ; 
     int n ; 
 
     public SegmentTree(int num){
-        n = num;
-        tree = new int[4 * n];
+        n = num ; 
+        tree = new int[num*4];
+    }
+
+
+    public void update(int i , int left , int right , int pos){
+        if(left == right){
+            tree[i]++;
+            return ; 
+        }
+
+        int mid = left + (right - left ) / 2 ; 
+
+        if(pos<= mid){
+            update(2 * i + 1 , left , mid , pos);
+        }
+        else {
+            update(2 * i + 2 , mid + 1 , right , pos);
+        }
+
+        tree[i] = tree[2*i+1] + tree[2 * i + 2];
     }
 
     public int query(int i , int ql , int qr , int left , int right){
-        //no over lap 
-        if(ql > right || qr < left){
+        // no overlap
+        if(right < ql || qr < left){
             return 0 ; 
         }
 
-        // perfect over lpa
+        // perfect over lap 
         if(ql <= left && qr >= right ){
             return tree[i];
         }
 
-        int mid = left + (right - left ) / 2; 
+        int mid = left + (right - left ) / 2 ;
 
         int leftRes = query(2 * i + 1 , ql , qr , left , mid);
-        int rightRes = query(2 * i + 2 , ql , qr , mid + 1 , right );
+        int rightRes = query(2 * i + 2 , ql , qr , mid + 1 , right);
 
         return leftRes + rightRes;
     }
-    public void update ( int i , int left , int right , int pos){
-        if(left == right){
-            tree[i]++;
-            return;// increament the count of the value we have withnessed 
-        }
-
-        int mid = left + (right - left) / 2; 
-        if(pos <= mid){
-            update(2 * i + 1 , left , mid , pos);
-        }else{
-            update(2 * i + 2 , mid + 1 , right , pos);
-        }
-
-        tree[i] = tree[2 * i + 1 ] + tree[2 * i + 2 ];
-    }
 }
 
-class Solution {
-    
-    public int reversePairs(int[] nums) {
 
-        Map<Long , Integer> map = new HashMap<>();
+class Solution {
+    public int reversePairs(int[] nums) {
         List<Long> list = new ArrayList<>();
+        int max = 200000;
+        SegmentTree st = new SegmentTree(max+1);
         for(long n : nums){
             list.add(n);
-            list.add(1L * 2*n);
+            list.add(2L*n);
         }
 
+        Map<Long , Integer> map = new HashMap<>();
         int n = nums.length;
-        int ind = 0 ; 
         Collections.sort(list);
-        for(int i = 0 ; i < list.size() ;i++){
-            if(!map.containsKey(list.get(i)))
-            map.put(list.get(i) , ind++);
-        }
-        int max = 2000000;
-        int count = 0 ; 
-        SegmentTree st = new SegmentTree(max+1);
-        for(int i = n -1 ; i>= 0 ; i--){
-            int val = map.get((long)nums[i]);
 
-            
+        int ind = 0 ; 
+        for(int i = 0 ; i < list.size() ; i++){
+            long val = list.get(i);
+            if(!map.containsKey(val))
+            map.put(val , ind++);
+        }
+
+        int count = 0 ; 
+        for(int i = n-1 ; i >= 0 ; i--){
+            long val = nums[i];
+            int putVal = map.get(val);
+
             int tempCount = 0 ; 
 
-            tempCount = st.query(0 , 0 ,val - 1, 0 , max );
+            tempCount = st.query(0 , 0 , putVal - 1, 0 , max);
+            count += tempCount;
+            int doubleVal = map.get(1L*val*2);
 
-            if(tempCount > 0){
-                count += tempCount;
-            }
-            int nextVal = map.get(1L *nums[i]*2);
-            st.update(0 , 0 , max , nextVal);
+            st.update(0 , 0 , max , doubleVal);
 
         }
 
-        return count; 
+    return count; 
     }
-    //2
 }
