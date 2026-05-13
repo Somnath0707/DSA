@@ -1,67 +1,68 @@
 class SegmentTree{
-    int tree[]; 
-    int arr[] ; 
-    
+    int[] tree ;
+    int n ; 
+
     public SegmentTree(int num){
         int n = num;
-        tree = new int[4*n];
+        tree = new int[num*4];
     }
 
-    public int query(int i , int ql , int qr , int left , int right ){
-        // No overlap 
-        if(right < ql || left > qr){
-            return 0 ; /// default
+    public void update(int i , int left , int right , int pos){
+        if(left == right ){
+            tree[i]++;
+            return;
         }
 
-        // perfect overlap
-        if(ql <= left && qr >= right){
+        int mid = left + (right - left) / 2 ; 
+
+        if(pos <= mid){
+            update(2* i + 1 , left , mid , pos);
+        }else{
+            update(2* i + 2 , mid + 1 , right , pos);
+        }
+
+        tree[i] = tree[2* i + 1 ] + tree[2 * i + 2];
+    }
+
+    public int query(int i , int ql , int qr , int left , int right){
+        // No overlap
+        if(right < ql || qr < left ){
+            return 0; 
+        }
+
+        // Perfect overt lap 
+        if(ql <= left && qr >= right) {
             return tree[i];
         }
+        // perfect
+        int mid = left + (right - left ) / 2 ;
 
-        // partial over lap 
-        int mid = left + (right - left) / 2; 
-        int leftRes = query(2 * i + 1 , ql , qr , left , mid );
-        int rightRes = query(2 * i + 2 , ql , qr , mid + 1 , right);
+        int leftRes = query(2 * i + 1 , ql , qr , left , mid);
+
+        int rightRes = query(2 * i + 2 , ql , qr , mid + 1 , right );
 
         return leftRes + rightRes;
     }
-
-    public void update (int i , int left , int right , int pos ){
-        if(left == right){
-            // arr[left] = val; 
-            tree[i]++;
-            return ; 
-        }
-        int mid = left + (right - left ) / 2 ; 
-
-        if(pos <= mid ){
-            update(2* i + 1 , left , mid , pos );
-        }
-        else {
-            update(2 * i + 2 , mid + 1 , right , pos );
-        }
-
-        tree[i] = tree[2 * i + 1 ] + tree[2 * i + 2];
-    }
 }
 class Solution {
-    int OFFSET = 10000;
     public List<Integer> countSmaller(int[] nums) {
+        int OFFSET = 10000;
+        // OFFSET and MAX cause the value could be negative me can handle that by the offset
         int max = 20000;
-
         SegmentTree st = new SegmentTree(max+1);
-        int n = nums.length;
         List<Integer> list = new ArrayList<>();
-        for(int i = n-1 ; i >= 0 ; i--){
-            int num = nums[i] + OFFSET;
+        for(int i = nums.length-1 ; i >= 0;  i--){
+            // to make the negative as positive 
+            int val = nums[i] + OFFSET;
             int count = 0 ; 
-            if(num > 0)
-                count = st.query(0 , 0 , num-1 , 0 , max);
+            // We search for the the value that is less than current value i.e 0 to curr-1
+            count = st.query(0 , 0 , val-1 , 0 , max );
 
-            st.update(0 , 0, max , num);
             list.add(count);
-        }
 
+            // we dont update at i we update the number i.e if the curr value is 5 we update the 5++ so the freq of 5 becomes 1
+            st.update(0 , 0 , max , val);
+        }
         Collections.reverse(list);
         return list;
     }
