@@ -1,91 +1,84 @@
 class SegmentTree{
-    int n ; 
-    int tree[];
-    int arr[];
-
-    public SegmentTree(int nums[]){
-        n = nums.length ; 
-        tree = new int[4*n];
+    int tree[]; 
+    int arr[] ; 
+    
+    public SegmentTree(int[] nums){
+        int n = nums.length;
         arr = nums;
+        tree = new int[4*n];
     }
 
-    public void build(int i , int left , int right){
-        
-        // Base Case
+    public void build(int i , int left , int right ){
         if(left == right){
-            // usual shi
             tree[i] = arr[left];
-            return;
+            return ; 
         }
-
+        
         int mid = left + (right - left ) / 2; 
+        int leftChild = 2*i+1;
+        int rightChild = 2 * i + 2; 
 
-        int leftChild = 2 * i + 1;
-        int rightChild = 2 * i + 2 ; 
-
-        build(leftChild , left , mid);
-        build(rightChild , mid + 1 , right);
+        build(leftChild , left , mid );
+        build(rightChild , mid+1 , right);
 
         tree[i] = tree[leftChild] + tree[rightChild];
     }
 
-    public int range(int i , int ql , int qr , int left , int right){
-        // Case 1 : No overLap
+    public int query(int i , int ql , int qr , int left , int right ){
+        // No overlap 
         if(right < ql || left > qr){
-            return 0 ; 
+            return 0 ; /// default
         }
 
-        // Case 2 : Complete overlap
-        if(ql <= left && right <= qr){
+        // perfect overlap
+        if(ql <= left && qr >= right){
             return tree[i];
         }
 
-        // Case 3 : Partial overlap
-        int mid = (left + right ) / 2;
-        int left_res = range(2*i+1 , ql , qr , left , mid);
-        int right_res = range(2*i+2 , ql , qr , mid+1 , right) ;
+        // partial over lap 
+        int mid = left + (right - left) / 2; 
+        int leftRes = query(2 * i + 1 , ql , qr , left , mid );
+        int rightRes = query(2 * i + 2 , ql , qr , mid + 1 , right);
 
-        return left_res + right_res;
-
+        return leftRes + rightRes;
     }
 
-    public void updatePos(int i , int left , int right , int pos , int val){
+    public void update (int i , int left , int right , int pos , int val){
         if(left == right){
-            arr[left] = val;
+            arr[left] = val; 
             tree[i] = val;
             return ; 
         }
+        int mid = left + (right - left ) / 2 ; 
 
-        int mid = left + (right - left) / 2; 
-
-        if(pos <= mid){
-            updatePos(2*i+ 1 , left , mid , pos , val);
-        }else{
-            updatePos(2*i + 2 , mid+1 , right , pos , val);
+        if(pos <= mid ){
+            update(2* i + 1 , left , mid , pos , val);
+        }
+        else {
+            update(2 * i + 2 , mid + 1 , right , pos , val);
         }
 
-
-        tree[i] = tree[2*i+1] + tree[2*i+2];
+        tree[i] = tree[2 * i + 1 ] + tree[2 * i + 2];
     }
 }
 
 
+
 class NumArray {
-    SegmentTree st ; 
-    int n ;
+    SegmentTree st; 
+    int n ; 
     public NumArray(int[] nums) {
         st = new SegmentTree(nums);
         n = nums.length;
         st.build(0 , 0 , n-1);
-
     }
     
     public void update(int index, int val) {
-        st.updatePos(0 , 0 , n-1 , index , val);
+        st.update(0 , 0 , n-1 , index , val);
     }
     
     public int sumRange(int left, int right) {
-        int ans = st.range(0 , left , right , 0 , n-1);
+        int ans = st.query(0 , left , right , 0 , n-1);
         return ans;
     }
 }
