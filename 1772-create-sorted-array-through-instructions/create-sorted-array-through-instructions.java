@@ -60,10 +60,10 @@ class Solution {
             int lessCount = 0 ;
 
             // element greater so val + 1 till max 
-            if(val < max)
+            // if(val < max)
             greatCount = st.query(0 , val + 1 , max , 0 , max);
             // element less so 0 till val - 1
-            if(val > 0 )
+            // if(val > 0 )
             lessCount = st.query(0 , 0 , val -1 , 0 , max );
 
             count  =  (count + Math.min(greatCount , lessCount)) % MOD;
