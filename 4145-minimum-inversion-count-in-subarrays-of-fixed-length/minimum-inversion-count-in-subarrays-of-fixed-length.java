@@ -1,121 +1,108 @@
-class SegmentTree{
-    int tree[] ;
-    int n ; 
+class SegmentTree {
+    int tree[]; 
+    int n ;
 
-    SegmentTree(int num){
-        n = num; 
+    public SegmentTree(int num ){
+        n = num;
         tree = new int[4*n];
     }
 
-    public void update(int i , int left , int  right , int  pos , int val){
+    public void update(int i , int left , int right , int val , int pos){
         if(left == right){
-            if(val != -1 )
-            tree[i]++;
-
-            if(val == -1){
-                tree[i]--;
+            if(val != -1){
+                tree[i]++;
+                return;
             }
-            return ; 
+            else{
+                tree[i]--;
+                return;
+            }
         }
 
-        int mid = left + (right - left ) / 2 ; 
-
+        int mid = left + (right - left) / 2 ;
         if(pos<= mid){
-            update(2 * i + 1 , left , mid, pos, val);
-        }
-        else{
-            update(2 * i + 2 , mid + 1 , right , pos , val);
+            update(2 * i + 1 , left , mid , val , pos);
+        }else{
+            update(2 * i + 2 , mid + 1 , right , val , pos);
         }
 
-        tree[i] = tree[2 * i + 1 ] + tree[2 * i + 2 ]; 
+        tree[i] = tree[2* i + 1] + tree[2 * i + 2];
     }
 
     public int query(int i , int ql , int qr , int left , int right){
-        // No overlap
-        if(left > qr ||  right < ql){
+
+        // No over lap 
+        if(left > qr || right  < ql){
             return 0 ; 
         }
 
-        // perfect overlap
+        // perfect over lap 
         if(ql <= left && right <= qr){
             return tree[i];
         }
 
-        int mid = left + (right - left ) / 2; 
-
+        // Parital overlap
+        int mid = left + (right - left) / 2; 
+        
         int leftRes = query(2 * i + 1 , ql , qr , left , mid);
-        int rightRes = query(2 * i + 2 , ql, qr , mid + 1 ,right);
+        int rightRes = query(2 * i + 2 , ql , qr , mid + 1 , right);
 
         return leftRes + rightRes;
     }
 }
-
 class Solution {
     public long minInversionCount(int[] nums, int k) {
-        /// What we do is take the last element in the window check if check if thre is element in range such 
-        // n+1 to max if so count++
-        // once we check the complete what do we do we move to the next window and remoe the first prev first elemetn int window and update the last element in the window and during this we get the min or prev and curr window count 
-
-        // how do we remove range from the segment tree this is stupid as fuck 
-        
-        
-        // Add the number in first window at least 
-
-
-        /// Cooridnate compression 
+        //Cooridnate compression
         List<Long> list = new ArrayList<>();
+
         for(long n : nums){
             list.add(n);
         }
 
         Collections.sort(list);
-        //Map them 
+
         Map<Long , Integer> map = new HashMap<>();
-        int indx = 0 ; 
+        int ind = 0 ; 
         for(int i = 0 ; i < list.size() ; i++){
             long val = list.get(i);
             if(!map.containsKey(val))
-            map.put(val , indx++);
-        }
+            map.put(val , ind++);
+        }   
 
+        SegmentTree st = new SegmentTree(ind);
 
-        // finised the cooridante compresion 
-
-
-        int max =indx+1;
-        SegmentTree st = new SegmentTree(max);
-        long count = 0 ; 
-        for(int i = 0 ; i < k; i++){
-            int val = map.get((long)(nums[i])); 
-
-
-            count += st.query(0 , val+ 1 , max , 0 , max);
-
-            st.update(0 , 0 , max , val, 1);
-        }
-        long min = count;
-       
         int n = nums.length;
-        for(int i = k ; i < n ; i++){
-            int left = i - k ; 
-            int del = map.get((long)nums[left]);
-            // remmove the first element in the window 
-            if(del > 0 )
-            count -= st.query(0, 0, del-1, 0, max);
-            st.update(0 , 0 , max , del , -1);
-            
-            
+        long count = 0 ; 
+        long min = 0 ; 
 
+        for(int i = 0 ; i < k ; i++){
             int val = map.get((long)nums[i]);
-            if(val < max)
-            count +=  st.query(0 , val+ 1 , max , 0 , max);
 
-            st.update(0 , 0 , max , val , 1);
+            count += st.query(0 , val+1 , ind , 0 , ind);
 
+            st.update(0 , 0 , ind , 1 , val);
+        }  
+
+        min = count;
+
+
+        for(int i = k ; i < n ; i++){
+            long left = nums[i - k];
+            count -= st.query(0 , 0 , map.get(left)-1 , 0 , ind);
+
+            st.update(0 , 0 , ind , -1 , map.get(left));
+
+
+            long curr = nums[i];
+
+            count += st.query(0 , map.get(curr)+1 , ind , 0 , ind);
+
+            st.update(0 , 0 , ind , 1 , map.get(curr));
+            
             min = Math.min(min , count);
 
         }
-        if(min == -1 ) return 0 ; 
-        return min ;
+
+        return min ; 
     }
 }
