@@ -25,7 +25,7 @@ class Solution {
             int row = curr[1];
             int col = curr[2];
 
-            if(cost > distance[row][col]) continue;
+            // if(cost > distance[row][col]) continue;
 
             if(row == n-1 && col == m-1) return cost ; 
 
