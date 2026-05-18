@@ -6,7 +6,7 @@ class Solution {
         if(dp[i] != null) return dp[i];
         int n = nums.length;
         int prev = i ; 
-        int ans = 0 ;
+        int ans = 1 ;
         for(int ind = 1 ; ind <= d ; ind++ ){
             int front = ind + i ;
 
@@ -39,6 +39,6 @@ class Solution {
         for(int i = 0 ; i < arr.length ; i++){
             ans = Math.max(ans , f(i  , arr , d));
         }
-        return 1+ans;
+        return ans;
     }
 }
