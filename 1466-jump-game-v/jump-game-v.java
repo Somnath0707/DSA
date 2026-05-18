@@ -1,44 +1,39 @@
 class Solution {
-    Integer dp[]; 
-    public int f(int i  , int nums[] , int d){
-        // base case
-        // if we cant go form curr to +d and from curr to -d then we need to stop 
-        if(dp[i] != null) return dp[i];
+    Integer dp[] ; 
+    public int f(int ind , int nums[] , int d){
+        
+        if(dp[ind] != null ) return dp[ind];
+        int prev = ind ; 
         int n = nums.length;
-        int prev = i ; 
-        int ans = 1 ;
-        for(int ind = 1 ; ind <= d ; ind++ ){
-            int front = ind + i ;
+        int ans = 1 ; 
+        for(int i = 1 ; i <= d ; i++){
+            int front = ind + i ; 
+            if(front >= n ){
+                break ;
+            }
 
-            if(front >= n ) break;
             if(nums[front] >= nums[prev]){
                 break;
             }
             ans = Math.max(ans , 1 + f(front , nums , d));
         }
 
-        for(int ind = 1 ; ind <= d ; ind++){
-            int back = i - ind;
-            if(back < 0){
+        for(int i = 1 ; i <= d ; i++){
+            int back = ind - i ;
+            if(back < 0 || nums[back] >= nums[prev]){
                 break;
             }
-            if(nums[back] >= nums[prev]){
-                break;
-            }
-            
-
-            ans = Math.max( ans , 1 + f(back , nums , d));
+            ans = Math.max(ans , 1 + f(back , nums , d));
         }
-
-        return dp[i] = ans;
-  
+        return dp[ind] = ans;
     }
     public int maxJumps(int[] arr, int d) {
-        int ans = 0 ;
+        int ans = 0 ; 
         dp = new Integer[arr.length];
         for(int i = 0 ; i < arr.length ; i++){
-            ans = Math.max(ans , f(i  , arr , d));
+            ans = Math.max(ans , f(i , arr , d));
         }
-        return ans;
+
+        return ans ;
     }
 }
