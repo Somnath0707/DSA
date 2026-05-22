@@ -83,9 +83,9 @@ class Solution {
         for(int i = 0 ; i < n ; i++){
             ans[i] = prices[i];
             for(int j = 0 ; j < n ; j++){
-                if(empty[i][j] == Integer.MAX_VALUE || loaded[i][j] == Integer.MAX_VALUE){
-                    continue;
-                }
+                // if(empty[i][j] == Integer.MAX_VALUE || loaded[i][j] == Integer.MAX_VALUE){
+                //     continue;
+                // }
 
                 long total = empty[i][j] + loaded[j][i] + prices[j];
 
