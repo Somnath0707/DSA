@@ -17,12 +17,12 @@ class Solution {
         int left = dip-1;
         int right = dip+1;
 
-        while(left >= 0 && right < n){
-            if(nums[left]<nums[right] ) return false;
+        // while(left >= 0 && right < n){
+        //     if(nums[left]<nums[right] ) return false;
             
-            left--;
-            right++;
-        }
+        //     left--;
+        //     right++;
+        // }
         if(nums[0] < nums[n-1] )return false;
 
         return true ;
