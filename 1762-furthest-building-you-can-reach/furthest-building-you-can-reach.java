@@ -23,88 +23,31 @@ class Solution {
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         int n = nums.length;
-        if(bricks == 33671263) return 589;
-        if(bricks == 926413609) return 72329;
-        if(n == 10 && bricks == 10 && ladders == 2) return 8;
-        if(n == 9 && bricks == 10 && ladders == 2 && nums[0] ==4 && nums[4] == 3) return 7;
-
-        if(n == 10 && bricks == 10 && ladders == 5 && nums[4] == 31 ) return 9;
-        for (int i = 0; i < n - 1; i++) {
-            int diff = nums[i + 1] - nums[i];
-
-            pq.offer(diff);
-            if (pq.size() > ladders) {
-                // we remove the lower number as it is the pq we remove the min number 
-                pq.poll();
-            }
-        }
-        int brick = bricks ; 
-        int ladder = ladders;
-        // put the number in set 
-        Set<Integer> set = new HashSet<>();
-        while (!pq.isEmpty()) {
-            set.add(pq.poll());
-        }
         int i = 0;
-
-        while (i < n - 1) {
-
+        
+        while(i < n -1){
             int curr = nums[i];
-            int next = nums[i + 1];
-
+            int next = nums[i+1];
             int diff = next - curr;
-
-            System.out.println("This is the diff : " + diff);
-
-            if (diff <= 0) {
+            if(diff <= 0 ) {
                 i++;
-                System.out.println("condition ok " + i);
                 continue;
             }
 
-            if (ladder> 0) {
-                if (set.contains(diff) || brick < diff) {
-                    ladder--;
-                } else {
-                    brick -= diff;
-                }
-                i++;
-            }
-            else if (diff <= brick) {
-                brick -= diff;
-                i++;
-            }
-            else {
-                break;
-            }
-        }
-        // now try using rope first 
-        int ind = 0 ; 
-        while(ind < n -1 ) {
-            int curr = nums[ind];
-            int next = nums[ind+1];
-            int diff = next - curr;
-
-            if(diff <= 0 ){
-                ind++;
-                continue;
-            }
-
-            if(ladders != 0){
+            if(ladders > 0){
                 ladders--;
-                ind++;
-                continue;
+                pq.offer(diff);
+                i++;
             }
             else {
-                if(diff <= bricks){
-                    bricks -= diff;
-                    ind++;
-                    continue;
-                }else{
-                    break;
+                pq.offer(diff);
+                bricks -= pq.poll();
+                if(bricks < 0){
+                    return i;
                 }
+                i++;
             }
         }
-        return Math.max(i , ind);
+        return i ; 
     }
 }
