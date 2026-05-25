@@ -39,7 +39,7 @@ class Solution {
         // now we have the the left sorted and right sorted in place 
         int left = 0 ; 
         int right = j;
-        int minToRemove = Math.min(n - 1 - i, j);
+        int minToRemove = Math.min(n-i-1 , j);
         while(left <= i && right < n){
             if (arr[left] <= arr[right]) {
                 minToRemove = Math.min(minToRemove, right - left - 1);
