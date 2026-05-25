@@ -1,7 +1,7 @@
 class Solution {
     public boolean canReach(String s, int minJump, int maxJump) {
         int n = s.length();
-        if (s.charAt(n - 1) == 1)
+        if (s.charAt(n - 1) == '1')
             return false;
 
         // this seems like that kind of problem that sound like dp but is like greedy under the hood
