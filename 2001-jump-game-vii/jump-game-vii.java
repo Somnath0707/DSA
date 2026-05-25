@@ -36,9 +36,9 @@ class Solution {
                 if(nums[i] == 0 && !set.contains(i) ){
                     q.offer(i);
                     set.add(i);
-                    far = i ;
                 }
             }
+            far = end;
         }
 
         return false; 
