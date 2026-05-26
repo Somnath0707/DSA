@@ -55,17 +55,27 @@ class Solution {
         for(int i = 0 ; i < n ; i++){
             int curr = nums[i];
             // if stack is emtpy we push
-           
+            if(stack.isEmpty()){
+                stack.push(i);
+
+            }
             // if curr is smaller than top 
             // but also it should be in range 
             // should not remove the element such that we not get enought elements afterwards
+            else if(curr < nums[stack.peek()] ){
                 while(!stack.isEmpty() &&curr < nums[stack.peek()] && stack.size() + n - i > k ){
                     stack.pop();
                 }
+                if(stack.size() < k )
+                stack.push(i);
+            }
+            else{
                 if (stack.size() < k) {
                     stack.push(i);
                 }
             }
+
+        }
 
         int arr[] = new int[temp];
         List<Integer> list = new ArrayList<>();
@@ -76,4 +86,4 @@ class Solution {
 
         return arr;
     }
-}
+} 
