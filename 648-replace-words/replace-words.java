@@ -42,13 +42,13 @@ class Trie{
 
         for(char ch : s.toCharArray()){
             int ind = ch - 'a';
-            System.out.println(ch + " " + node.child[ind]);
+            // System.out.println(ch + " " + node.child[ind]);
             if(node.child[ind] == null){
                 return -1 ; // keep the original word only 
             }
             node = node.child[ind];
             if(node.isEnd == true){
-                System.out.println(node.index);
+                // System.out.println(node.index);
                 return node.index;
             }
         }
