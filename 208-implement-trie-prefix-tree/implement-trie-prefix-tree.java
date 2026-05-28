@@ -36,7 +36,6 @@ class Trie {
 
         for(char ch : word.toCharArray()){
             int indx = ch - 'a';
-            System.out.println(ch + " " + node.child[indx]);
             if(node.child[indx] == null){
                 return false; 
             }
