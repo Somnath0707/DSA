@@ -5,8 +5,20 @@ class Solution {
         for(int i = 0 ; i < n ; i++){
             int num = 0 ; 
             String s = String.valueOf(nums[i]);
-            for(char ch : s.toCharArray()){
-                num += ch - '0';
+            int left  = 0 ; 
+            int right = s.length()-1;
+            while(left <= right){
+                if(left==right){
+                    num+=s.charAt(left)-'0';
+                    left++;
+                    continue;
+                }
+                int lSide = s.charAt(left)-'0';
+                int rSide = s.charAt(right) -'0';
+                // System.out.println(lSide + " " + rSide);
+                num += lSide + rSide; 
+                left++;
+                right--;
             }
             ans = Math.min(num , ans);
         }
