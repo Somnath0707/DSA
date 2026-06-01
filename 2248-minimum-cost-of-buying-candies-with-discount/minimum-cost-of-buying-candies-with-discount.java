@@ -1,21 +1,16 @@
 class Solution {
     public int minimumCost(int[] nums) {
         int n = nums.length ;
-        List<Integer> list = new ArrayList<>();
-        for(int i = 0; i < n ;i++){
-            list.add(nums[i]);
-        }
-
-        Collections.sort(list , (a,b) -> b-a);
+        Arrays.sort(nums);
         int count = 0 ; 
         int cost = 0 ; 
-        for(int i = 0 ; i < n ; i++){
+        for(int i = n-1; i >= 0 ; i--){
             if(count == 2){
                 count = 0 ; 
                 continue;
             }
             else {
-                cost += list.get(i);
+                cost += nums[i];
                 count++;
             }
         }
