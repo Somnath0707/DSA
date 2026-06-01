@@ -1,7 +1,7 @@
 class Solution {
 
     int ans = 0 ; 
-    public Map<String,Integer> dp ; 
+    int dp[] ; 
     public int max(int ind , int j , int arr[] ){
         int max = -1; 
         for(int i = ind ; i <= j ; i++){
@@ -16,9 +16,7 @@ class Solution {
             return 0  ;
         } 
 
-        String key = String.valueOf(i); 
-
-        if(dp.containsKey(key)) return dp.get(key);
+        if(dp[i] != -1 ) return dp[i];
 
         int n = arr.length;
         
@@ -34,9 +32,7 @@ class Solution {
         // we have to get max in this range 
         // how can we store the answer for each complete check 
 
-        int  temp = ans; 
-        dp.put(key , ans);
-        return temp;
+        return dp[i] = ans; 
 
     }
     public int maxSumAfterPartitioning(int[] arr, int k) {
@@ -55,7 +51,8 @@ class Solution {
 
         // each subarray could choose the independent subarray within the the constraint k so one subbarray could be of size 2 one could be 4 etc 
         int n = arr.length ;
-        dp = new HashMap<>();
+        dp = new int[n+1]; 
+        Arrays.fill(dp, -1 ) ; 
 
         
 
