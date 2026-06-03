@@ -44,6 +44,7 @@ class Solution {
             int v = curr[0]; 
             // int arrival time of that noe 
             int arriv = curr[1]; 
+            if(arriv > dis[v]) continue;
 
             for(int nums[] : list.get(v)){
                 int nextNode = nums[0]; 
