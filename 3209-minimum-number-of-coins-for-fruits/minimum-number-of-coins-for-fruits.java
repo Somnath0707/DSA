@@ -2,7 +2,7 @@ class Solution {
     Integer dp[][]; 
     public int f(int i , int limit ,  int prices[]){
         if(i == prices.length){
-            return 0; 
+            return -0; 
         }
 
         if(dp[i][limit] != null) return dp[i][limit]; 
