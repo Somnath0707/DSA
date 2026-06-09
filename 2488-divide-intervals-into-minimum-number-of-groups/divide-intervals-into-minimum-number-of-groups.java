@@ -29,12 +29,12 @@ class Solution {
             
 
             if(!pq.isEmpty() && start > pq.peek()){
-                System.out.println(start +  " > " + pq.peek());
-                System.out.println("remove the one which is ending : " + pq.peek());
+                // System.out.println(start +  " > " + pq.peek());
+                // System.out.println("remove the one which is ending : " + pq.peek());
                 pq.poll(); 
             }
 
-            System.out.println(" new end " + end);
+            // System.out.println(" new end " + end);
             pq.offer(end);
             
         }
