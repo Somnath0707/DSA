@@ -1,13 +1,12 @@
 class Solution {
     int MOD = 1000000007;
-    Map<String , Integer> dp ; 
+    Integer dp[][]; 
     public int f(int i , int count , int end , int k){
         if(count == k){
             if(i == end ) return 1 ; 
             return 0 ; 
         }
-        String key = i + "#" + count; 
-        if(dp.containsKey(key)) return dp.get(key);
+        if(dp[i][count] != null) return dp[i][count]; 
 
         int takeOne = 0 ; 
         int giveOne = 0 ; 
@@ -15,10 +14,7 @@ class Solution {
         takeOne =( takeOne + f(i+1 , count+1 , end , k )) % MOD;
         giveOne = (giveOne + f(i-1 , count+ 1 , end , k )) % MOD;
 
-        int ans  = (takeOne + giveOne) % MOD;
-
-        dp.put(key , ans ); 
-        return ans; 
+        return dp[i][count] = (takeOne + giveOne) % MOD;
     }
     public int numberOfWays(int startPos, int endPos, int k) {
         // we are given two number start and end 
@@ -35,11 +31,10 @@ class Solution {
         // as here we can go front and go back +1 and -1 might give me infinte 
         // or maybe it is possible to use dp as there is a limit of k steps 
 
-        // so we can do +1 -1 for k step if the steps increase > k we can back track lmao   
-
-        dp = new HashMap<>();
+        // so we can do +1 -1 for k step if the steps increase > k we can back track lmao 
 
         // but I still think bfs is there 
-        return f(startPos , 0 , endPos , k);
+        dp = new Integer[3000][k]; 
+        return f(startPos+1000 , 0 , endPos+1000 , k);
     }
 }
