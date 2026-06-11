@@ -13,16 +13,14 @@ class Solution {
             }
         }
 
-        int ans[] = new int[n]; 
-        ans[0] = arr[0] ; 
 
         for(int i = 1 ; i < n ; i++){
-            ans[i] = ans[i-1] + arr[i]; 
+            arr[i] = arr[i-1] + arr[i]; 
         }
 
         for(int i = 0 ; i < n ; i++){
             // System.out.println(nums[i] + " " + ans[i]);
-            nums[i] = nums[i] + ans[i]; 
+            nums[i] = nums[i] + arr[i]; 
             if(nums[i] < 0 ) nums[i] = 0 ; 
             
             if(nums[i] != 0 ) return false; 
