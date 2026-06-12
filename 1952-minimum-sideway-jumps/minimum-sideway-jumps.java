@@ -2,9 +2,15 @@ class Solution {
     int dp[][]; 
     public int f(int i , int lane ,  int obs[] , int n ){
         if(i == n-1 ) return 0 ; 
-        if(obs[i] == lane) return 1000000;
+        // System.out.println("I am trying to jum to this lane " + lane + " at Index " + i );
+        if(obs[i] == lane) {
+            //  System.out.println("I tried jumping to this lane " + lane + "  but  could not " + i );
+            return 1000000;
+        }
+        //  System.out.println("I have jumped to this lane " + lane + " at Index " + i );
         if(dp[i][lane] != -1) return dp[i][lane]; 
         int ans = 0 ; 
+        
         
         if(lane == obs[i+1] && obs[i+1] != 0  ){
             // System.out.println("Obstacle found at : "  + i);
