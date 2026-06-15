@@ -17,13 +17,13 @@ class Solution {
                     seenRow.add(indx);
                     sum += val * col; 
                     rows--;
-                }
+                }else continue; 
             }else{
                 if(rows >= 0 && !seenCol.contains(indx)){
                     seenCol.add(indx);
                     sum+= val * rows;
                     col--; 
-                }
+                }else continue; 
             }
         }
         return sum ; 
