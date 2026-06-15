@@ -14,10 +14,10 @@ class Solution {
         ListNode slow = head; 
         ListNode prev = null; 
         if(head.next == null ) return null ;
-        while(fast.next != null && fast != null){
+        while(fast != null && fast.next != null ){
             prev = slow ; 
             slow = slow.next ; 
-            if(fast.next.next == null ) break; 
+            // if(fast.next.next == null ) break; 
             fast = fast.next.next; 
             // System.out.println(slow.val + " # " + fast.val + " # "  + prev.val);
             
