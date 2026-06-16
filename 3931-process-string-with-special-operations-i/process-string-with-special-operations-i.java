@@ -7,20 +7,20 @@ class Solution {
             if(ch == '*'){
                 if(str.length() >=1)
                     str.deleteCharAt(str.length()-1);
-                System.out.println("THis is the op at * " + str.toString());
+                // System.out.println("THis is the op at * " + str.toString());
             }
             else if(ch == '#'){
                 str.append(str);
-                System.out.println("THis is the op at #  " + str);
+                // System.out.println("THis is the op at #  " + str);
             }
             else if(ch == '%'){
                 str = str.reverse(); 
-                System.out.println("THis is the op at %  " + str);
+                // System.out.println("THis is the op at %  " + str);
             }
 
             else{
                 str.append(ch);
-                System.out.println("THis is the op at else " + str);
+                // System.out.println("THis is the op at else " + str);
             }
         }
 
