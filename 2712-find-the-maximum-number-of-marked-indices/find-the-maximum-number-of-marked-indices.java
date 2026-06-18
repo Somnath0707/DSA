@@ -16,6 +16,9 @@ class Solution {
                 if(map.get(key) == 0) map.remove(key);
                 count+=2; 
             }
+            else {
+                break;
+            }
         }
         return count ; 
     }
