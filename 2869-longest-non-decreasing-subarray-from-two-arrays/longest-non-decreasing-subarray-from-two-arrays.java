@@ -1,32 +1,36 @@
 class Solution {
-    Map<String , Integer> map ;
-    public int f(int i  , int prev , int count ,  int nums1[] , int nums2[] ){
-        if(i >= nums1.length ) return count;
-        String key = i + "#" + prev ;
-        int take1 = 0, take2 = 0;
+    int n = 0 ; 
+    Map<String,Integer> dp; 
+    public int f(int i , int prev , int nums1[] , int nums2[]){
+        if(i == n ) return 0 ; 
+        String key = i + "#" + prev; 
+        int take = 0 ; 
 
-        if(map.containsKey(key)) return map.get(key);
+        
+        if(nums1[i] < prev && nums2[i] < prev && prev != Integer.MAX_VALUE ) return 0 ; 
+        if(dp.containsKey(key)) return dp.get(key);
 
-        if(nums1[i] >= prev){
-            take1 = f(i+1 , nums1[i], count + 1 , nums1 , nums2 );
+        else if(prev == Integer.MAX_VALUE ){
+             take = Math.max(f(i+1 , prev , nums1 , nums2) ,Math.max(1 + f(i+1 , nums1[i] , nums1 , nums2) , 1 + f(i+1 , nums2[i] , nums1 , nums2)));
         }
+        
 
-        if(nums2[i] >= prev){
-            take2 = f(i+1 , nums2[i], count + 1 , nums1 , nums2 );
+        else if((nums1[i] >= prev && nums2[i] >= prev )|| prev == Integer.MAX_VALUE){
+            // System.out.println(" This is the take when both have great value " + i );
+            take = Math.max(1 + f(i+1 , nums1[i] , nums1 , nums2) , 1 + f(i+1 , nums2[i] , nums1 , nums2));
         }
-
-        int ans =  Math.max(count, Math.max(take1, take2));
-        map.put(key , ans);
-        return ans ; 
-
-
+        else if(nums1[i] >= prev ){
+            take = 1 + f(i+1 , nums1[i] , nums1 , nums2);
+        }
+        else if(nums2[i] >= prev){
+           take =  1 + f(i+1 , nums2[i] , nums1 , nums2);
+        }
+        dp.put(key , take) ;
+        return take ; 
     }
     public int maxNonDecreasingLength(int[] nums1, int[] nums2) {
-        int max = Integer.MIN_VALUE;
-        map = new HashMap<>();
-        for(int i = 0 ; i < nums1.length ; i++){
-            max = Math.max(max , f(i , -1 , 0 ,nums1 , nums2));
-        }
-        return max ; 
+        n = nums1.length;
+        dp = new HashMap<>(); 
+        return f(0, Integer.MAX_VALUE , nums1 , nums2);
     }
 }
