@@ -23,7 +23,7 @@ class Solution {
     }
     public int longestIdealString(String s, int k) {
         n = s.length();
-        dp = new Integer[n+1][200];
+        dp = new Integer[n+1][123];
  
         return f(0 ,'#',s , k );
     }
