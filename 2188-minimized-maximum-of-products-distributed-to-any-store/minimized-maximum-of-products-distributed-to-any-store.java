@@ -14,11 +14,14 @@ class Solution {
     }
     public int minimizedMaximum(int n, int[] quantities) {
         // We have an int n indicating there are n specialty retails store  m product types of varying amounts which are given as 0 indexed integer array 
-
+        int max = 0 ; 
         /// Minimize the maximum it shouts at me its binary search on answer problem lmao 
+        for(int i = 0 ; i < quantities.length ; i++){
+            max = Math.max(quantities[i] , max);
+        }
 
         int left = 1 ; 
-        int right = 1000000;
+        int right = max;
         int ans = 0; 
         while(left <= right){
             int mid = left + (right - left) / 2; 
