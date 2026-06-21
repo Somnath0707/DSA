@@ -1,20 +1,26 @@
 class Solution {
+    Map<String , Boolean> map ; 
     public boolean f(int i ,  long prev , int started ,  String s ) {
         if(i == s.length() && started > 1){
             return true; 
         }
+
+        String key = i + "#" + prev +  "#"+ started; 
+
+        if(map.containsKey(key)) return map.get(key); 
 
         boolean ans = false; 
         long num = 0 ; 
         for(int j = i ; j < s.length() ; j++){
             int digit = s.charAt(j) - '0';
             num = num * 10 + digit; 
-
+            if(prev < num && prev != -1) break; 
             if(prev == -1 || num == prev-1){
                ans = ans || f(j+1 , num ,started+1, s);
             }
         }
 
+        map.put(key ,  ans); 
         return ans; 
     }
     public boolean splitString(String s) {
@@ -26,6 +32,7 @@ class Solution {
 
         // we can use a for loop and try like string partation
         // then we can try the next chooice 
+        map = new HashMap<>(); 
         return f(0 , -1 ,0,  s); 
     }
 }
