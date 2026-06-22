@@ -8,9 +8,10 @@ class Solution {
             char ch2 = str2.charAt(i); 
 
             if(ch1 != ch2) count++; 
-            if(count > 1) return false; 
+            // if(count > 1) return false; 
         }
         if(count == 0) return false; 
+        if(count > 1 ) return false; 
         return true;
     }
     public int countSubstrings(String s, String t) {
