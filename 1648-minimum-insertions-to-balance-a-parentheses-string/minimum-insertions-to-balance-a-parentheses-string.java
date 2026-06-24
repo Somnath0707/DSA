@@ -33,8 +33,8 @@ class Solution {
 
         }
 
-        System.out.println(ans);
-        System.out.println(countClose + " " + countOpen);
+        // System.out.println(ans);
+        // System.out.println(countClose + " " + countOpen);
 
         if(countOpen != 0){
             ans += countOpen * 2 - countClose; 
