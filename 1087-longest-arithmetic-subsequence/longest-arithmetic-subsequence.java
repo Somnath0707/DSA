@@ -18,7 +18,7 @@ class Solution {
                 ans = Math.max(ans, 1 + f(j, newDiff, nums));
                 // 3. MAGIC FIX: We found the next number in the sequence! 
                 // Stop looping. Any identical number further down is just worse.
-                break; 
+                // break; 
             }
             else if(diff == 1001){ // 1001 is our new "1000" flag
                 ans = Math.max(ans, 1 + f(j, newDiff, nums));
