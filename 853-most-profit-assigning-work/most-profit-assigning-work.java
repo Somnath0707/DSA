@@ -20,14 +20,10 @@ class Solution {
             map.put(diff , prof);
         }
         int n = worker.length;  
-        int max = 0 ; 
-        for(int i = 0 ; i < n ; i++){
-            // System.out.println(worker[i]);
-            max = Math.max(max , worker[i]);
-        }
+        int max = 100000; 
+
 
         // System.out.println("before the worker");
-        System.out.println(max);
         int arr[] = new int[max+1]; 
         for(int i = 1; i < arr.length ; i++){
             if(map.containsKey(i)){
