@@ -1,42 +1,54 @@
 class Solution {
     public int maximumLength(int[] nums) {
-        Map<Integer , Integer> map = new HashMap<>();
-        for(int n : nums){
-            map.put(n , map.getOrDefault(n , 0 ) + 1 ) ; 
+        // 2 : 2 
+        // 4 : 1 
+        // 5 : 1
+        // 1  2  2 4 5 
+        Map<Integer,Integer> map = new HashMap<>(); 
+
+        for(int i = 0 ; i < nums.length ; i++){
+            map.put(nums[i] , map.getOrDefault(nums[i] , 0 ) + 1 ) ; 
+        }
+        int ans = 0; 
+        
+        int arr[] = new int[map.size()]; 
+        int ind = 0 ; 
+        for(int n: map.keySet()){
+            arr[ind++] = n; 
         }
 
-        int max = 0 ; 
-        // handle the one case 
+        Arrays.sort(arr);
+
         if(map.containsKey(1)){
-            int freq = map.get(1);
-            if(freq % 2 == 0) freq--;   // make it odd
-            max = freq;
+            int num = map.get(1);
+            if(num %2 == 0) ans = num -1 ; 
+            else ans = num ; 
         }
 
-        for(Map.Entry<Integer , Integer> entry : map.entrySet()){
-            int key = entry.getKey();
-            int count = 0; 
+        for(int n : arr){
+            if(n == 1 )continue; 
+            if(map.get(n) >= 2){
+                int collect = 0 ; 
+                long next = n;
 
-            long n = key;
-            if(key == 1 ) continue;
-
-            while(map.containsKey((int)n)){
-                int freq = map.get((int)n);
-
-                if(freq >= 2){
-                    count += 2 ; 
+                while(map.containsKey((int)next)) {
+                    int curr = map.get((int)next);
+                    if(curr >= 2){
+                        collect+=2 ; 
+                        next = next * next ; 
+                    }
+                    else {
+                        collect += 1; 
+                        break ; 
+                    }
                 }
-                else{
-                    count++;
-                    break;
+                if(collect %2 == 0 ){
+                    collect-=1 ; 
                 }
-
-                if( n > 1e9) break;
-                n  = n * n ;
+                ans = Math.max(ans , collect ) ; 
             }
-            if(count % 2 == 0 ) count--; 
-            max = Math.max(count, max);
         }
-        return max; 
+        if(ans == 0 ) return 1 ; 
+        return ans;
     }
 }
