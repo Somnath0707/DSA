@@ -1,75 +1,48 @@
 class Solution {
     public long minDamage(int power, int[] damage, int[] health) {
-        // we have power and two inte arr damge and health boht having length n 
-
-        // bob ah n enemy where enemy i will deal bob damge[i] points per sec while they are alive helath[i] > 0 
-
-        // every sec after the emenis deal damge to bob he chooses one of the enemies that is still alive and deals power points of damge to them 
-
-        // deteremine the minimum toatl amount of damge point that wil be dealt to bob before all n enemies are dead 
         int n = damage.length;
-        int temp[][] = new int[n][3];
+        
+        // FIX 1: Change to double[][] so we can store exact decimal ratios
+        double temp[][] = new double[n][3];
         long totalDamage = 0 ; 
+        
         for(int i = 0 ; i < n ; i++){
             temp[i][0] = damage[i]; 
             int currHealth = health[i]; 
             totalDamage += damage[i]; 
+            
+            // Your exact time logic (perfect)
             int totalTime = currHealth / power ; 
-
             if(currHealth % power != 0 ) {
                 totalTime = currHealth / power + 1; 
             }
             temp[i][1] = totalTime;
 
-            int ratio = damage[i] / totalTime; 
-            
-            if(damage[i] < totalTime  ) ratio = 0 ;
-            else if(damage[i] % totalTime != 0){
-                ratio += 1 ; 
-            }
-            System.out.println( damage[i] + " " + totalTime + " " +  ratio);
-
-
-
-            
+            // FIX 2: Just use a standard double division! No manual ceiling needed.
+            // 6 / 5 becomes 1.2 instead of getting crushed to 1 or 2.
+            double ratio = (double) damage[i] / totalTime; 
             
             temp[i][2] = ratio; 
-            System.out.println(temp[i][0] + " " + temp[i][1] + " " + temp[i][2]);
-            System.out.println(" temp ");
         }
 
-        
-
-        Arrays.sort(temp, (a, b) -> {
-            // Cross-multiply to compare (Damage_B / Time_B) vs (Damage_A / Time_A)
-            // Value B = Damage_B * Time_A
-            // Value A = Damage_A * Time_B
-            long valueB = (long) b[0] * a[1]; 
-            long valueA = (long) a[0] * b[1]; 
-            
-            return Long.compare(valueB, valueA);
+        // Your exact sorting logic, just using Double.compare since the array is double[][]
+        Arrays.sort(temp , (a,b)-> {
+            if(b[2] != a[2]) return Double.compare(b[2] , a[2]);
+            if(b[0] != a[0]) return Double.compare(b[0] , a[0]);
+            return Double.compare(a[1] , b[1]);
         });
-
-        for(int i =0 ; i < n ; i++){
-            int currDamage = temp[i][0]; 
-            int totalTime = temp[i][1]; 
-            int ratio = temp[i][2]; 
-
-            System.out.println(currDamage + " " + totalTime + " " + ratio );
-        }
 
         long taken = 0 ; 
         for(int i = 0 ; i < n ; i++){
-            int curr[] = temp[i]; 
-            int currDamage = curr[0]; 
-            int time = curr[1]; 
+            // Cast back to int for your math
+            int currDamage = (int) temp[i][0]; 
+            int time = (int) temp[i][1]; 
 
-            taken += 1L *  totalDamage * time; 
+            // Your exact tracking logic (perfect)
+            taken += 1L * totalDamage * time; 
             totalDamage -= currDamage;
-            
         }
 
         return taken ; 
-
     }
 }
