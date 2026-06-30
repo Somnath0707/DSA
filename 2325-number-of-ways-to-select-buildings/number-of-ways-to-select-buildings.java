@@ -1,12 +1,9 @@
 class Solution {
     Long dp[][][]; 
     public long f(int i , int prev , int len, String s){
-        if( i == s.length()){
-            if(len == 3) return 1 ;
-            return 0; 
-        }
 
         if( len == 3 ) return 1; 
+        if(i == s.length()) return 0 ; 
 
         if(dp[i][prev][len] != null) return dp[i][prev][len]; 
 
