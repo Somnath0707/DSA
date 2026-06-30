@@ -16,7 +16,7 @@ class Solution {
                     if(prev != st.peek()){
                         streak = 1; 
                     }
-                    if(prev == st.peek()){
+                    else if(prev == st.peek()){
                         streak++; 
                     }
                     ans += streak;
