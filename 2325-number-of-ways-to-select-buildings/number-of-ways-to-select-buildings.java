@@ -1,11 +1,11 @@
 class Solution {
-    Long dp[][][]; 
+    long dp[][][]; 
     public long f(int i , int prev , int len, String s){
 
         if( len == 3 ) return 1; 
         if(i == s.length()) return 0 ; 
 
-        if(dp[i][prev][len] != null) return dp[i][prev][len]; 
+        if(dp[i][prev][len] != -1) return dp[i][prev][len]; 
 
         long take = 0 ; 
         long skip = 0;
@@ -23,7 +23,12 @@ class Solution {
     }
     public long numberOfWays(String s) {
         int n = s.length(); 
-        dp = new Long [n][3][4];
+        dp = new long [n][3][4];
+        for(int i =0 ; i < n ; i++){
+            for(int j = 0 ; j < 3 ; j++){
+                Arrays.fill(dp[i][j] , -1 ) ; 
+            }
+        }
 
         return f(0 , 2 , 0  ,s);
     }
