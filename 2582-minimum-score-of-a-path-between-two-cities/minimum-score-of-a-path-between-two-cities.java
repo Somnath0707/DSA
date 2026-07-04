@@ -21,10 +21,8 @@ class Solution {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a,b) -> Integer.compare(a[1] ,b[1]));
 
         pq.offer(new int[]{1 , Integer.MAX_VALUE });
-        boolean vis[] = new boolean[n+1]; 
 
         min[1] = Integer.MAX_VALUE ; 
-        vis[1] = true; 
 
         while(!pq.isEmpty()){
             int curr[] = pq.poll(); 
@@ -41,7 +39,6 @@ class Solution {
 
                 min[nextNode] = newMin;
                 pq.offer(new int[]{nextNode , newMin});
-                vis[nextNode] = true; 
             }
         }
 
