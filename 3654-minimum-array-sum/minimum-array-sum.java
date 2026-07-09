@@ -1,10 +1,10 @@
 class Solution {
-    Integer dp[][][]; 
+    int dp[][][]; 
     public int f(int i  , int op1 , int op2 , int k , int nums[]){
         if(i == nums.length) return 0 ; 
 
         int ans = Integer.MAX_VALUE ; 
-        if(dp[i][op1][op2] != null ) return dp[i][op1][op2]; 
+        if(dp[i][op1][op2] != -1 ) return dp[i][op1][op2]; 
 
         if(op1 > 0 && op2 >0){
             double num = nums[i]; 
@@ -48,12 +48,12 @@ class Solution {
         // its dp 
         // at each point try doing all like trying doing operation 1 or operation 2 or no operation and to the answer add the number and try to get the min number the state could be the i , op op2 which would go on changing 
         int n= nums.length; 
-        dp = new Integer [n][op1+1][op2+1]; 
-        // for(int i =0 ; i < n ; i++){
-        //     for(int j = 0 ; j < op1+1 ; j++){
-        //         Arrays.fill(dp[i][op1] , -1);
-        //     }
-        // }
+        dp = new int [n][op1+1][op2+1]; 
+        for(int i =0 ; i < n ; i++){
+            for(int j = 0 ; j <= op1 ; j++){
+                Arrays.fill(dp[i][j] , -1);
+            }
+        }
         return f(0 , op1 , op2 , k , nums);
     }
 }
