@@ -1,5 +1,5 @@
 class Solution {
-    HashSet<String> set ; 
+    HashMap<String, Boolean> set ; 
     public boolean f(int i ,int j , int taken , String s , String t){
         if(i >= s.length()) return true; 
         if(j == t.length()){
@@ -9,7 +9,7 @@ class Solution {
 
         String key = i + "#" + j + "#" + taken;
 
-        if(set.contains(key)) return false; 
+        if(set.containsKey(key)) return set.get(key); 
 
         if ((s.length() - i) > (t.length() - j)) {
             return false;
@@ -26,7 +26,7 @@ class Solution {
                 ans = f(i , j+1 , taken , s , t);
             }
         }
-        if(!ans) set.add(key);
+        set.put(key , ans);
 
         return ans; 
 
@@ -42,7 +42,7 @@ class Solution {
         // so for cat and chat c matchs for a and h 
         // we can either change it we can move i ahead or we can move j ahead 
         // if we chnage then i moves j also move if we just move i aheat we dont get teh value  if we move the j ahead then we get a then we can again move both i and j ahead
-        set = new HashSet<>(); 
+        set = new HashMap<>(); 
         int n = s.length(); 
         int m = t.length();
         
