@@ -35,12 +35,12 @@ class Solution {
                 ans = Math.max(ans, n - rightVal );
                 ans = Math.max(ans ,leftVal);
                 continue; 
-            }else{
-            int temp = n-rightVal+1 + ((rightVal - leftVal) / 2);
-            int temp2 = leftVal + ((rightVal - leftVal) / 2);
-            ans = Math.max(ans , temp);
-            ans = Math.max(ans , temp2);
             }
+            // int temp = n-rightVal+1 + ((rightVal - leftVal) / 2);
+            // int temp2 = leftVal + ((rightVal - leftVal) / 2);
+            // ans = Math.max(ans , temp);
+            // ans = Math.max(ans , temp2);
+            // }
         }
         while(!right.isEmpty())
         ans = Math.max(ans , n - right.poll());
