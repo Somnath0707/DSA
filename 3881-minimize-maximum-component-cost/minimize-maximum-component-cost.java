@@ -38,11 +38,11 @@ class Solution {
         return component; 
     }
     public int minCost(int n, int[][] edges, int k) {
-        Arrays.sort(edges , (a,b)-> a[2] - b[2]);
+        // Arrays.sort(edges , (a,b)-> a[2] - b[2]);
         if(n == k) return 0 ; 
         int left = 1 ; 
         int m = edges.length; 
-        int right = edges[m-1][2];
+        int right = 10000000;
         int ans = 0 ; 
         while(left <= right){
             int mid = left + (right - left ) / 2 ;
