@@ -10,7 +10,8 @@ class Solution {
                 one++; 
             }
             else if(startCount){
-                if(s.charAt(i) =='0'){ zero++; 
+                if(s.charAt(i) =='0'){ 
+                    zero++; 
                 zero = Math.min(zero , one);
                 }
                 else one++; 
