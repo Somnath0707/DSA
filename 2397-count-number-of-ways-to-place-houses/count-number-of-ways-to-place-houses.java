@@ -1,12 +1,12 @@
 class Solution {
     int MOD = 1000000007; 
-    Integer dp[][]; 
+    int dp[][]; 
     public int f(int i , int taken , int n ){
         if( i == n ){
             return 1; 
         }
 
-        if(dp[i][taken] != null ) return dp[i][taken]; 
+        if(dp[i][taken] != -1 ) return dp[i][taken]; 
 
         long take = 0 ; 
 
@@ -21,7 +21,10 @@ class Solution {
         return dp[i][taken] = (int)take % MOD; 
     }
     public int countHousePlacements(int n) {
-        dp = new Integer[n][2]; 
+        dp = new int[n][2]; 
+        for(int i = 0 ; i < n ; i++){
+            Arrays.fill(dp[i] , -1 ) ; 
+        }
         int oneSide = f(0 , 0 , n );
         // int allEmpty = 1; 
         // int oppPos = n
