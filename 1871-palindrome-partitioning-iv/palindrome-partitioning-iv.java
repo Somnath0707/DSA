@@ -22,13 +22,10 @@ class Solution {
 
          boolean[][] isPal = new boolean[n][n];
         
-        // Build the table: lengths 1 to n
         for (int length = 1; length <= n; length++) {
             for (int i = 0; i <= n - length; i++) {
                 int j = i + length - 1;
                 if (s.charAt(i) == s.charAt(j)) {
-                    // A string is a palindrome if its outer chars match 
-                    // AND its inner string is a palindrome (or it's length 1 or 2)
                     if (length <= 2) {
                         isPal[i][j] = true;
                     } else {
@@ -40,14 +37,6 @@ class Solution {
         return f(1 , n-2 , s , isPal);
 
 
-    }
-    public boolean isPalindrome(String s , int l , int r ){
-        while (l < r) {
-            if (s.charAt(l) != s.charAt(r)) return false;
-            l++;
-            r--;
-        }
-        return true;
     }
 }
 // /"abcbdd"
