@@ -1,71 +1,44 @@
-import java.util.Arrays;
-
 class Solution {
-    // Calculates the mutated sum if the array is capped at value 'i'
-    public int getMutatedSum(int i, int[] nums, int[] prefixSum) {
-        int left = 0; 
-        int right = nums.length - 1;
-        int ans = -1;  
+    public int check(int mid , int nums[] , int target){
+        int val = 0 ; 
         int n = nums.length; 
-        
-        // Binary search to find the FIRST element >= i
-        while (left <= right) {
-            int mid = left + (right - left) / 2; 
-            if (nums[mid] >= i) {
-                ans = mid; 
-                right = mid - 1; 
-            } else {
-                left = mid + 1; 
+        for(int i =0 ; i < n ; i++){
+            if(nums[i] > mid){
+                val+=mid; 
+            }
+            else {
+                val += nums[i]; 
             }
         }
-        
-        // If all elements are smaller than i, the array sum doesn't change
-        if (ans == -1) return prefixSum[n - 1];
-        
-        // If the very first element is >= i, ALL elements are capped to i
-        if (ans == 0) return n * i;
-        
-        // Otherwise: elements before 'ans' stay as they are, 
-        // and elements from 'ans' onwards are capped to 'i'
-        return prefixSum[ans - 1] + (n - ans) * i; 
+        return val ; 
     }
-
     public int findBestValue(int[] arr, int target) {
-        Arrays.sort(arr);
+        int max = 0 ; 
         int n = arr.length; 
-        int[] prefixSum = new int[n]; 
-        prefixSum[0] = arr[0]; 
-        for (int i = 1; i < n; i++) {
-            prefixSum[i] = prefixSum[i - 1] + arr[i]; 
+        for(int i = 0 ; i < n ; i++){
+            max = Math.max(max , arr[i]);
         }
-        
-        // Binary search space for 'i'
-        int low = 0;
-        int high = arr[n - 1]; // The cap never needs to be higher than the max element
-        int bestValue = 0;
-        int minDiff = Integer.MAX_VALUE;
-        
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            int currentSum = getMutatedSum(mid, arr, prefixSum);
-            int currentDiff = Math.abs(target - currentSum);
+
+        int maxDiff = Integer.MAX_VALUE; 
+        int left = 0 ; 
+        int right = max ; 
+        int prevDiff = Integer.MAX_VALUE; 
+        int ans = 0 ; 
+        while(left <= right){
+            int mid = left + (right - left) / 2; 
+            int currSum = check(mid  , arr , target);
+            int currDiff = Math.abs (target-currSum);
             
-            // Update the closest value found so far
-            // LeetCode condition: "If there is a tie, return the minimum integer"
-            if (currentDiff < minDiff || (currentDiff == minDiff && mid < bestValue)) {
-                minDiff = currentDiff;
-                bestValue = mid;
+            if(currDiff < maxDiff || currDiff == maxDiff && mid < ans){
+                ans = mid; 
+                maxDiff = currDiff; 
             }
-            
-            // If the current sum is less than target, we need a larger cap to increase the sum
-            if (currentSum < target) {
-                low = mid + 1;
-            } else { 
-                // If current sum >= target, we try smaller caps to see if we can get closer
-                high = mid - 1;
+            else if( currSum < target){
+                left = mid+1; 
+            }else {
+                right = mid-1; 
             }
         }
-        
-        return bestValue;
+        return ans; 
     }
 }
