@@ -27,3 +27,5 @@ class Solution {
       return f(0 , 1, nums);
     }
 }
+
+// In some other timeline all the hards are this level and the problem over 1700 rating never existed and I wish I was born in that universe 
