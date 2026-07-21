@@ -1,5 +1,5 @@
 class Solution {
-    Map<String , String> dp; 
+   String dp[][]; 
     public String check(String str , String str2){
         if(str.equals("Invalid") ) return str2; 
         if(str2.equals("Invalid")) return str; 
@@ -24,9 +24,7 @@ class Solution {
             return "Invalid"; 
         }
 
-        String key = i + "#" + cost ; 
-
-        if(dp.containsKey(key)) return dp.get(key); 
+        if(!dp[i][cost].equals("-1")) return dp[i][cost]; 
 
         String take = "Invalid";
         String skip = "Invalid";
@@ -41,7 +39,7 @@ class Solution {
 
         String ans =  check(take , skip); 
 
-        dp.put(key , ans) ;
+        dp[i][cost] = ans ; 
         return ans; 
     }
     public String largestNumber(int[] nums, int target) {
@@ -50,7 +48,10 @@ class Solution {
         // 1. The cost of painting a digit (i+1) is given by cost[i]
         // 2.The total cost used must be equal to target
         // 3. The integer does not have 0 digits
-        dp = new HashMap<>(); 
+        dp = new String[10][5001];
+        for(int i = 0 ; i < 10 ; i++){
+            Arrays.fill(dp[i] , "-1");
+        }
         String ans =  f(1 , 0 , target , nums);
         if(ans.equals("Invalid")) return "0" ; 
         return ans; 
