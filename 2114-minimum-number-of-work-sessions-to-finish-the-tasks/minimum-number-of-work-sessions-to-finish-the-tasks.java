@@ -8,8 +8,11 @@ class Solution {
         
 
         if( i == nums.length){
-            if(totalTime == 0) return 1000000009;
-            return 1 + f(0 , 0 , mask , nums) ;
+             if (mask == (1 << nums.length) - 1) {
+                return 0; 
+            }
+            return 1000000009;
+            // return 1 + f(0 , 0 , mask , nums) ;
         } 
         if(dp[i][totalTime][mask] != null ) return dp[i][totalTime][mask]; 
 
@@ -20,7 +23,7 @@ class Solution {
         int take = 1000000009 ; 
 
         if(totalTime + nums[i] <= target){
-            int takeFirst = f(i+1, totalTime + nums[i] , mask | (1 << i), nums);  
+            int takeFirst = f(0, totalTime + nums[i] , mask | (1 << i), nums);  
             int skipDirect = f(i+1 , totalTime  , mask , nums); 
             int newSession = 1 + f(0 , nums[i] , mask | (1 << i) , nums); 
 
