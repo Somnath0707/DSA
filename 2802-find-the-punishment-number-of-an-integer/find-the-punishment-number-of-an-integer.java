@@ -1,5 +1,5 @@
 class Solution {
-    Boolean dp[][]; 
+    // Boolean dp[][]; 
     public boolean  f(int i , int sum ,  int target , String str ){
         if(i == str.length()){
             if( sum == target ) return true; 
@@ -7,20 +7,20 @@ class Solution {
         }
         if (sum > target) return false;
 
-        if(dp[i][sum] != null) return dp[i][sum]; 
+        // if(dp[i][sum] != null) return dp[i][sum]; 
         boolean take = false; 
 
         for(int ind = i ; ind < str.length() ; ind++){
             int add = Integer.parseInt(str.substring(i , ind+1));
-            if(f(ind+1 , sum+add , target , str)) return dp[i][sum] = true; 
+            if(f(ind+1 , sum+add , target , str)) return true; 
         }
 
-        return dp[i][sum] =  false; 
+        return  false; 
     }
     boolean check(int val , int i ){
        String str = String.valueOf(val); 
        int target = i ; 
-        dp = new Boolean[8][1001]; 
+        // dp = new Boolean[8][1001]; 
        return f(0 ,0, target , str); 
     }
     public int punishmentNumber(int n) {
