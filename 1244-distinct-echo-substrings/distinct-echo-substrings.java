@@ -1,40 +1,41 @@
-class RolllingHash{
-    long MOD = 1000000007; 
-    long base = 31; 
+class RolllingHash {
+    long MOD = 1000000007;
+    long base = 31;
 
-    long pow[]; 
-    long hash[]; 
+    long pow[];
+    long hash[];
 
-    RolllingHash(String s){
-        int n = s.length(); 
+    RolllingHash(String s) {
+        int n = s.length();
 
-        pow = new long[n+1] ; 
-        hash = new long[n]; 
+        pow = new long[n + 1];
+        hash = new long[n];
 
-        pow[0] = 1; 
+        pow[0] = 1;
 
-        for(int i = 1 ; i <= n ; i++){
-            pow[i] = (pow[i-1] * base) % MOD; 
+        for (int i = 1; i <= n; i++) {
+            pow[i] = (pow[i - 1] * base) % MOD;
         }
 
-        hash[0] = s.charAt(0) - 'a' + 1; 
+        hash[0] = s.charAt(0) - 'a' + 1;
 
-        for(int i = 1 ; i < n ; i++){
-            hash[i] = ((hash[i-1] * base) +( s.charAt(i) -'a' + 1) )% MOD;
+        for (int i = 1; i < n; i++) {
+            hash[i] = ((hash[i - 1] * base) + (s.charAt(i) - 'a' + 1)) % MOD;
         }
     }
 
-    long getHash(int l , int r){
-        if( l == 0) return hash[r]; 
+    long getHash(int l, int r) {
+        if (l == 0)
+            return hash[r];
 
-        long ans = (hash[r] - hash[l-1] * pow[r-l + 1]) % MOD; 
+        long ans = (hash[r] - hash[l - 1] * pow[r - l + 1]) % MOD;
 
-        if(ans < 0 ) ans+= MOD; 
+        if (ans < 0)
+            ans += MOD;
 
-        return ans; 
+        return ans;
     }
 }
-
 
 class Solution {
 
@@ -47,25 +48,33 @@ class Solution {
 
         // ex : abcabcabc for trie 1 a then we move to for loop i+1 b not match ab next not abc i+1 abc ok we found once we only have to go thill the n/2 abca no abcba no stop so now start from b 
         // the time complexity would be n^2 log n most probably checking all substring but the trie check is direct so may be or I could be wrong 
-        RolllingHash re = new RolllingHash(text); 
+        RolllingHash re = new RolllingHash(text);
 
-        int ans = 0 ; 
-        int n = text.length();  
-        Set<String> set = new HashSet<>();
-        for(int i = 0 ; i < n ; i++){
-            for(int j = i ; j < n ; j++){
-                int left = i ; 
-                int right = j ; 
-                if(j-i+1 > n-j-1) break; 
-                int newLeft = j+1 ; 
-                int newRight = newLeft + (j-i); 
-                if(set.contains(text.substring(i , j+1))) continue; 
-                if(re.getHash(left , right) == re.getHash(newLeft , newRight)){
-                    set.add(text.substring(i , j+1));
-                     ans++; 
-                }
+        int ans = 0;
+        int n = text.length();
+        // Set<String> set = new HashSet<>();
+        Set<Long> set = new HashSet<>();
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                int left = i;
+                int right = j;
+                if (j - i + 1 > n - j - 1)
+                    break;
+                int newLeft = j + 1;
+                int newRight = newLeft + (j - i);
+               
+
+                long halfHash = re.getHash(i, j);
+
+                if (set.contains(halfHash))
+                    continue;
+
+                if (halfHash == re.getHash(newLeft, newRight)) {
+                    set.add(halfHash);
+                    ans++;
                 }
             }
-        return ans; 
+        }
+        return ans;
     }
 }
