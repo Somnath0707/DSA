@@ -49,10 +49,8 @@ class Solution {
 
             if(rh.getHash(left , right) == rh.getHash(newLeft , newRight)){
                 int currMax = right - left + 1; 
-                if(currMax > maxLen){
                     maxLeft = left; 
                     maxRight = right; 
-                }
             }
         }
 
@@ -60,3 +58,5 @@ class Solution {
         return s.substring(maxLeft , maxRight+1);
     }
 }
+
+// I had struggled so much previously with this problem but couldn't solve it, but toady I solved echo substring where I just learned the concept of the rolling hash and oh boy this was just cake walk
