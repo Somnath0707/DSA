@@ -52,8 +52,8 @@ class Solution {
 
         int ans = 0;
         int n = text.length();
-        // Set<String> set = new HashSet<>();
-        Set<Long> set = new HashSet<>();
+        Set<String> set = new HashSet<>();
+        // Set<Long> set = new HashSet<>();
         for (int i = 0; i < n; i++) {
             for (int j = i; j < n; j++) {
                 int left = i;
@@ -64,15 +64,15 @@ class Solution {
                 int newRight = newLeft + (j - i);
                
 
-                long halfHash = re.getHash(i, j);
-
-                if (set.contains(halfHash))
-                    continue;
-
-                if (halfHash == re.getHash(newLeft, newRight)) {
-                    set.add(halfHash);
-                    ans++;
+                String tempLeft = text.substring(left , right+1); 
+                if(set.contains(tempLeft))continue; 
+                String tempRight = text.substring(newLeft , newRight+1); 
+                if(tempLeft.equals(tempRight)){
+                    ans++; 
+                    set.add(tempLeft);
                 }
+                
+
             }
         }
         return ans;
