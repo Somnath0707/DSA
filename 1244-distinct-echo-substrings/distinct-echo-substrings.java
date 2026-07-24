@@ -40,41 +40,36 @@ class RolllingHash {
 class Solution {
 
     public int distinctEchoSubstrings(String text) {
-        // cant i use bitmask dp here
 
-        // or trie 
-
-        // the trie could be we generrate a trie for in for loop and try to check with for loop + 1 till the lenth of that currnet trie; 
-
-        // ex : abcabcabc for trie 1 a then we move to for loop i+1 b not match ab next not abc i+1 abc ok we found once we only have to go thill the n/2 abca no abcba no stop so now start from b 
-        // the time complexity would be n^2 log n most probably checking all substring but the trie check is direct so may be or I could be wrong 
-        RolllingHash re = new RolllingHash(text);
-
-        int ans = 0;
+        Set<String> set = new HashSet<>();
         int n = text.length();
-        // Set<String> set = new HashSet<>();
-        Set<Long> set = new HashSet<>();
+
         for (int i = 0; i < n; i++) {
+
             for (int j = i; j < n; j++) {
-                int left = i;
-                int right = j;
-                if (j - i + 1 > n - j - 1)
-                    break;
-                int newLeft = j + 1;
-                int newRight = newLeft + (j - i);
-               
 
-                long halfHash = re.getHash(i, j);
+                int len = j - i + 1;
 
-                if (set.contains(halfHash))
+                if ((len & 1) == 1)
                     continue;
 
-                if (halfHash == re.getHash(newLeft, newRight)) {
-                    set.add(halfHash);
-                    ans++;
+                int mid = i + len / 2;
+
+                boolean same = true;
+
+                for (int k = 0; k < len / 2; k++) {
+
+                    if (text.charAt(i + k) != text.charAt(mid + k)) {
+                        same = false;
+                        break;
+                    }
                 }
+
+                if (same)
+                    set.add(text.substring(i, j + 1));
             }
         }
-        return ans;
+
+        return set.size();
     }
 }
