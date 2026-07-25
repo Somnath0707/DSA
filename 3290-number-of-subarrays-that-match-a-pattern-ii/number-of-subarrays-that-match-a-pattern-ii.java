@@ -44,7 +44,7 @@ class Solution {
             else if(nums[i] == nums[i+1]){
                 arr[i] = 0 ; 
             }else arr[i] = 1; 
-            System.out.print(arr[i] + " " );
+            // System.out.print(arr[i] + " " );
         }
         RollingHash re = new RollingHash(arr); 
         RollingHash rh = new RollingHash(pattern); 
@@ -54,8 +54,8 @@ class Solution {
             int left = i ; 
             int right = i + size-1; 
             if(re.getHash(left , right) == rh.getHash(0 , pattern.length-1)){
-                System.out.println(re.getHash(left , right));
-                System.out.println(rh.getHash(0 , pattern.length-1));
+                // System.out.println(re.getHash(left , right));
+                // System.out.println(rh.getHash(0 , pattern.length-1));
                 count++; 
             }
         }
