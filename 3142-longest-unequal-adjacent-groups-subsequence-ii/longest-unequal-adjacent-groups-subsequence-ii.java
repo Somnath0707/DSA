@@ -1,7 +1,6 @@
 class Solution {
     int chooice[][] ; 
-    int dp[][] ; 
-
+    int dp[][] ;
     public boolean getHamming(String one , String two){
         if(one.length() != two.length()) return false; 
         int count = 0 ; 
