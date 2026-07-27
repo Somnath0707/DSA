@@ -1,65 +1,65 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 class Solution {
-    public boolean check(int[] buses, int[] passengers, int capacity, int targetTime) {
-        int i = 0; // bus index
-        int j = 0; // passenger index
+    public boolean  check(int []nums , int arr[] , int cap , int mid){
+        int count = 0; 
+        int i = 0 ; 
+        int j = 0 ; 
 
-        while (i < buses.length) {
-            int count = 0;
-            
-            // Fill the current bus with passengers who arrived on or before bus departure
-            while (j < passengers.length && passengers[j] <= buses[i] && count < capacity) {
-                // If our target time is before/at this passenger's arrival and fits in the bus
-                if (targetTime <= passengers[j]) {
-                    return true;
-                }
-                j++;
-                count++;
+        while(i < nums.length && j < arr.length){
+            if(mid <= arr[j] && mid <= nums[i] ){
+                return true; 
             }
-            
-            // If target time is after all boarders on this bus, but before/at bus departure time
-            if (count < capacity && targetTime <= buses[i]) {
-                return true;
+            else if(arr[j] <= nums[i]){
+                j++; 
+                count++; 
             }
-
+            // else if(nums[i] < arr[j]){
+            //     i++;
+            //     count = 0; 
+            // }
+            else {
+                i++;
+                // j++; 
+                count = 0 ; 
+            }
+            if(count == cap ){
+                count = 0 ; 
+                i++; 
+            }
+        }
+        while (i < nums.length) {
+            if(mid <= nums[i])
+            return true;
             i++;
         }
-        return false;
+        return false; 
     }
-
     public int latestTimeCatchTheBus(int[] buses, int[] passengers, int capacity) {
-        Arrays.sort(buses);
+        Arrays.sort(buses); 
         Arrays.sort(passengers);
 
-        Set<Integer> set = new HashSet<>();
-        for (int p : passengers) {
-            set.add(p);
+        int left = 1; 
+        int right = buses[buses.length - 1]; 
+        int ans = 0 ; 
+
+        Set<Integer> set = new HashSet<>(); 
+        for(int i =0 ; i < passengers.length ; i++){
+            set.add(passengers[i]);
         }
+        while(left <= right){
+            int mid = left + (right - left ) / 2; 
 
-        int left = 1;
-        int right = buses[buses.length - 1]; // Latest possible time is the last bus departure
-        int bestTime = 1;
-
-        // Binary search for the maximum valid arrival time
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-
-            if (check(buses, passengers, capacity, mid)) {
-                bestTime = mid;
-                left = mid + 1; // Try to find a later time
-            } else {
-                right = mid - 1;
+            if(check(buses , passengers , capacity , mid)){
+                ans = mid; 
+                left = mid+1 ; 
+            }
+            else{
+                right = mid-1; 
             }
         }
 
-        // Post-processing: Ensure bestTime is not already taken by another passenger
-        while (set.contains(bestTime)) {
-            bestTime--;
+        while(set.contains(ans)){
+            ans--; 
         }
-
-        return bestTime;
+        return ans; 
     }
 }
