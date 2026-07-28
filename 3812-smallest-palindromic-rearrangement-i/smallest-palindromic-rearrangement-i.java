@@ -6,13 +6,13 @@ class Solution {
             int val = s.charAt(i) -'a';
             arr[val]++; 
         }
-        String str = ""; 
+        StringBuilder str = new StringBuilder();  
         int oddAt = -1; 
         for(int i = 0 ; i < arr.length ; i++){
             if(arr[i] != 1){
                 for(int j = 0 ; j < arr[i]/2 ; j++){
                     // arr[i]-=2;
-                    str = str + (char)('a' + i); 
+                    str.append((char)('a' + i)); 
                 }
                 arr[i] %= 2;
             }
@@ -24,13 +24,13 @@ class Solution {
             if(arr[i] == 1){
                 for(int j = 0 ; j < arr[i] ; j++){
                     arr[i]--; 
-                    str = str + (char)('a' + i);
+                    str = str.append((char)('a' + i));
                 }
             }
         }
         
 
-        return str + temp; 
+        return str.append(temp).toString(); 
 
         // return "";
 
