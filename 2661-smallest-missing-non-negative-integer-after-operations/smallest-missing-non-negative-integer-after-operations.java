@@ -62,9 +62,9 @@ class Solution {
             if(i >= value ){
                 // System.out.println(i + "value" + value); 
                 check = i % value; 
-                System.out.println(check); 
+                // System.out.println(check); 
             }
-            System.out.println(check); 
+            // System.out.println(check); 
             if(!map.containsKey(check))break; 
             map.put(check, map.get(check)-1);
             if(map.get(check) == 0) map.remove(check); 
