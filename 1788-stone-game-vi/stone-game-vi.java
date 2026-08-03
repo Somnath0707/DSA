@@ -8,10 +8,6 @@ class Solution {
 
         // 2 4 3 and 1 6 7 which is choice alice can make take our 3 and cost him 7 both are same so we take 3 and remove the 7 now 2 4 and 1 6 which will bob take our he can gain 6 max or he can reomve 4 lmao just take 6 both are same so 6 and 3 now alice last stone 2 so 5 and 6 bob wins no other way 
         PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->b[1]-a[1]);
-
-        // PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->b[1]-a[1]);
-
-        // Set<Integer> removed = new HashSet<>();
         int n = aliceValues.length;
         for(int i = 0 ; i < n ; i++){
             int sum = aliceValues[i] + bobValues[i];
