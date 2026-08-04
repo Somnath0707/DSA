@@ -22,7 +22,7 @@ class Solution {
         int nums[] = new int[n+1]; 
 
         nums[0] = stones[0]; 
-
+// production
         for(int i = 1 ; i < n+1 ; i++){
             nums[i] = stones[i-1] + nums[i-1]; 
         }
