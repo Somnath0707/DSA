@@ -1,66 +1,66 @@
 class Solution {
     public List<Integer> remainingMethods(int n, int k, int[][] nums) {
-        Set<Integer> sus = new HashSet<>();
-        Set<Integer> noSus = new HashSet<>();
-        int len = nums.length ; 
+        Set<Integer> sus = new HashSet<>(); 
+        Set<Integer> noSus = new HashSet<>(); 
 
-        // the the dfs of the k and then put them in sus 
+        HashMap<Integer , ArrayList<Integer>> graph = new HashMap<>(); 
 
-        // do the bfs if any one that go to the sus remove them from sus and add them to the no sus 
-         HashMap<Integer, List<Integer>> graph = new HashMap<>();
+        for(int i = 0 ; i < n ; i++){
+            graph.put(i , new ArrayList<>());
+        }
 
-        for(int[] num : nums){
-            int a = num[0];
-            int b = num[1];
-            graph.putIfAbsent(a, new ArrayList<>());
+        for(int[]num : nums){
+            int a = num[0]; 
+            int b = num[1]; 
+
             graph.get(a).add(b);
         }
-        // BFS from k
-        Queue<Integer> q = new LinkedList<>();
-        q.offer(k);
-        sus.add(k);
+        
+        Queue<Integer> q = new LinkedList<>(); 
+        sus.add(k); 
+
+        q.offer(k); 
 
         while(!q.isEmpty()){
-            int node = q.poll();
-            if(graph.containsKey(node)){
-                for(int nei : graph.get(node)){
-                    if(!sus.contains(nei)){
-                        sus.add(nei);
-                        q.offer(nei);
-                    }
+            int temp = q.poll(); 
+            for(int val : graph.get(temp)){
+                if(!sus.contains(val)){
+                    sus.add(val);
+                    q.offer(val); 
                 }
             }
         }
 
+        /// we have got all the suspect 
 
         for(int num[] : nums){
-            int a = num[0];
-            int b = num[1];
+            int a = num[0]; 
+            int b = num[1]; 
+
             if(!sus.contains(a) && sus.contains(b)){
-
-            ArrayList<Integer> all = new ArrayList<>();
-
-            for(int i = 0; i < n; i++){
-                all.add(i);
-            }
-
-            return all;
-}
-        }
-
-        ArrayList<Integer> list = new ArrayList<>();
-
-        for(int i = 0; i < n; i++){
-
-            if(!sus.contains(i)){
-                list.add(i);
+                List<Integer> list = new ArrayList<>(); 
+                for(int i = 0 ; i < n ; i++){
+                    list.add(i); 
+                }
+                return list; 
             }
         }
 
-        return list ;
+    
 
+        
         
 
 
+        ArrayList<Integer> ans = new ArrayList<>(); 
+
+        for(int i = 0 ; i < n ; i++){
+            if(!sus.contains(i)){
+                ans.add(i); 
+            }
+        }
+
+
+        return ans; 
     }
 }
