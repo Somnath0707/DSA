@@ -34,7 +34,7 @@ class Solution {
     }
     public int palindromePartition(String s, int k) {
         if(k == s.length() ) return 0 ; 
-        dp = new Integer[s.length()][1000];
+        dp = new Integer[s.length()][100];
         return f(0 , 0 , s ,k);
 
     }
