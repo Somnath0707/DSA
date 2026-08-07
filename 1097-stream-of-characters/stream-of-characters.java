@@ -47,17 +47,18 @@ class Trie {
     // check prefix
     public boolean searchPrefix(String s) {
         TrieNode curr = root;
+        int n = s.length(); 
+        for(int i = n-1 ; i>=0 ; i--){
+            int indx = s.charAt(i)-'a';
 
-        for (char ch : s.toCharArray()) {
-            int indx = ch - 'a';
+            if(curr.child[indx] == null )return false; 
 
-            if (curr.child[indx] == null)
-                return false;
-
-            curr = curr.child[indx];
+            curr = curr.child[indx]; 
+            if (curr.isEnd)
+            return true;
         }
 
-        return true;
+        return false;
     }
 }
 
@@ -87,25 +88,8 @@ class StreamChecker {
     }
 
     public boolean query(char letter) {
-
         s.append(letter);
-
-        int n = s.length();
-        StringBuilder temp = new StringBuilder(); 
-        for (int i = n - 1; i >= 0; i--) {
-            temp.append(s.charAt(i));
-            int len = n - i;
-
-            if (len < min)
-                continue;
-
-            if (len > max)
-                break;
-
-            if(t.search(temp.toString()))
-                return true;
-        }
-
-        return false;
+        if(t.searchPrefix(s.toString())) return true; 
+        return false; 
     }
 }
