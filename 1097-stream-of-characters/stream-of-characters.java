@@ -1,113 +1,111 @@
-class RollingHash{
-    long base = 99999991L;
+class TrieNode {
+    TrieNode[] child = new TrieNode[26];
+    boolean isEnd = false;
+}
 
-    long mod1 = 1000000007L;
-    long mod2 = 1000000009L;
+class Trie {
 
-    long hash1[];
-    long hash2[];
+    TrieNode root;
 
-    long power1[];
-    long power2[];
-
-    RollingHash(String s ){
-        int n = s.length();
-
-        hash1 = new long[n+1];
-        hash2 = new long[n+1];
-
-        power1 = new long[n+1];
-        power2 = new long[n+1];
-
-        power1[0] = 1;
-        power2[0] = 1;
-
-        for(int i = 1 ; i <= n ; i++){
-            power1[i] = (power1[i-1] * base) % mod1;
-            power2[i] = (power2[i-1] * base) % mod2;
-
-            hash1[i] = (hash1[i-1] * base + s.charAt(i-1)) % mod1;
-            hash2[i] = (hash2[i-1] * base + s.charAt(i-1)) % mod2;
-        }
+    public Trie() {
+        root = new TrieNode();
     }
 
-    public long[] getHash(int l , int r){
+    // insert a word
+    public void insert(String s) {
+        TrieNode curr = root;
 
-        long ans1 = hash1[r+1] - (hash1[l] * power1[r-l+1]) % mod1;
-        if(ans1 < 0) ans1 += mod1;
+        for (char ch : s.toCharArray()) {
+            int indx = ch - 'a';
 
-        long ans2 = hash2[r+1] - (hash2[l] * power2[r-l+1]) % mod2;
-        if(ans2 < 0) ans2 += mod2;
+            if (curr.child[indx] == null) {
+                curr.child[indx] = new TrieNode();
+            }
 
-        return new long[]{ans1, ans2};
+            curr = curr.child[indx];
+        }
+
+        curr.isEnd = true;
+    }
+
+    // search complete word
+    public boolean search(String s) {
+        TrieNode curr = root;
+
+        for (char ch : s.toCharArray()) {
+            int indx = ch - 'a';
+
+            if (curr.child[indx] == null)
+                return false;
+
+            curr = curr.child[indx];
+        }
+
+        return curr.isEnd;
+    }
+
+    // check prefix
+    public boolean searchPrefix(String s) {
+        TrieNode curr = root;
+
+        for (char ch : s.toCharArray()) {
+            int indx = ch - 'a';
+
+            if (curr.child[indx] == null)
+                return false;
+
+            curr = curr.child[indx];
+        }
+
+        return true;
     }
 }
 
 class StreamChecker {
 
-    Set<String> set;
-
-    int min = 202;
+    Trie t;
     int max = 0;
+    int min = Integer.MAX_VALUE;
 
-    boolean valid[] = new boolean[202];
-
-    StringBuilder str = new StringBuilder();
+    StringBuilder s = new StringBuilder();
 
     public StreamChecker(String[] words) {
 
-        StringBuilder str = new StringBuilder();
+        t = new Trie();
 
-        set = new HashSet<>();
+        int n = words.length;
 
-        for(String word : words){
+        for (int i = 0; i < n; i++) {
 
-            RollingHash re = new RollingHash(word);
+            StringBuilder str = new StringBuilder(words[i]);
 
-            long[] hash = re.getHash(0 , word.length()-1);
+            min = Math.min(min, str.length());
+            max = Math.max(max, str.length());
 
-            set.add(hash[0] + "#" + hash[1]);
-
-            min = Math.min(word.length() , min);
-            max = Math.max(word.length() , max);
-
-            valid[word.length()] = true;
+            t.insert(str.reverse().toString());
         }
     }
 
     public boolean query(char letter) {
 
-        str.append(letter);
+        s.append(letter);
 
-        if(str.length() < min) return false;
+        int n = s.length();
+        StringBuilder temp = new StringBuilder(); 
+        for (int i = n - 1; i >= 0; i--) {
+            temp.append(s.charAt(i));
+            int len = n - i;
 
-        if(str.length() > max){
-            str.deleteCharAt(0);
-        }
+            if (len < min)
+                continue;
 
-        RollingHash rh = new RollingHash(str.toString());
+            if (len > max)
+                break;
 
-        // i can use rolling hash if i hash the streamcheck words and then i also also hash the current i pointre to left move ahed and j is to the last so each substring
-
-        int n = str.length();
-
-        for(int i = 0 ; i < n ; i++){
-
-            int currentSuffixLength = n - i;
-
-            if (!valid[currentSuffixLength]) continue;
-
-            long[] check = rh.getHash(i , n-1);
-
-            if(set.contains(check[0] + "#" + check[1])) return true;
+            if(t.search(temp.toString()))
+                return true;
         }
 
         return false;
     }
 }
-
-/**
- * Your StreamChecker object will be instantiated and called as such:
- * StreamChecker obj = new StreamChecker(words);
- * boolean param_1 = obj.query(letter);
- */
