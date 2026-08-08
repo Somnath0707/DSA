@@ -43,9 +43,9 @@ class Solution {
             int candle = prefix[i][1]; 
             char ch = s.charAt(i); 
             // if we have not seen any plate we dont need there candle 
-            // if(candle <= 0 && ch == '*'){
-            //     continue; 
-            // }
+            if(candle <= 0 && ch == '*'){
+                continue; 
+            }
             
             // if we have atleast seen one plate  we can add candle
              if(ch == '*'){
