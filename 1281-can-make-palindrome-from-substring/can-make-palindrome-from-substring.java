@@ -15,7 +15,7 @@ class Solution {
             total += curr[i]; 
         }
 
-        System.out.println(odd + " "  + even );
+        // System.out.println(odd + " "  + even );
 
         if(total % 2 == 0){
             if(odd == 0) return true; 
