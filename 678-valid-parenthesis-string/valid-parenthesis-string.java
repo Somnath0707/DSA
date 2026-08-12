@@ -1,23 +1,30 @@
 class Solution {
-    public boolean checkValidString(String s) {
-        int min = 0; 
-        int max = 0 ; 
+    Boolean dp[][] ; 
+    public boolean f(int i , int balance , String s){
+        if(balance < 0) return false; 
+        int n = s.length() ; 
+        if(i == n ) return balance == 0 ; 
 
-        for(int i =0 ; i < s.length() ; i++){
-            char c  = s.charAt(i);
-            if(c =='('){
-                max+=1;
-                min+=1;
-            }else if(c ==')'){
-                max-=1;
-                min-=1;
-            }else{
-                min-=1; 
-                max+=1;
-            }
-            if(min<0) min=0;
-            if(max<0) return false;
+        char ch = s.charAt(i); 
+        boolean ans = false ; 
+        if(dp[i][balance] != null) return dp[i][balance]; 
+        if(ch == '('){
+            ans = ans || f(i+1 , balance+1 , s); 
         }
-        return (min == 0 );
+        else if(ch == ')'){
+            ans = ans || f(i+1 , balance-1 , s);
+        }
+        else{
+            ans = ans || f(i+1 , balance +1 , s); 
+            ans = ans || f(i+1 , balance -1 , s); 
+            ans = ans || f(i+1 , balance , s);
+        }
+
+        return dp[i][balance] = ans; 
+    }
+    public boolean checkValidString(String s) {
+        int n = s.length(); 
+        dp = new Boolean[n][n];
+        return f(0 , 0 , s); 
     }
 }
