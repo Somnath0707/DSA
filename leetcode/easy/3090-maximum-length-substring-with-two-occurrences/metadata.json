@@ -1,0 +1,24 @@
+{
+  "title": "Maximum Length Substring With Two Occurrences",
+  "titleSlug": "maximum-length-substring-with-two-occurrences",
+  "frontendQuestionId": "3090",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-length-substring-with-two-occurrences/",
+  "difficulty": "Easy",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-14T04:22:50.802Z",
+  "runtimeMs": 3,
+  "memoryKb": 45158,
+  "totalCorrect": 709,
+  "totalTestcases": 709,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-14T04:22:52.056Z"
+}
