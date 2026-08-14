@@ -1,0 +1,26 @@
+{
+  "title": "Maximize the Profit as the Salesman",
+  "titleSlug": "maximize-the-profit-as-the-salesman",
+  "frontendQuestionId": "2830",
+  "leetcodeUrl": "https://leetcode.com/problems/maximize-the-profit-as-the-salesman/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-14T09:08:29.289Z",
+  "runtimeMs": 199,
+  "memoryKb": 122880,
+  "totalCorrect": 435,
+  "totalTestcases": 435,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-14T09:08:30.113Z"
+}
