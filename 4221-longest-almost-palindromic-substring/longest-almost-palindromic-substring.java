@@ -4,7 +4,7 @@ class Solution {
     int[][] dp0;
     int[][] dp1;
 
-    static final int UNVISITED = Integer.MAX_VALUE;
+    static final int UNVISITED = Integer .MAX_VALUE;
     static final int BAD = -1000000000;
 
     public int f(int l, int r, int used) {
@@ -29,7 +29,7 @@ class Solution {
         } else {
 
             if (used == 1) {
-                return dp1[l][r] = BAD;
+                return  BAD;
             }
 
             int a = f(l + 1, r, 1);
