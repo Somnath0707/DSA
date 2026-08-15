@@ -1,0 +1,20 @@
+{
+  "title": "minimum-operations-to-make-a-rotated-palindrome-i",
+  "titleSlug": "minimum-operations-to-make-a-rotated-palindrome-i",
+  "frontendQuestionId": null,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-make-a-rotated-palindrome-i/",
+  "difficulty": "Unknown",
+  "topics": [],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-15T14:56:10.286Z",
+  "runtimeMs": 417,
+  "memoryKb": 45056,
+  "totalCorrect": 998,
+  "totalTestcases": 998,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-15T14:56:16.018Z"
+}
