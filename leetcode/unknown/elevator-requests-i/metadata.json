@@ -1,0 +1,20 @@
+{
+  "title": "elevator-requests-i",
+  "titleSlug": "elevator-requests-i",
+  "frontendQuestionId": null,
+  "leetcodeUrl": "https://leetcode.com/problems/elevator-requests-i/",
+  "difficulty": "Unknown",
+  "topics": [],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-15T14:34:06.132Z",
+  "runtimeMs": 1,
+  "memoryKb": 46080,
+  "totalCorrect": 1000,
+  "totalTestcases": 1000,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-15T14:34:11.768Z"
+}
