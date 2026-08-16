@@ -1,0 +1,20 @@
+{
+  "title": "minimize-the-maximum-waiting-time-at-synchronized-traffic-lights",
+  "titleSlug": "minimize-the-maximum-waiting-time-at-synchronized-traffic-lights",
+  "frontendQuestionId": null,
+  "leetcodeUrl": "https://leetcode.com/problems/minimize-the-maximum-waiting-time-at-synchronized-traffic-lights/",
+  "difficulty": "Unknown",
+  "topics": [],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-16T02:54:40.080Z",
+  "runtimeMs": 3,
+  "memoryKb": 124928,
+  "totalCorrect": 743,
+  "totalTestcases": 743,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-16T02:54:40.650Z"
+}
