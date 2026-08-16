@@ -1,0 +1,1 @@
+<h2><a href="https://leetcode.com/problems/minimize-the-maximum-waiting-time-at-synchronized-traffic-lights/">minimize-the-maximum-waiting-time-at-synchronized-traffic-lights</a></h2><h3>Unknown</h3><hr>Problem description not found.
