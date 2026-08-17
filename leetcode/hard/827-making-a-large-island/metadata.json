@@ -1,0 +1,26 @@
+{
+  "title": "Making A Large Island",
+  "titleSlug": "making-a-large-island",
+  "frontendQuestionId": "827",
+  "leetcodeUrl": "https://leetcode.com/problems/making-a-large-island/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find",
+    "Matrix"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-17T06:15:08.658Z",
+  "runtimeMs": 136,
+  "memoryKb": 159744,
+  "totalCorrect": 75,
+  "totalTestcases": 75,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-17T06:15:09.803Z"
+}
