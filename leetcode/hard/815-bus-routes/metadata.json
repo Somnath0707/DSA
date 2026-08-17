@@ -1,0 +1,24 @@
+{
+  "title": "Bus Routes",
+  "titleSlug": "bus-routes",
+  "frontendQuestionId": "815",
+  "leetcodeUrl": "https://leetcode.com/problems/bus-routes/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Breadth-First Search"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-17T15:32:06.927Z",
+  "runtimeMs": 1019,
+  "memoryKb": 125952,
+  "totalCorrect": 54,
+  "totalTestcases": 54,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-17T15:32:08.060Z"
+}
