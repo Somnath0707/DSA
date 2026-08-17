@@ -1,0 +1,25 @@
+{
+  "title": "Stone Game V",
+  "titleSlug": "stone-game-v",
+  "frontendQuestionId": "1563",
+  "leetcodeUrl": "https://leetcode.com/problems/stone-game-v/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Game Theory"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-17T07:07:03.082Z",
+  "runtimeMs": 1315,
+  "memoryKb": 50381,
+  "totalCorrect": 132,
+  "totalTestcases": 132,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-17T07:07:04.969Z"
+}
