@@ -1,0 +1,25 @@
+{
+  "title": "Pacific Atlantic Water Flow",
+  "titleSlug": "pacific-atlantic-water-flow",
+  "frontendQuestionId": "417",
+  "leetcodeUrl": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-17T09:31:08.712Z",
+  "runtimeMs": 11,
+  "memoryKb": 48538,
+  "totalCorrect": 114,
+  "totalTestcases": 114,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-17T09:31:09.841Z"
+}
