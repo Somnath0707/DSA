@@ -1,0 +1,28 @@
+{
+  "title": "Number of Squareful Arrays",
+  "titleSlug": "number-of-squareful-arrays",
+  "frontendQuestionId": "996",
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-squareful-arrays/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-17T07:08:18.593Z",
+  "runtimeMs": 2,
+  "memoryKb": 44237,
+  "totalCorrect": 78,
+  "totalTestcases": 78,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-17T07:08:20.565Z"
+}
