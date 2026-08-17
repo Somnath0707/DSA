@@ -19,8 +19,8 @@
   "memoryKb": 159744,
   "totalCorrect": 75,
   "totalTestcases": 75,
-  "helpType": "PENDING_SELF_REPORT",
-  "helpLabel": "Pending self report",
+  "helpType": "HINT",
+  "helpLabel": "Needed hint",
   "focusSeconds": null,
-  "syncedAt": "2026-08-17T06:15:09.803Z"
+  "syncedAt": "2026-08-17T06:15:17.202Z"
 }
