@@ -1,131 +1,58 @@
 class Solution {
 
-    Map<Integer, ArrayList<int[]>> map;
-
-    public int bfs(int src, int tar, List<Integer> startBuses) {
-
-        Map<Integer, Integer> dist = new HashMap<>();
-        Deque<int[]> q = new ArrayDeque<>();
-
-        for (int id : startBuses) {
-
-            int state = src * 501 + id;
-
-            dist.put(state, 1);
-
-            q.offerLast(new int[]{src, id, 1});
+    public int numBusesToDestination(int[][] routes, int source, int target) {
+        if (source == target) {
+            return 0;
         }
 
+        HashMap<Integer, ArrayList<Integer>> adjList = new HashMap<>();
+        // Create a map from the bus stop to all the routes that include this stop.
+        for (int r = 0; r < routes.length; r++) {
+            for (int stop : routes[r]) {
+                // Add all the routes that have this stop.
+                ArrayList<Integer> route = adjList.getOrDefault(
+                        stop,
+                        new ArrayList<>());
+                route.add(r);
+                adjList.put(stop, route);
+            }
+        }
+
+        if (adjList.get(source) == null || adjList.get(target) == null)
+            return -1;
+        Queue<Integer> q = new LinkedList<>();
+        Set<Integer> vis = new HashSet<Integer>(routes.length);
+        // Insert all the routes in the queue that have the source stop.
+        for (int route : adjList.get(source)) {
+            q.add(route);
+            vis.add(route);
+        }
+
+        int busCount = 1;
         while (!q.isEmpty()) {
+            int size = q.size();
 
-            int[] curr = q.pollFirst();
+            for (int i = 0; i < size; i++) {
+                int route = q.remove();
 
-            int val = curr[0];
-            int uid = curr[1];
-            int count = curr[2];
+                // Iterate over the stops in the current route.
+                for (int stop : routes[route]) {
+                    // Return the current count if the target is found.
+                    if (stop == target) {
+                        return busCount;
+                    }
 
-            int currState = val * 501 + uid;
-
-            // stale state
-            if (dist.get(currState) != count)
-                continue;
-
-            if (val == tar)
-                return count;
-
-            for (int[] num : map.get(val)) {
-
-                int newVal = num[0];
-                int newId = num[1];
-
-                int newCount = count;
-
-                if (newId != uid)
-                    newCount++;
-
-                int state = newVal * 501 + newId;
-
-                int old = dist.getOrDefault(
-                    state,
-                    Integer.MAX_VALUE
-                );
-
-                if (newCount >= old)
-                    continue;
-
-                dist.put(state, newCount);
-
-                if (newId == uid) {
-                    // cost = 0
-                    q.offerFirst(
-                        new int[]{
-                            newVal,
-                            newId,
-                            newCount
+                    // Iterate over the next possible routes from the current stop.
+                    for (int nextRoute : adjList.get(stop)) {
+                        if (!vis.contains(nextRoute)) {
+                            vis.add(nextRoute);
+                            q.add(nextRoute);
                         }
-                    );
-                } else {
-                    // cost = 1
-                    q.offerLast(
-                        new int[]{
-                            newVal,
-                            newId,
-                            newCount
-                        }
-                    );
+                    }
                 }
             }
+            busCount++;
         }
-
         return -1;
-    }
-
-    public int numBusesToDestination(
-            int[][] routes,
-            int source,
-            int target) {
-
-        if (source == target)
-            return 0;
-
-        map = new HashMap<>();
-
-        int n = routes.length;
-
-        List<Integer> startBuses = new ArrayList<>();
-
-        for (int i = 0; i < n; i++) {
-
-            int m = routes[i].length;
-
-            for (int j = 0; j < m; j++) {
-
-                int val = routes[i][j];
-
-                if (val == source)
-                    startBuses.add(i);
-
-                int next;
-
-                if (j == m - 1)
-                    next = routes[i][0];
-                else
-                    next = routes[i][j + 1];
-
-                map.putIfAbsent(
-                    val,
-                    new ArrayList<>()
-                );
-
-                map.get(val).add(
-                    new int[]{next, i}
-                );
-            }
-        }
-
-        if (startBuses.isEmpty())
-            return -1;
-
-        return bfs(source, target, startBuses);
     }
 }
