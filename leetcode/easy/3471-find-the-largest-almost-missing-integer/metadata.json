@@ -1,0 +1,23 @@
+{
+  "title": "Find the Largest Almost Missing Integer",
+  "titleSlug": "find-the-largest-almost-missing-integer",
+  "frontendQuestionId": "3471",
+  "leetcodeUrl": "https://leetcode.com/problems/find-the-largest-almost-missing-integer/",
+  "difficulty": "Easy",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-18T03:27:01.460Z",
+  "runtimeMs": 5,
+  "memoryKb": 47514,
+  "totalCorrect": 900,
+  "totalTestcases": 900,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-18T03:27:01.933Z"
+}
