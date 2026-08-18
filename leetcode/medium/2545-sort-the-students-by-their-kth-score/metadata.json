@@ -1,0 +1,24 @@
+{
+  "title": "Sort the Students by Their Kth Score",
+  "titleSlug": "sort-the-students-by-their-kth-score",
+  "frontendQuestionId": "2545",
+  "leetcodeUrl": "https://leetcode.com/problems/sort-the-students-by-their-kth-score/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Matrix"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-18T14:28:08.458Z",
+  "runtimeMs": 3,
+  "memoryKb": 57549,
+  "totalCorrect": 33,
+  "totalTestcases": 33,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-18T14:28:09.624Z"
+}
