@@ -1,0 +1,27 @@
+{
+  "title": "Implement Router",
+  "titleSlug": "implement-router",
+  "frontendQuestionId": "3508",
+  "leetcodeUrl": "https://leetcode.com/problems/implement-router/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Design",
+    "Queue",
+    "Ordered Set"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-18T09:30:14.965Z",
+  "runtimeMs": 182,
+  "memoryKb": 215654,
+  "totalCorrect": 753,
+  "totalTestcases": 753,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-18T09:30:15.794Z"
+}
