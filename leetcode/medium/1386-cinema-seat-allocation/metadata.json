@@ -1,0 +1,25 @@
+{
+  "title": "Cinema Seat Allocation",
+  "titleSlug": "cinema-seat-allocation",
+  "frontendQuestionId": "1386",
+  "leetcodeUrl": "https://leetcode.com/problems/cinema-seat-allocation/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Bit Manipulation"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-19T03:35:12.811Z",
+  "runtimeMs": 40,
+  "memoryKb": 59597,
+  "totalCorrect": 53,
+  "totalTestcases": 53,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-19T03:35:13.815Z"
+}
