@@ -1,0 +1,25 @@
+{
+  "title": "Critical Connections in a Network",
+  "titleSlug": "critical-connections-in-a-network",
+  "frontendQuestionId": "1192",
+  "leetcodeUrl": "https://leetcode.com/problems/critical-connections-in-a-network/",
+  "difficulty": "Hard",
+  "topics": [
+    "Depth-First Search",
+    "Graph Theory",
+    "Biconnected Component",
+    "Bridge (Graph)"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-19T15:59:37.364Z",
+  "runtimeMs": 91,
+  "memoryKb": 251494,
+  "totalCorrect": 19,
+  "totalTestcases": 19,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-19T15:59:37.821Z"
+}
