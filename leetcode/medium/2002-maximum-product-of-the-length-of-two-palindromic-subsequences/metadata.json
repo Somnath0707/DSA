@@ -1,0 +1,26 @@
+{
+  "title": "Maximum Product of the Length of Two Palindromic Subsequences",
+  "titleSlug": "maximum-product-of-the-length-of-two-palindromic-subsequences",
+  "frontendQuestionId": "2002",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/",
+  "difficulty": "Medium",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-19T07:38:12.933Z",
+  "runtimeMs": 783,
+  "memoryKb": 48128,
+  "totalCorrect": 226,
+  "totalTestcases": 226,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-19T07:38:14.305Z"
+}
