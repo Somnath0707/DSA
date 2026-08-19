@@ -13,13 +13,13 @@
   "language": "java",
   "verdict": "Accepted",
   "submissionId": null,
-  "submittedAt": "2026-08-19T15:59:37.364Z",
-  "runtimeMs": 91,
-  "memoryKb": 251494,
+  "submittedAt": "2026-08-19T16:00:26.938Z",
+  "runtimeMs": 116,
+  "memoryKb": 251392,
   "totalCorrect": 19,
   "totalTestcases": 19,
-  "helpType": "NONE",
-  "helpLabel": "Solved solo",
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
   "focusSeconds": null,
-  "syncedAt": "2026-08-19T16:00:07.888Z"
+  "syncedAt": "2026-08-19T16:00:27.490Z"
 }
