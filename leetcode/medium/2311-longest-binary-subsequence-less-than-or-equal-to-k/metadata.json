@@ -1,0 +1,25 @@
+{
+  "title": "Longest Binary Subsequence Less Than or Equal to K",
+  "titleSlug": "longest-binary-subsequence-less-than-or-equal-to-k",
+  "frontendQuestionId": "2311",
+  "leetcodeUrl": "https://leetcode.com/problems/longest-binary-subsequence-less-than-or-equal-to-k/",
+  "difficulty": "Medium",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Greedy",
+    "Memoization"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-20T09:51:50.109Z",
+  "runtimeMs": 1,
+  "memoryKb": 44442,
+  "totalCorrect": 155,
+  "totalTestcases": 155,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-20T09:51:50.470Z"
+}
