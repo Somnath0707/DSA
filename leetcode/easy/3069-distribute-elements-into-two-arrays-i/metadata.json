@@ -1,0 +1,23 @@
+{
+  "title": "Distribute Elements Into Two Arrays I",
+  "titleSlug": "distribute-elements-into-two-arrays-i",
+  "frontendQuestionId": "3069",
+  "leetcodeUrl": "https://leetcode.com/problems/distribute-elements-into-two-arrays-i/",
+  "difficulty": "Easy",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-20T03:38:44.132Z",
+  "runtimeMs": 1,
+  "memoryKb": 47411,
+  "totalCorrect": 622,
+  "totalTestcases": 622,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-20T03:38:44.702Z"
+}
