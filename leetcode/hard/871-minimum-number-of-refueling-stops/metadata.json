@@ -1,0 +1,25 @@
+{
+  "title": "Minimum Number of Refueling Stops",
+  "titleSlug": "minimum-number-of-refueling-stops",
+  "frontendQuestionId": "871",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-20T06:44:21.001Z",
+  "runtimeMs": 3,
+  "memoryKb": 48128,
+  "totalCorrect": 198,
+  "totalTestcases": 198,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-20T06:44:23.157Z"
+}
