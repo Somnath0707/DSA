@@ -1,0 +1,25 @@
+{
+  "title": "Minimum Time for K Connected Components",
+  "titleSlug": "minimum-time-for-k-connected-components",
+  "frontendQuestionId": "3608",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-time-for-k-connected-components/",
+  "difficulty": "Medium",
+  "topics": [
+    "Binary Search",
+    "Union-Find",
+    "Graph Theory",
+    "Sorting"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-20T15:28:55.520Z",
+  "runtimeMs": 77,
+  "memoryKb": 208794,
+  "totalCorrect": 587,
+  "totalTestcases": 587,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-20T15:28:55.907Z"
+}
