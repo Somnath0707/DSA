@@ -1,0 +1,25 @@
+{
+  "title": "Maximum Good People Based on Statements",
+  "titleSlug": "maximum-good-people-based-on-statements",
+  "frontendQuestionId": "2151",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-good-people-based-on-statements/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-21T14:21:48.720Z",
+  "runtimeMs": 30,
+  "memoryKb": 44134,
+  "totalCorrect": 91,
+  "totalTestcases": 91,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-21T14:21:52.288Z"
+}
