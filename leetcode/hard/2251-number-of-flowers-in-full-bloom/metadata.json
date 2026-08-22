@@ -1,0 +1,27 @@
+{
+  "title": "Number of Flowers in Full Bloom",
+  "titleSlug": "number-of-flowers-in-full-bloom",
+  "frontendQuestionId": "2251",
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-flowers-in-full-bloom/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Sorting",
+    "Prefix Sum",
+    "Ordered Set"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-22T04:38:30.951Z",
+  "runtimeMs": 118,
+  "memoryKb": 122368,
+  "totalCorrect": 53,
+  "totalTestcases": 53,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-22T04:38:32.989Z"
+}
