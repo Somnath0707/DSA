@@ -1,0 +1,23 @@
+{
+  "title": "Minimum Distance to Type a Word Using Two Fingers",
+  "titleSlug": "minimum-distance-to-type-a-word-using-two-fingers",
+  "frontendQuestionId": "1320",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-distance-to-type-a-word-using-two-fingers/",
+  "difficulty": "Hard",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-22T08:58:57.465Z",
+  "runtimeMs": 142,
+  "memoryKb": 55296,
+  "totalCorrect": 55,
+  "totalTestcases": 55,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-22T08:58:59.646Z"
+}
