@@ -1,0 +1,22 @@
+{
+  "title": "Check Divisibility by Digit Sum and Product",
+  "titleSlug": "check-divisibility-by-digit-sum-and-product",
+  "frontendQuestionId": "3622",
+  "leetcodeUrl": "https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product/",
+  "difficulty": "Easy",
+  "topics": [
+    "Math"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-22T03:27:36.727Z",
+  "runtimeMs": 1,
+  "memoryKb": 43008,
+  "totalCorrect": 636,
+  "totalTestcases": 636,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-22T03:27:37.024Z"
+}
