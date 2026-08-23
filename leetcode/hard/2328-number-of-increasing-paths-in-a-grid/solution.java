@@ -7,11 +7,11 @@ class Solution {
         };
 
     int MOD = 1000000007; 
-    Integer dp[][]; 
+    int dp[][]; 
 
     public int f(int i  , int j , int grid[][] , int n , int m){
         if(i == n || j == m) return 0 ; 
-        if(dp[i][j] != null) return dp[i][j]; 
+        if(dp[i][j] != -1) return dp[i][j]; 
         int total = 1 ; 
         for(int d[] : dir){
             int nr = i + d[0]; 
@@ -27,7 +27,10 @@ class Solution {
     public int countPaths(int[][] grid) {
         int n = grid.length ; 
         int m = grid[0].length ;
-        dp = new Integer[n][m];  
+        dp = new int[n][m]; 
+        for(int i = 0 ; i < n ; i++){
+            Arrays.fill(dp[i], -1);
+        }
         int total = 0 ; 
         for(int i = 0 ; i < n ; i++){
             for(int j = 0 ; j < m ; j++){
