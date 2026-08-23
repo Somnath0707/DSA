@@ -10,6 +10,7 @@ class Solution {
     Integer dp[][]; 
 
     public int f(int i  , int j , int grid[][] , int n , int m){
+        if(i == n || j == m) return 0 ; 
         if(dp[i][j] != null) return dp[i][j]; 
         int total = 1 ; 
         for(int d[] : dir){
