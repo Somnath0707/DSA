@@ -1,0 +1,20 @@
+{
+  "title": "longest-subarray-with-at-most-k-distinct-prime-factors",
+  "titleSlug": "longest-subarray-with-at-most-k-distinct-prime-factors",
+  "frontendQuestionId": null,
+  "leetcodeUrl": "https://leetcode.com/problems/longest-subarray-with-at-most-k-distinct-prime-factors/",
+  "difficulty": "Unknown",
+  "topics": [],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-23T03:11:24.834Z",
+  "runtimeMs": 309,
+  "memoryKb": 139981,
+  "totalCorrect": 710,
+  "totalTestcases": 710,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-23T03:11:30.155Z"
+}
