@@ -1,0 +1,24 @@
+{
+  "title": "Minimum Moves to Reach Target with Rotations",
+  "titleSlug": "minimum-moves-to-reach-target-with-rotations",
+  "frontendQuestionId": "1210",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-24T15:40:25.717Z",
+  "runtimeMs": 62,
+  "memoryKb": 55910,
+  "totalCorrect": 42,
+  "totalTestcases": 42,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-24T15:40:32.916Z"
+}
