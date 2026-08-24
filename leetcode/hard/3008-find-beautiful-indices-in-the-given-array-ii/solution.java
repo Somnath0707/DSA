@@ -1,20 +1,24 @@
-h(); 
-        int j = lenA-1;
+{
+        RollingHash sh = new RollingHash(a); 
+        RollingHash rh = new RollingHash(b); 
+        RollingHash real = new RollingHash(s); 
+
+        List<Integer> list = new ArrayList<>(); 
+        List<Integer> listB = new ArrayList<>(); 
+        int n = s.length(); 
+        int lenA = a.length(); 
 
         for(int i = 0 ; i < n-lenA ; i++){
-            if(real.getHash(i , j) == sh.getHash(0 , lenA-1)){
+            if(real.getHash(i ,i+lenA ) == sh.getHash(0 , lenA)){
                 list.add(i); 
             }
-            j++;  
         }
 
         int lenB = b.length(); 
-        j = lenB-1; 
         for(int i = 0 ; i < n - lenB ; i++){
-            if(real.getHash(i,j) == rh.getHash(0 , lenB-1)){
+            if(real.getHash(i,i+lenB) == rh.getHash(0 , lenB-1)){
                 listB.add(i); 
             }
-            j++; 
         }
 
         int left = 0; 
@@ -26,13 +30,4 @@ h();
             int diff = Math.abs(list.get(mid)-listB.get(mid));
             if(diff <= k){
                 ans = mid;  
-                left = mid+1; 
-            }
-            else{
-                right =  mid-1; 
-            }
-        }
-        if(ans == -1) return new ArrayList<>();
-
-        List<Integer> res = new ArrayList<>(); 
-        for(int i = 0 ; i <= ans ; i
+                left = mid+1;
