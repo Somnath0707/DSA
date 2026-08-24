@@ -1,0 +1,30 @@
+{
+  "title": "Find Beautiful Indices in the Given Array II",
+  "titleSlug": "find-beautiful-indices-in-the-given-array-ii",
+  "frontendQuestionId": "3008",
+  "leetcodeUrl": "https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-ii/",
+  "difficulty": "Hard",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Binary Search",
+    "Rolling Hash",
+    "String Matching",
+    "Hash Function",
+    "Z Algorithm",
+    "Knuth–Morris–Pratt Algorithm",
+    "Boyer–Moore String-Search Algorithm"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-24T04:16:44.859Z",
+  "runtimeMs": 0,
+  "memoryKb": 43930,
+  "totalCorrect": 0,
+  "totalTestcases": 2,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-24T04:16:45.378Z"
+}
