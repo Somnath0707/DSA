@@ -1,0 +1,25 @@
+{
+  "title": "Maximum Number of Events That Can Be Attended II",
+  "titleSlug": "maximum-number-of-events-that-can-be-attended-ii",
+  "frontendQuestionId": "1751",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-25T13:35:08.916Z",
+  "runtimeMs": 214,
+  "memoryKb": 237568,
+  "totalCorrect": 70,
+  "totalTestcases": 70,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-25T13:35:15.280Z"
+}
