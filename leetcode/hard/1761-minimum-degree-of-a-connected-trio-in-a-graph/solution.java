@@ -22,6 +22,7 @@ class Solution {
                 if(j <= i) continue ;
 
                 for(int k : list.get(j)){
+                    if(k <= j) continue; 
                     if(list.get(i).contains(k)){
                         int first = list.get(i).size()-2; 
                         int second = list.get(j).size()-2; 
