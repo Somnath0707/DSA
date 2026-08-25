@@ -1,0 +1,23 @@
+{
+  "title": "Smallest Missing Multiple of K",
+  "titleSlug": "smallest-missing-multiple-of-k",
+  "frontendQuestionId": "3718",
+  "leetcodeUrl": "https://leetcode.com/problems/smallest-missing-multiple-of-k/",
+  "difficulty": "Easy",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-25T03:52:21.095Z",
+  "runtimeMs": 7,
+  "memoryKb": 46694,
+  "totalCorrect": 664,
+  "totalTestcases": 664,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-25T03:52:40.609Z"
+}
