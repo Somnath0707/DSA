@@ -1,55 +1,41 @@
 class Solution {
-
     public int minTrioDegree(int n, int[][] edges) {
+        // we can use 3 loop first get the fist node and make adjlist with set
+        // for each node travese the set and check if that node is connteced to somone which is also directly connected to the first node if so check how many node are that nodes connected i mean check set.size() for each node and answer should be size.size()-2 to the answer add them to visited path or something or no need to ig mark them as we are doing incremental and we dont need the total we need just the lowest indegreee
 
-        List<Set<Integer>> adj = new ArrayList<>();
 
-        for (int i = 0; i <= n; i++) {
-            adj.add(new HashSet<>());
+        List<Set<Integer>> list = new ArrayList<>(); 
+        for(int i = 0 ; i <= n ; i++){
+            list.add(new HashSet<>()); 
         }
+        for(int num[] : edges){
+            int u = num[0]; 
+            int v = num[1]; 
 
-        int[] degree = new int[n + 1];
-
-        for (int[] edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-
-            adj.get(u).add(v);
-            adj.get(v).add(u);
-
-            degree[u]++;
-            degree[v]++;
+            list.get(u).add(v); 
+            list.get(v).add(u); 
         }
+        int ans = Integer.MAX_VALUE; 
+        for(int i = 1 ; i <= n ; i++){
 
-        int ans = Integer.MAX_VALUE;
+            for(int j : list.get(i)){
+                if(j <= i) continue ;
 
-        // Pick the first node
-        for (int i = 1; i <= n; i++) {
+                for(int k : list.get(j)){
+                    if(list.get(i).contains(k)){
+                        int first = list.get(i).size()-2; 
+                        int second = list.get(j).size()-2; 
+                        int third = list.get(k).size()-2; 
 
-            // Go through all nodes directly connected to i
-            for (int j : adj.get(i)) {
+                        int trio = first + second + third; 
 
-                // Avoid checking the same pair in the other order
-                if (j <= i) continue;
-
-                // Check nodes connected to both i and j
-                for (int k : adj.get(j)) {
-
-                    if (k <= j) continue;
-
-                    if (adj.get(i).contains(k)) {
-
-                        int trioDegree =
-                                degree[i] +
-                                degree[j] +
-                                degree[k] - 6;
-
-                        ans = Math.min(ans, trioDegree);
+                        ans = Math.min(trio , ans); 
                     }
                 }
             }
         }
+        if(ans == Integer.MAX_VALUE) return -1; 
+        return ans; 
 
-        return ans == Integer.MAX_VALUE ? -1 : ans;
     }
 }
