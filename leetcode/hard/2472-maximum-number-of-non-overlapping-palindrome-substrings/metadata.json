@@ -1,0 +1,25 @@
+{
+  "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+  "titleSlug": "maximum-number-of-non-overlapping-palindrome-substrings",
+  "frontendQuestionId": "2472",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/",
+  "difficulty": "Hard",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-25T08:38:05.789Z",
+  "runtimeMs": 149,
+  "memoryKb": 63386,
+  "totalCorrect": 56,
+  "totalTestcases": 56,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-25T08:38:09.916Z"
+}
