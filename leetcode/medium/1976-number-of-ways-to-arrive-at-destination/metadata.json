@@ -1,0 +1,26 @@
+{
+  "title": "Number of Ways to Arrive at Destination",
+  "titleSlug": "number-of-ways-to-arrive-at-destination",
+  "frontendQuestionId": "1976",
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/",
+  "difficulty": "Medium",
+  "topics": [
+    "Dynamic Programming",
+    "Graph Theory",
+    "Topological Sort",
+    "Shortest Path",
+    "Dijkstra's Algorithm"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-26T13:52:33.878Z",
+  "runtimeMs": 14,
+  "memoryKb": 53248,
+  "totalCorrect": 57,
+  "totalTestcases": 57,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-26T13:53:16.414Z"
+}
