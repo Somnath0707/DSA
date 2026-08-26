@@ -1,0 +1,23 @@
+{
+  "title": "Shortest and Lexicographically Smallest Beautiful String",
+  "titleSlug": "shortest-and-lexicographically-smallest-beautiful-string",
+  "frontendQuestionId": "2904",
+  "leetcodeUrl": "https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string/",
+  "difficulty": "Medium",
+  "topics": [
+    "String",
+    "Sliding Window"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-26T04:10:16.084Z",
+  "runtimeMs": 1,
+  "memoryKb": 45261,
+  "totalCorrect": 674,
+  "totalTestcases": 674,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-26T04:10:22.184Z"
+}
