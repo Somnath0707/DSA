@@ -1,0 +1,30 @@
+{
+  "title": "Swim in Rising Water",
+  "titleSlug": "swim-in-rising-water",
+  "frontendQuestionId": "778",
+  "leetcodeUrl": "https://leetcode.com/problems/swim-in-rising-water/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find",
+    "Minimax",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Dijkstra's Algorithm"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-26T04:30:02.904Z",
+  "runtimeMs": 11,
+  "memoryKb": 47718,
+  "totalCorrect": 43,
+  "totalTestcases": 43,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-26T04:30:07.013Z"
+}
