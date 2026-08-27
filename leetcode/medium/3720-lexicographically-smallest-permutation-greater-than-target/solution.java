@@ -1,6 +1,6 @@
 class Solution {
     TreeMap<Character,Integer> map ; 
-    public String f(int i , int prev , String s , String target){
+    public String f(int i , String s , String target){
         if( i == s.length() ) return null ; 
         char ch = target.charAt(i); 
         Character key = map.ceilingKey(ch);
@@ -10,7 +10,7 @@ class Solution {
             map.put(ch , map.get(ch)-1);
             if(map.get(ch) == 0) map.remove(ch); 
             String res = 
-            f(i+1 , i , s , target); 
+            f(i+1 , s , target); 
             if(res != null){
                 return ch + res ; 
             }
@@ -40,7 +40,7 @@ class Solution {
             map.put(ch , map.getOrDefault(ch , 0)+1); 
         }
 
-        String ans =  f(0 , -1, s , target); 
+        String ans =  f(0 , s , target); 
         if(ans == null) return ""; 
         return ans; 
 
