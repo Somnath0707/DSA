@@ -1,0 +1,25 @@
+{
+  "title": "Maximum Width Ramp",
+  "titleSlug": "maximum-width-ramp",
+  "frontendQuestionId": "962",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-width-ramp/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-27T10:43:09.738Z",
+  "runtimeMs": 22,
+  "memoryKb": 60826,
+  "totalCorrect": 101,
+  "totalTestcases": 101,
+  "helpType": "EDITORIAL",
+  "helpLabel": "Used editorial",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-27T10:43:48.371Z"
+}
