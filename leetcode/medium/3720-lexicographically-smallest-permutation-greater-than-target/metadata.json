@@ -1,0 +1,26 @@
+{
+  "title": "Lexicographically Smallest Permutation Greater Than Target",
+  "titleSlug": "lexicographically-smallest-permutation-greater-than-target",
+  "frontendQuestionId": "3720",
+  "leetcodeUrl": "https://leetcode.com/problems/lexicographically-smallest-permutation-greater-than-target/",
+  "difficulty": "Medium",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Counting",
+    "Enumeration"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-27T02:52:30.221Z",
+  "runtimeMs": 11,
+  "memoryKb": 48538,
+  "totalCorrect": 761,
+  "totalTestcases": 761,
+  "helpType": "HINT",
+  "helpLabel": "Needed hint",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-27T02:53:12.875Z"
+}
