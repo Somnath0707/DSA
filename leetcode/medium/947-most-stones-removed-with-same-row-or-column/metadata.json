@@ -1,0 +1,26 @@
+{
+  "title": "Most Stones Removed with Same Row or Column",
+  "titleSlug": "most-stones-removed-with-same-row-or-column",
+  "frontendQuestionId": "947",
+  "leetcodeUrl": "https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/",
+  "difficulty": "Medium",
+  "topics": [
+    "Hash Table",
+    "Depth-First Search",
+    "Union-Find",
+    "Graph Theory",
+    "Bipartite Graph"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-28T04:29:00.979Z",
+  "runtimeMs": 13,
+  "memoryKb": 48128,
+  "totalCorrect": 69,
+  "totalTestcases": 69,
+  "helpType": "HINT",
+  "helpLabel": "Needed hint",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-28T04:29:05.828Z"
+}
