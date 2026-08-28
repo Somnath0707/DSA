@@ -1,0 +1,26 @@
+{
+  "title": "Find Number of Ways to Reach the K-th Stair",
+  "titleSlug": "find-number-of-ways-to-reach-the-k-th-stair",
+  "frontendQuestionId": "3154",
+  "leetcodeUrl": "https://leetcode.com/problems/find-number-of-ways-to-reach-the-k-th-stair/",
+  "difficulty": "Hard",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Memoization",
+    "Combinatorics"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-28T12:34:18.813Z",
+  "runtimeMs": 60,
+  "memoryKb": 47718,
+  "totalCorrect": 600,
+  "totalTestcases": 600,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-28T12:34:55.943Z"
+}
