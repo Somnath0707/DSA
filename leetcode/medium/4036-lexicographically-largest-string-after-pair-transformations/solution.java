@@ -1,47 +1,27 @@
 class Solution {
     public String[] largestString(int[] nums) {
+        // 1 -> a 2-> b 4-> c 
 
-        int n = nums.length;
-
-        long[] powers = new long[26];
-
-        long ind = 1;
-        for (int i = 0; i < 26; i++) {
-            powers[i] = ind;
-            ind *= 2;
+        // so 2 4 8 16 32 64 128 etc then we can get the folliwing value 
+        // remove that first 
+        int n = nums.length; 
+        TreeMap<Long , Character> map = new TreeMap<>(); 
+        long ind = 1 ; 
+        for(char ch = 'a' ; ch <= 'z' ; ch++){
+            map.put(ind , ch);
+            ind*= 2; 
         }
-
-        String[] ans = new String[n];
-
-        for (int i = 0; i < n; i++) {
-
-            long curr = nums[i];
-            StringBuilder str = new StringBuilder();
-
-            while (curr != 0) {
-
-                // largest power <= curr
-                int lo = 0;
-                int hi = 25;
-
-                while (lo <= hi) {
-                    int mid = lo + (hi - lo) / 2;
-
-                    if (powers[mid] <= curr) {
-                        lo = mid + 1;
-                    } else {
-                        hi = mid - 1;
-                    }
-                }
-
-                // hi is the largest index such that powers[hi] <= curr
-                curr -= powers[hi];
-                str.append((char)('a' + hi));
+        String ans[] = new String[n]; 
+        for(int i =0 ; i < n ;i++){
+            long curr = nums[i]; 
+            StringBuilder str = new StringBuilder(); 
+            while(curr != 0){
+                long key = map.floorKey(curr); 
+                curr -= key;
+                str.append(map.get(key));   
             }
-
-            ans[i] = str.toString();
+            ans[i] = str.toString(); 
         }
-
-        return ans;
+        return ans; 
     }
 }
