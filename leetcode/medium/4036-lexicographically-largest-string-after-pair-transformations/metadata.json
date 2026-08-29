@@ -8,13 +8,13 @@
   "language": "java",
   "verdict": "Accepted",
   "submissionId": null,
-  "submittedAt": "2026-08-29T16:14:45.573Z",
-  "runtimeMs": 523,
-  "memoryKb": 136090,
+  "submittedAt": "2026-08-29T16:57:28.751Z",
+  "runtimeMs": 138,
+  "memoryKb": 136499,
   "totalCorrect": 999,
   "totalTestcases": 999,
   "helpType": "NONE",
   "helpLabel": "Solved solo",
   "focusSeconds": null,
-  "syncedAt": "2026-08-29T16:15:46.759Z"
+  "syncedAt": "2026-08-29T16:58:01.110Z"
 }
