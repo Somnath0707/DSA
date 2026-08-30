@@ -1,0 +1,20 @@
+{
+  "title": "Minimum Operations to Form Subset Sum I",
+  "titleSlug": "minimum-operations-to-form-subset-sum-i",
+  "frontendQuestionId": "4040",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-form-subset-sum-i/",
+  "difficulty": "Medium",
+  "topics": [],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-30T04:40:12.611Z",
+  "runtimeMs": 355,
+  "memoryKb": 50893,
+  "totalCorrect": 999,
+  "totalTestcases": 999,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-30T04:40:18.261Z"
+}
