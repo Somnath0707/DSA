@@ -1,0 +1,25 @@
+{
+  "title": "Minimum Number of Moves to Make Palindrome",
+  "titleSlug": "minimum-number-of-moves-to-make-palindrome",
+  "frontendQuestionId": "2193",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/",
+  "difficulty": "Hard",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Greedy",
+    "Binary Indexed Tree"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-31T04:22:56.483Z",
+  "runtimeMs": 52,
+  "memoryKb": 43930,
+  "totalCorrect": 129,
+  "totalTestcases": 129,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-31T04:23:49.723Z"
+}
