@@ -28,7 +28,6 @@ class Solution {
             ind++;
         }
         if(list.size() < 2) return new int[]{-1,-1};
-        Collections.sort(list); 
         int max = list.get(list.size()-1) - list.get(0);
         int min = Integer.MAX_VALUE; 
 
