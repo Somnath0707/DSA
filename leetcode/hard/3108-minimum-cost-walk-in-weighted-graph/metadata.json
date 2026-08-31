@@ -1,0 +1,25 @@
+{
+  "title": "Minimum Cost Walk in Weighted Graph",
+  "titleSlug": "minimum-cost-walk-in-weighted-graph",
+  "frontendQuestionId": "3108",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Bit Manipulation",
+    "Union-Find",
+    "Graph Theory"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-08-31T13:37:47.439Z",
+  "runtimeMs": 26,
+  "memoryKb": 221491,
+  "totalCorrect": 549,
+  "totalTestcases": 549,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-08-31T13:37:48.272Z"
+}
