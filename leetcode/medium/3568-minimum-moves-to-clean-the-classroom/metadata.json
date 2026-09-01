@@ -1,0 +1,26 @@
+{
+  "title": "Minimum Moves to Clean the Classroom",
+  "titleSlug": "minimum-moves-to-clean-the-classroom",
+  "frontendQuestionId": "3568",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-moves-to-clean-the-classroom/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-01T04:11:34.537Z",
+  "runtimeMs": 616,
+  "memoryKb": 289587,
+  "totalCorrect": 799,
+  "totalTestcases": 799,
+  "helpType": "HINT",
+  "helpLabel": "Needed hint",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-01T04:12:28.901Z"
+}
