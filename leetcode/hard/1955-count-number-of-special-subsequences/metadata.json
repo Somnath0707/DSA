@@ -1,0 +1,23 @@
+{
+  "title": "Count Number of Special Subsequences",
+  "titleSlug": "count-number-of-special-subsequences",
+  "frontendQuestionId": "1955",
+  "leetcodeUrl": "https://leetcode.com/problems/count-number-of-special-subsequences/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-02T13:56:47.801Z",
+  "runtimeMs": 697,
+  "memoryKb": 310272,
+  "totalCorrect": 99,
+  "totalTestcases": 99,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-02T13:56:49.743Z"
+}
