@@ -1,0 +1,26 @@
+{
+  "title": "Minimum Cost Path with Alternating Directions III",
+  "titleSlug": "minimum-cost-path-with-alternating-directions-iii",
+  "frontendQuestionId": "4003",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-path-with-alternating-directions-iii/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Graph Theory",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Shortest Path"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-02T04:44:58.355Z",
+  "runtimeMs": 432,
+  "memoryKb": 167014,
+  "totalCorrect": 642,
+  "totalTestcases": 642,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-02T04:45:06.670Z"
+}
