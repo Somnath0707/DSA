@@ -1,0 +1,27 @@
+{
+  "title": "Longest Path With Different Adjacent Characters",
+  "titleSlug": "longest-path-with-different-adjacent-characters",
+  "frontendQuestionId": "2246",
+  "leetcodeUrl": "https://leetcode.com/problems/longest-path-with-different-adjacent-characters/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "String",
+    "Tree",
+    "Depth-First Search",
+    "Graph Theory",
+    "Topological Sort"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-02T03:38:02.910Z",
+  "runtimeMs": 95,
+  "memoryKb": 166195,
+  "totalCorrect": 142,
+  "totalTestcases": 142,
+  "helpType": "HINT",
+  "helpLabel": "Needed hint",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-02T03:38:09.403Z"
+}
