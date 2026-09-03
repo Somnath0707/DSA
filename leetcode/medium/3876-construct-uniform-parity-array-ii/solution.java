@@ -1,12 +1,11 @@
 class Solution {
     public boolean uniformArray(int[] nums) {
-        TreeMap<Integer,Integer> even = new TreeMap<>(); 
         TreeMap<Integer,Integer> odd = new TreeMap<>();
         int n = nums.length; 
         for(int i = 0 ; i < nums.length ; i++){
             int val = nums[i]; 
             if(val % 2 == 0){
-                even.put(val , i);
+                continue; 
             }else{
                 odd.put(val , i);
             }

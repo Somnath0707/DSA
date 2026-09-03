@@ -10,14 +10,14 @@
   ],
   "language": "java",
   "verdict": "Accepted",
-  "submissionId": "2129109175",
-  "submittedAt": "2026-09-03T03:26:21.462Z",
-  "runtimeMs": 320,
-  "memoryKb": 206746,
+  "submissionId": "2129116016",
+  "submittedAt": "2026-09-03T03:37:15.208Z",
+  "runtimeMs": 202,
+  "memoryKb": 155955,
   "totalCorrect": 1019,
   "totalTestcases": 1019,
   "helpType": "NONE",
   "helpLabel": "Solved solo",
   "focusSeconds": null,
-  "syncedAt": "2026-09-03T03:32:42.746Z"
+  "syncedAt": "2026-09-03T03:37:20.034Z"
 }
