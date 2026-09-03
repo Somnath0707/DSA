@@ -1,0 +1,23 @@
+{
+  "title": "Construct Uniform Parity Array II",
+  "titleSlug": "construct-uniform-parity-array-ii",
+  "frontendQuestionId": "3876",
+  "leetcodeUrl": "https://leetcode.com/problems/construct-uniform-parity-array-ii/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": "2129109175",
+  "submittedAt": "2026-09-03T03:26:21.462Z",
+  "runtimeMs": 320,
+  "memoryKb": 206746,
+  "totalCorrect": 1019,
+  "totalTestcases": 1019,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-03T03:26:23.007Z"
+}
