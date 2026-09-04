@@ -1,0 +1,23 @@
+{
+  "title": "Process Restricted Friend Requests",
+  "titleSlug": "process-restricted-friend-requests",
+  "frontendQuestionId": "2076",
+  "leetcodeUrl": "https://leetcode.com/problems/process-restricted-friend-requests/",
+  "difficulty": "Hard",
+  "topics": [
+    "Union-Find",
+    "Graph Theory"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-04T14:42:54.431Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-04T14:42:56.987Z"
+}

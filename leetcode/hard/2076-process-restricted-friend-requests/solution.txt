@@ -1,0 +1,24 @@
+.get(a)) {
+                            if (dsu.find(b) == parentY) {
+                                possible = false;
+                                break;
+                            }
+                        }
+                    }
+                    if (!possible)
+                        break;
+                }
+
+                if (possible)
+                    dsu.union(x, y);
+                else
+                    ans[i] = false;
+
+            }
+
+        }
+
+        return ans;
+
+    }
+}
