@@ -1,0 +1,25 @@
+{
+  "title": "Maximum Number of Achievable Transfer Requests",
+  "titleSlug": "maximum-number-of-achievable-transfer-requests",
+  "frontendQuestionId": "1601",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "language": "java",
+  "verdict": "Accepted",
+  "submissionId": "2130283512",
+  "submittedAt": "2026-09-04T04:50:07.267Z",
+  "runtimeMs": 242,
+  "memoryKb": 48230,
+  "totalCorrect": 117,
+  "totalTestcases": 117,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-04T04:50:07.768Z"
+}
