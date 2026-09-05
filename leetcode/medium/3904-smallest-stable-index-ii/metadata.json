@@ -1,0 +1,23 @@
+{
+  "title": "Smallest Stable Index II",
+  "titleSlug": "smallest-stable-index-ii",
+  "frontendQuestionId": "3904",
+  "leetcodeUrl": "https://leetcode.com/problems/smallest-stable-index-ii/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-05T02:57:47.424Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-05T02:58:05.140Z"
+}
