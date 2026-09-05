@@ -1,0 +1,25 @@
+{
+  "title": "Lexicographically Maximum MEX Array",
+  "titleSlug": "lexicographically-maximum-mex-array",
+  "frontendQuestionId": "3948",
+  "leetcodeUrl": "https://leetcode.com/problems/lexicographically-maximum-mex-array/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Queue"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-05T15:11:42.072Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-05T15:11:42.884Z"
+}

@@ -1,0 +1,11 @@
+class Solution {
+    public int[] maximumMEX(int[] a) {
+        // there are few things to know first is the mex is the first value that is not present in that subarray
+
+        // so straight away I can see few things
+        // we want mex in that sub arry we can use prefix array 
+        // return new int[]{3}; 
+
+        // no now that I think its not that it feel like monotonic stack question 
+
+        // i understood the case like if value if greater than mex we remove till top >= curr and then push it if we if not max we consider it as new 
