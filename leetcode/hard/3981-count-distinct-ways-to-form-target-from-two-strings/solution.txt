@@ -1,0 +1,13 @@
+ans=(ans+dfs(i,x+1,k+1))%mod;
+        return dp[i][j][k]=(int)ans;
+    }
+    public int interleaveCharacters(String word1,String word2,String target){
+        a=word1;
+        b=word2;
+        t=target;
+        for(int i=0;i<101;i++)
+            for(int j=0;j<101;j++)
+                Arrays.fill(dp[i][j],-1);
+        return dfs(0,0,0);
+    }
+}

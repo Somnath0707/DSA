@@ -1,0 +1,24 @@
+{
+  "title": "Count Distinct Ways to Form Target from Two Strings",
+  "titleSlug": "count-distinct-ways-to-form-target-from-two-strings",
+  "frontendQuestionId": "3981",
+  "leetcodeUrl": "https://leetcode.com/problems/count-distinct-ways-to-form-target-from-two-strings/",
+  "difficulty": "Hard",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-05T04:08:20.643Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-05T04:08:35.623Z"
+}
