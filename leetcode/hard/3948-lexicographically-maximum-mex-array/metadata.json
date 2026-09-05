@@ -18,8 +18,8 @@
   "memoryKb": null,
   "totalCorrect": null,
   "totalTestcases": null,
-  "helpType": "PENDING_SELF_REPORT",
-  "helpLabel": "Pending self report",
+  "helpType": "EXTERNAL",
+  "helpLabel": "Used external help",
   "focusSeconds": null,
-  "syncedAt": "2026-09-05T15:11:42.884Z"
+  "syncedAt": "2026-09-05T15:17:10.566Z"
 }
