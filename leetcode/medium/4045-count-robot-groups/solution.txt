@@ -1,0 +1,16 @@
+class Solution {
+    public int countGroups(int[] position, int[] speed, int distance) {
+        
+        int n= speed.length;
+        int currMin = speed[n-1];  
+        int ans = 0; 
+        for(int i = n-2 ; i >= 0 ; i--){
+            // not reachable ever
+            if((speed[i] <= currMin) && (position[i+1]-position[i]>distance)){
+                ans++; 
+                currMin = speed[i]; 
+            }
+        }
+        return ans+1; 
+    }
+}
