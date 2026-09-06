@@ -1,0 +1,23 @@
+{
+  "title": "Distinct Subsequences",
+  "titleSlug": "distinct-subsequences",
+  "frontendQuestionId": "115",
+  "leetcodeUrl": "https://leetcode.com/problems/distinct-subsequences/",
+  "difficulty": "Hard",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-06T06:49:57.380Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-06T06:49:57.986Z"
+}
