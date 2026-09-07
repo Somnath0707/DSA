@@ -1,0 +1,13 @@
+nr < 0 || nc < 0 || nr >= n || nc >= m) continue;
+                    
+                    // The sum stays exactly the same because mat[row+1][0] is already in minSum!
+                    int newSum = sum; 
+                    
+                    pq.offer(new int[]{nr, nc, newSum});
+                }
+            }
+        }
+
+        return -1; 
+    }
+}
