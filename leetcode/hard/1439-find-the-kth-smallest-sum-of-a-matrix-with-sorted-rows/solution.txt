@@ -1,13 +1,23 @@
-nr < 0 || nc < 0 || nr >= n || nc >= m) continue;
-                    
-                    // The sum stays exactly the same because mat[row+1][0] is already in minSum!
-                    int newSum = sum; 
-                    
-                    pq.offer(new int[]{nr, nc, newSum});
-                }
-            }
+import java.util.*;
+
+class Solution {
+    public int kthSmallest(int[][] mat, int k) {
+        int n = mat.length; 
+        int m = mat[0].length; 
+        int minSum = 0;
+        for (int i = 0; i < n; i++) {
+            minSum += mat[i][0];
         }
 
-        return -1; 
-    }
-}
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[2] - b[2]); 
+        
+
+        pq.offer(new int[] { 0, 0, minSum });
+
+        int count = 0;
+        int dir[][] = {
+            {0, 1}, {1, 0}
+        };
+        
+        while(!pq.isEmpty()){
+    

@@ -13,13 +13,13 @@
   "language": "Unknown",
   "verdict": "Accepted",
   "submissionId": null,
-  "submittedAt": "2026-09-07T04:20:26.317Z",
+  "submittedAt": "2026-09-07T04:44:11.611Z",
   "runtimeMs": null,
   "memoryKb": null,
   "totalCorrect": null,
   "totalTestcases": null,
-  "helpType": "NONE",
-  "helpLabel": "Solved solo",
+  "helpType": "EDITORIAL",
+  "helpLabel": "Used editorial",
   "focusSeconds": null,
-  "syncedAt": "2026-09-07T04:20:30.959Z"
+  "syncedAt": "2026-09-07T04:44:15.243Z"
 }
