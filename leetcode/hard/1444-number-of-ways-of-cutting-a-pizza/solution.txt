@@ -1,0 +1,25 @@
+ =  (int)ans;
+    }
+
+    public int ways(String[] pizza, int k) {
+
+        int n = pizza.length;
+        int m = pizza[0].length();
+        int nums[][] = new int[n][m];
+
+        dp = new Integer[n][m][k]; 
+        int count = 0 ; 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (pizza[i].charAt(j) == 'A') {
+                    nums[i][j] = 1;
+                    count++; 
+                }
+            }
+        }
+
+        if(count == 0 ) return 0; 
+
+        return f(0, 0, 0, nums, k);
+    }
+}
