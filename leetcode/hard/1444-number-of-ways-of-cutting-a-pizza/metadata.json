@@ -1,0 +1,26 @@
+{
+  "title": "Number of Ways of Cutting a Pizza",
+  "titleSlug": "number-of-ways-of-cutting-a-pizza",
+  "frontendQuestionId": "1444",
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-ways-of-cutting-a-pizza/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Memoization",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-07T13:48:40.545Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-07T13:48:41.291Z"
+}
