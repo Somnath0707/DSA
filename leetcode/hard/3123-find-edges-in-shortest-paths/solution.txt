@@ -1,0 +1,13 @@
+ &&
+                    dist1[u] + w + dist2[v] == shortest) ||
+                    (dist1[v] != Integer.MAX_VALUE && dist2[u] != Integer.MAX_VALUE &&
+                            dist1[v] + w + dist2[u] == shortest)) {
+
+                ans[i] = true;
+            }
+        }
+
+        return ans;
+
+    }
+}
