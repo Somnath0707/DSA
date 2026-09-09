@@ -1,0 +1,23 @@
+gth ){
+            return 0 ; 
+        }
+
+        if(dp[i][prev]!= null) return dp[i][prev]; 
+        long take = 0 ; 
+        long skip = 0 ; 
+
+        if(prev == 0 )
+        take = nums[i] + f(i+1 , 1 , nums);
+        else if(prev == 1 )
+        take =  -nums[i] + f(i+1 , 0 , nums);
+
+        skip = Math.max(skip , f(i+1 , prev , nums));
+
+        return dp[i][prev] = Math.max(take , skip); 
+    }
+    public long maxAlternatingSum(int[] nums) {
+        int n = nums.length; 
+        dp = new Long[n][2]; 
+        return f(0 , 0 ,  nums);
+    }
+}

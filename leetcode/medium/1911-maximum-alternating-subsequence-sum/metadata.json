@@ -1,0 +1,23 @@
+{
+  "title": "Maximum Alternating Subsequence Sum",
+  "titleSlug": "maximum-alternating-subsequence-sum",
+  "frontendQuestionId": "1911",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-alternating-subsequence-sum/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-09T15:11:35.154Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-09T15:12:16.476Z"
+}
