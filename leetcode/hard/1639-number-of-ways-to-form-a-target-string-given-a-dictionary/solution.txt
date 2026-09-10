@@ -1,0 +1,30 @@
+class Solution {
+    int MOD = 1000000007; 
+    Integer dp[][]; 
+    int count[][]; 
+    public int f(int i , int j , String words[] , String target){
+        if(j == target.length()) return 1; 
+        if(i == words[0].length()) return 0 ; 
+
+        if(dp[i][j] != null) return dp[i][j]; 
+        long take = 0 ; 
+        long skip = 0 ; 
+        long currCount = (long)count[i][target.charAt(j)-'a']; 
+        
+        take = (long)(take + currCount*f(i+1, j+1 , words , target)) % MOD;
+        skip = skip +  f(i+1 , j , words , target) % MOD; 
+
+        return dp[i][j] = (int)(take + skip ) % MOD; 
+    }
+    public int numWays(String[] words, String target) {
+        int n = words[0].length(); 
+        int m = target.length(); 
+        dp = new Integer[n][m]; 
+        count = new int[n][26];
+
+        for(int i = 0 ; i < n ; i++){
+            for(int j = 0 ; j < words.length ; j++){
+                count[i][words[j].charAt(i) - 'a']++; 
+            }
+        }
+        return f
