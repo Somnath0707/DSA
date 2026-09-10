@@ -1,0 +1,24 @@
+{
+  "title": "Count Nodes Equal to Average of Subtree",
+  "titleSlug": "count-nodes-equal-to-average-of-subtree",
+  "frontendQuestionId": "2265",
+  "leetcodeUrl": "https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/",
+  "difficulty": "Medium",
+  "topics": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-10T04:29:47.458Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-10T04:29:47.864Z"
+}
