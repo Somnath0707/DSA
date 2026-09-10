@@ -1,0 +1,25 @@
+{
+  "title": "Orderly Queue",
+  "titleSlug": "orderly-queue",
+  "frontendQuestionId": "899",
+  "leetcodeUrl": "https://leetcode.com/problems/orderly-queue/",
+  "difficulty": "Hard",
+  "topics": [
+    "Math",
+    "String",
+    "Sorting",
+    "Lexicographically Minimal String Rotation"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-10T15:01:57.592Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-10T15:02:10.599Z"
+}
