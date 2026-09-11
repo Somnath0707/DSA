@@ -1,0 +1,28 @@
+
+            ans = Math.max(ans, curr);
+        }
+
+        int take = 0;
+        for (int val[] : list.get(i)) {
+            int next = val[0];
+            int w = val[1];
+            if (vis[next] == 0) {
+                vis[next] = 1;
+                f(next, time + w, vis, max, list, values, curr + values[next]);
+                vis[next] = 0;
+            } else {
+                f(next, time + w, vis, max, list, values, curr);
+            }
+        }
+
+    }
+
+    public int maximalPathQuality(int[] values, int[][] edges, int maxTime) {
+        //states we need u v then also we need time and then maxSum 
+        // visited array to mark the visited node 
+        // pq to sort based on maxSum or maxTime that is the question 
+
+        // if we have visted something with same maxQuality do not vist it again 
+        // so is state u v and maxSum 
+
+        // so if we go frmo 0 to 1 we have 32 now at 1 we have two option one is go to 0 or go to 0 check is 0 visited yes check have we visit

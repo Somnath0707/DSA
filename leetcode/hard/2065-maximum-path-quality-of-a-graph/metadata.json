@@ -1,0 +1,24 @@
+{
+  "title": "Maximum Path Quality of a Graph",
+  "titleSlug": "maximum-path-quality-of-a-graph",
+  "frontendQuestionId": "2065",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-path-quality-of-a-graph/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Graph Theory"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-11T15:02:50.458Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-11T15:03:01.389Z"
+}
