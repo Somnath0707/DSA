@@ -1,0 +1,23 @@
+class Solution {
+    public boolean check(long val , int nums[][]){
+        for(int i = 0 ; i < nums.length ; i++){
+            int cost = nums[i][0]; 
+            int cashBack = nums[i][1]; 
+
+            val -= cost; 
+            // System.out.println(val + " " + cost );
+            if(val < 0) return false; 
+            // System.out.println(val + " " + cost);
+            val += cashBack;
+        }
+        return true; 
+    }
+    public long minimumMoney(int[][] nums) {
+        // we need in regard less in any order istg if this is shitty greedy fuck em
+
+        //but my idea is now first minute to get the worst possible first what should be the worst minimum gain per and max loss 
+
+        // so sort on the basis of biggest loss and then binary search on answer to get the answre thats the answer 
+
+
+        // so the sort should be the cost - cashbac

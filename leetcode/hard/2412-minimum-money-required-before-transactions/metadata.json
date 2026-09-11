@@ -1,0 +1,24 @@
+{
+  "title": "Minimum Money Required Before Transactions",
+  "titleSlug": "minimum-money-required-before-transactions",
+  "frontendQuestionId": "2412",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-money-required-before-transactions/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-11T13:30:39.642Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-11T13:30:40.773Z"
+}
