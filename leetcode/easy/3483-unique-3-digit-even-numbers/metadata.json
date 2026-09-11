@@ -1,0 +1,25 @@
+{
+  "title": "Unique 3-Digit Even Numbers",
+  "titleSlug": "unique-3-digit-even-numbers",
+  "frontendQuestionId": "3483",
+  "leetcodeUrl": "https://leetcode.com/problems/unique-3-digit-even-numbers/",
+  "difficulty": "Easy",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Recursion",
+    "Enumeration"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-11T03:48:35.807Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-11T03:48:36.537Z"
+}
