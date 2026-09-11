@@ -1,0 +1,23 @@
+         else {
+                boolean check = (gcd(ind, prev) == 1 )? true : false; 
+                if(check && secondPrev == 7 && ind != prev){
+                    ans = (ans + f(i+1 , ind , prev , n)) % MOD; 
+                }
+                else if (check) {
+                    if(ind != prev && ind != secondPrev){
+                        ans = (ans + f(i+1 , ind , prev , n)) % MOD; 
+                    }
+                }
+            }
+        }
+
+        return dp[i][prev][secondPrev] = ans;
+
+    }
+
+    public int distinctSequences(int n) {
+        // n , then is gcd found 
+        dp = new Integer[n][8][8];
+        return f(0, 7, 7 ,n);
+    }
+}

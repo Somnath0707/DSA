@@ -1,0 +1,23 @@
+{
+  "title": "Number of Distinct Roll Sequences",
+  "titleSlug": "number-of-distinct-roll-sequences",
+  "frontendQuestionId": "2318",
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-distinct-roll-sequences/",
+  "difficulty": "Hard",
+  "topics": [
+    "Dynamic Programming",
+    "Memoization"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-11T04:39:25.858Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-11T04:39:43.673Z"
+}
