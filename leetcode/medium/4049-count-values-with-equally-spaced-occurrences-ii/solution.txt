@@ -1,0 +1,20 @@
+         List<Integer> list = entry.getValue();
+
+            if (list.size() >= 3) {
+                int diff = list.get(1) - list.get(0);
+                boolean valid = true;
+
+                for (int i = 2; i < list.size(); i++) {
+                    if (list.get(i) - list.get(i - 1) != diff) {
+                        valid = false;
+                        break;
+                    }
+                }
+
+                if (valid) count++;
+            }
+        }
+
+        return count;
+    }
+}
