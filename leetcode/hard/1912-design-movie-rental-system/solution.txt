@@ -1,0 +1,24 @@
+|| !checkRented.get(shop).contains(movie)) {
+                continue;
+            }
+
+            // Prevent duplicate active copies
+            String key = shop + "#" + movie;
+
+            if (added.contains(key))
+                continue;
+
+            added.add(key);
+
+            list.add(Arrays.asList(shop, movie));
+            temp.add(curr);
+        }
+
+        // Put valid entries back
+        for (int[] curr : temp) {
+            rented.offer(curr);
+        }
+
+        return list;
+    }
+}

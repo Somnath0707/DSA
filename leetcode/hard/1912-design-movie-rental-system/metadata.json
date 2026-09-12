@@ -1,0 +1,26 @@
+{
+  "title": "Design Movie Rental System",
+  "titleSlug": "design-movie-rental-system",
+  "frontendQuestionId": "1912",
+  "leetcodeUrl": "https://leetcode.com/problems/design-movie-rental-system/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Design",
+    "Heap (Priority Queue)",
+    "Ordered Set"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-12T04:48:52.427Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "HINT",
+  "helpLabel": "Needed hint",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-12T04:48:57.679Z"
+}
