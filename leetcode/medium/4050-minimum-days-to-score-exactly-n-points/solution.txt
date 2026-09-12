@@ -1,0 +1,26 @@
+nd * (ind + 1) / 2 <= n - i; ind++) {
+
+            int curr = ind * (ind + 1) / 2;
+
+            int check = f(i + curr, n);
+
+            if (check != Integer.MAX_VALUE) {
+
+                int days = check + ind;
+
+                if (i + curr != n) {
+                    days++;
+                }
+
+                take = Math.min(take, days);
+            }
+        }
+
+        return dp[i] = take;
+    }
+
+    public int minDays(int n) {
+        dp = new Integer[n + 1];
+        return f(0, n);
+    }
+}
