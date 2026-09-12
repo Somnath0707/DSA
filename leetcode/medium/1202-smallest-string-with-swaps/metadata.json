@@ -1,0 +1,28 @@
+{
+  "title": "Smallest String With Swaps",
+  "titleSlug": "smallest-string-with-swaps",
+  "frontendQuestionId": "1202",
+  "leetcodeUrl": "https://leetcode.com/problems/smallest-string-with-swaps/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find",
+    "Sorting"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-12T13:03:35.476Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-12T13:03:38.216Z"
+}

@@ -1,0 +1,29 @@
+lic int find(int i) {
+        if (parent[i] != i) {
+            parent[i] = find(parent[i]); // Path compression
+        }
+        return parent[i];
+    }
+
+    public boolean union(int i, int j) {
+        int rootI = find(i), rootJ = find(j);
+        if (rootI == rootJ) return false;
+        if (rank[rootI] < rank[rootJ]) { int t = rootI; rootI = rootJ; rootJ = t; }
+        parent[rootJ] = rootI;
+        if (rank[rootI] == rank[rootJ]) rank[rootI]++;
+        count--;
+        return true;
+    }
+}
+
+class Solution {
+    public String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {
+        // By the number of question I have solved I am current in 30 sec I know this is gonna be dsu how connected components for sure 
+
+        // so its simple make the connected componned tnad for each connected componet get the best samllest first at per index 
+
+        // we have done few question like these 
+        DSU dsu = new DSU(s.length());
+
+        for (List<Integer> num : pairs) {
+ 
