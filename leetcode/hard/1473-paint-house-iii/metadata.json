@@ -1,0 +1,23 @@
+{
+  "title": "Paint House III",
+  "titleSlug": "paint-house-iii",
+  "frontendQuestionId": "1473",
+  "leetcodeUrl": "https://leetcode.com/problems/paint-house-iii/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-13T06:46:06.939Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-13T06:46:12.506Z"
+}

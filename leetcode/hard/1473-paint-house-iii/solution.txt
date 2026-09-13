@@ -1,0 +1,27 @@
+class Solution {
+    Integer dp[][][]; 
+    public int f(int i, int prev, int colonies, int[] houses, int cost[][], int m, int n, int target) {
+
+        if( colonies > target) return Integer.MAX_VALUE; 
+        
+        if (i == m) {
+            if (colonies == target)
+                return 0;
+            return Integer.MAX_VALUE;
+        }
+
+
+        if(dp[i][prev+1][colonies] != null) return dp[i][prev+1][colonies];
+
+        long take = Integer.MAX_VALUE;
+        if (houses[i] != 0) {
+            if (prev == -1) {
+                take = 1L * f(i + 1, houses[i], 1, houses, cost, m, n, target);
+            } else {
+                if (prev == houses[i]) {
+                    take = 1L * f(i + 1, houses[i], colonies, houses, cost, m, n, target);
+                } else {
+                    take = 1L * f(i + 1, houses[i], colonies + 1, houses, cost, m, n, target);
+                }
+            }
+  
