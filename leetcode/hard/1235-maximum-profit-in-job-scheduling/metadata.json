@@ -1,0 +1,25 @@
+{
+  "title": "Maximum Profit in Job Scheduling",
+  "titleSlug": "maximum-profit-in-job-scheduling",
+  "frontendQuestionId": "1235",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-14T12:18:05.999Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-14T12:18:14.005Z"
+}

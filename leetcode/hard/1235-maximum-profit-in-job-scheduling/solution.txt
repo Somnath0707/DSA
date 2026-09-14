@@ -1,0 +1,42 @@
+d - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return ans;
+    }
+
+    public int f(int i, int nums[][]) {
+        if (i == nums.length) return 0;
+        if(dp[i] != null) return dp[i]; 
+        int take = 0;
+        int skip = 0;
+
+        int start = nums[i][0];
+        int end = nums[i][1];
+
+        int findNext = binarySearch(nums, i + 1, end);
+
+        take = nums[i][2] + f(findNext, nums);
+
+        skip = f(i + 1, nums);
+
+        return dp[i] = Math.max(take, skip);
+    }
+
+    public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
+        
+        int n = startTime.length;
+        int nums[][] = new int[n][3];
+
+        for (int i = 0; i < n; i++) {
+            nums[i][0] = startTime[i];
+            nums[i][1] = endTime[i];
+            nums[i][2] = profit[i];
+        }
+        dp = new Integer[n]; 
+
+        Arrays.sort(nums, (a, b) -> {
+            if (a[0] != b[0]) return a[0] - b[0];
+            else return a[2] - b[
