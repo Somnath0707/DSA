@@ -1,0 +1,30 @@
+]) { int t = rootI; rootI = rootJ; rootJ = t; }
+        parent[rootJ] = rootI;
+        if (rank[rootI] == rank[rootJ]) rank[rootI]++;
+        count--;
+        return true;
+    }
+}
+class Solution {
+    public int numSimilarGroups(String[] strs) {
+       
+        int n = strs.length ; 
+        int m = strs[0].length(); 
+        DSU dsu = new DSU(n); 
+        for(int i = 0 ; i < n ; i++){
+            for(int j = 0 ; j < n ; j++){
+                int count = 0; 
+                for(int k = 0 ; k < m ; k++){
+                    if(i == j) continue; 
+                    if(strs[i].charAt(k) != strs[j].charAt(k)){
+                        count++; 
+                    }
+                }
+                if(count <=2){
+                    dsu.union(i , j); 
+                }
+            }
+        }
+        return dsu.count; 
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Similar String Groups",
+  "titleSlug": "similar-string-groups",
+  "frontendQuestionId": "839",
+  "leetcodeUrl": "https://leetcode.com/problems/similar-string-groups/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-15T03:39:14.099Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-15T03:39:14.452Z"
+}
