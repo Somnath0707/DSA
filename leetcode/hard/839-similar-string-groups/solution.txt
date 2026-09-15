@@ -1,4 +1,6 @@
-]) { int t = rootI; rootI = rootJ; rootJ = t; }
+d(j);
+        if (rootI == rootJ) return false;
+        if (rank[rootI] < rank[rootJ]) { int t = rootI; rootI = rootJ; rootJ = t; }
         parent[rootJ] = rootI;
         if (rank[rootI] == rank[rootJ]) rank[rootI]++;
         count--;
@@ -12,13 +14,14 @@ class Solution {
         int m = strs[0].length(); 
         DSU dsu = new DSU(n); 
         for(int i = 0 ; i < n ; i++){
-            for(int j = 0 ; j < n ; j++){
+            for(int j = i+1 ; j < n ; j++){
                 int count = 0; 
                 for(int k = 0 ; k < m ; k++){
                     if(i == j) continue; 
                     if(strs[i].charAt(k) != strs[j].charAt(k)){
                         count++; 
                     }
+                    if(count > 2) break; 
                 }
                 if(count <=2){
                     dsu.union(i , j); 
