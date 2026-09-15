@@ -1,0 +1,22 @@
+class Solution {
+    Integer dp[]; 
+    public int f(int i , boolean nums[][] , int k){
+        if(i == nums.length){
+            return 0  ; 
+        }
+
+        if(dp[i] != null ) return dp[i]; 
+
+        int skip = f(i+1 , nums , k) ; 
+        int take = 0 ; 
+        for(int ind = i ; ind < nums.length ; ind++){
+            if(ind-i+1 >= k && nums[i][ind]){
+                take = Math.max(take ,  1 + f(ind+1 , nums , k)); 
+            }
+        }
+
+
+        return dp[i] = Math.max(take ,skip); 
+
+    }
+    publi

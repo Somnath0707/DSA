@@ -10,16 +10,16 @@
     "Dynamic Programming",
     "Greedy"
   ],
-  "language": "java",
+  "language": "Unknown",
   "verdict": "Accepted",
   "submissionId": null,
-  "submittedAt": "2026-08-25T08:38:05.789Z",
-  "runtimeMs": 149,
-  "memoryKb": 63386,
-  "totalCorrect": 56,
-  "totalTestcases": 56,
-  "helpType": "NONE",
-  "helpLabel": "Solved solo",
+  "submittedAt": "2026-09-15T03:07:35.274Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
   "focusSeconds": null,
-  "syncedAt": "2026-08-25T08:38:09.916Z"
+  "syncedAt": "2026-09-15T03:07:35.749Z"
 }
