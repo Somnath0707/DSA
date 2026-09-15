@@ -1,0 +1,24 @@
+{
+  "title": "Minimum Number of Operations to Make Arrays Similar",
+  "titleSlug": "minimum-number-of-operations-to-make-arrays-similar",
+  "frontendQuestionId": "2449",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-arrays-similar/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-15T13:16:50.001Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-15T13:16:50.671Z"
+}
