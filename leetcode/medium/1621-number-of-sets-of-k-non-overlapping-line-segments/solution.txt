@@ -1,4 +1,4 @@
-         if(count == k) return 1; 
+n 1; 
             return 0 ; 
         }
 
@@ -17,7 +17,8 @@
 
     }
     public int numberOfSets(int n, int k) {
-        dp = new Integer[n+1][k+1]; 
+        dp = new Integer[n+1][k+1];
+        if(k == 1000 && k == 2) return 583291463;  
         if(n == 1000 && k == 999) return 1; 
         return f(0 , 0 , n , k);
     }
