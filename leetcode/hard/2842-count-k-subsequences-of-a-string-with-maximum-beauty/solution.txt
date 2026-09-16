@@ -2,14 +2,20 @@ class Solution {
     Map<Character, Integer> map = new HashMap<>();
     int MOD = 1000000007;
 
+    Map<String, Integer> dp;
     public int f(int i, int taken, int currentBeauty, int max, int k) {
         if (taken == k) {
             return currentBeauty == max ? 1 : 0;
         }
 
         if (i == 26) return 0;
-        
-        if (taken + (26 - i) < k) return 0;
+
+        // if (taken + (26 - i) < k) return 0;
+
+        String key = i + "#" + taken + "#" + currentBeauty;
+
+        if (dp.containsKey(key))
+            return dp.get(key);
 
         long take = 0;
         long skip = 0;
@@ -18,15 +24,11 @@ class Solution {
 
         if (map.containsKey(curr)) {
             int freqCount = map.get(curr);
-            
-            take = (1L * freqCount * f(i + 1, taken + 1, currentBeauty + freqCount, max, k)) % MOD;
+
+            take = (1L * freqCount *
+                    f(i + 1, taken + 1,
+                      currentBeauty + freqCount,
+                      max, k)) % MOD;
         }
 
-        skip = f(i + 1, taken, currentBeauty, max, k);
-
-        return (int)((take + skip) % MOD);
-    }
-
-    public int countKSubsequencesWithMaxBeauty(String s, int k) {
-        
-        for (ch
+        skip = f(i + 1, taken
