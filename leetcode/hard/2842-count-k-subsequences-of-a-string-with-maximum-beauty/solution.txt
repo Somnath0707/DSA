@@ -1,0 +1,27 @@
+           }
+        }
+
+        need = k - greater;
+
+        sameFreq = new int[26];
+        int idx = 0;
+
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] == cutoff) {
+                sameFreq[idx++] = cutoff;
+            }
+        }
+
+        sameFreq = Arrays.copyOf(sameFreq, idx);
+
+        dp = new int[idx + 1][need + 1];
+
+        for (int i = 0; i <= idx; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        ans = (ans * f(0, 0)) % MOD;
+
+        return (int)ans;
+    }
+}

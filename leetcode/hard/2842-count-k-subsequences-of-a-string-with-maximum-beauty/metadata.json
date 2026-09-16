@@ -1,0 +1,28 @@
+{
+  "title": "Count K-Subsequences of a String With Maximum Beauty",
+  "titleSlug": "count-k-subsequences-of-a-string-with-maximum-beauty",
+  "frontendQuestionId": "2842",
+  "leetcodeUrl": "https://leetcode.com/problems/count-k-subsequences-of-a-string-with-maximum-beauty/",
+  "difficulty": "Hard",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Greedy",
+    "Sorting",
+    "Combinatorics",
+    "Fermat's Little Theorem"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-16T13:51:57.776Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-16T13:52:45.762Z"
+}
