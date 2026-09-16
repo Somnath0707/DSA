@@ -1,27 +1,22 @@
-           }
+class Solution {
+    Map<Character, Integer> map = new HashMap<>();
+    long MOD = 1000000007;
+
+    // We no longer need the check() function! We can just keep a running total 
+    // of the beauty sum (`currentBeauty`) in our recursion parameters.
+
+    public int f(int i, int taken, int currentBeauty, int max, int k) {
+        if (taken == k) {
+            return currentBeauty == max ? 1 : 0; // Check if the beauty matches max
         }
+        
+        // Base case & Pruning: if we've checked all 26 characters OR 
+        // if we don't have enough characters left to pick 'k' characters
+        if (i == 26 || 26 - i < k - taken) return 0;
 
-        need = k - greater;
+        long take = 0;
+        long skip = 0;
 
-        sameFreq = new int[26];
-        int idx = 0;
+        char curr = (char) ('a' + i);
 
-        for (int i = 0; i < 26; i++) {
-            if (freq[i] == cutoff) {
-                sameFreq[idx++] = cutoff;
-            }
-        }
-
-        sameFreq = Arrays.copyOf(sameFreq, idx);
-
-        dp = new int[idx + 1][need + 1];
-
-        for (int i = 0; i <= idx; i++) {
-            Arrays.fill(dp[i], -1);
-        }
-
-        ans = (ans * f(0, 0)) % MOD;
-
-        return (int)ans;
-    }
-}
+        // T
