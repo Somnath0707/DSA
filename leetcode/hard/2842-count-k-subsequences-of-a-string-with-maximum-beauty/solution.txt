@@ -1,22 +1,32 @@
-class Solution {
-    Map<Character, Integer> map = new HashMap<>();
-    long MOD = 1000000007;
+    skip = f(i + 1, taken, currentBeauty, max, k);
 
-    // We no longer need the check() function! We can just keep a running total 
-    // of the beauty sum (`currentBeauty`) in our recursion parameters.
+        return (int) ((take + skip) % MOD);
+    }
 
-    public int f(int i, int taken, int currentBeauty, int max, int k) {
-        if (taken == k) {
-            return currentBeauty == max ? 1 : 0; // Check if the beauty matches max
+    public int countKSubsequencesWithMaxBeauty(String s, int k) {
+
+        for (char ch : s.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
-        
-        // Base case & Pruning: if we've checked all 26 characters OR 
-        // if we don't have enough characters left to pick 'k' characters
-        if (i == 26 || 26 - i < k - taken) return 0;
 
-        long take = 0;
-        long skip = 0;
+        if (map.size() < k) return 0;
 
-        char curr = (char) ('a' + i);
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
-        // T
+        for (int num : map.values()) {
+            pq.offer(num);
+
+            if (pq.size() > k)
+                pq.poll();
+        }
+
+        int max = 0;
+
+        while (!pq.isEmpty()) {
+            max += pq.poll();
+        }
+
+        // Start recursion: checking alphabet at index 0, taken 0, currentBeauty 0
+        return f(0, 0, 0, max, k);
+    }
+}
