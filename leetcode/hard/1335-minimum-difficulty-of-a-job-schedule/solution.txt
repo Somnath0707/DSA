@@ -2,12 +2,10 @@ class Solution {
 
     Integer dp[][][]; 
     public int f(int i, int dayTaken, int max, int[] nums, int d) {
-        if (dayTaken == d) {
-            if (i == nums.length) return 0;
-            return Integer.MAX_VALUE;
-        }
+        if (dayTaken > d) return Integer.MAX_VALUE; 
 
         if (i == nums.length) {
+            if (dayTaken == d) return max; 
             return Integer.MAX_VALUE;
         }
 
@@ -20,4 +18,8 @@ class Solution {
         int nextDays = f(i + 1, dayTaken + 1, 0, nums, d);
         
 
-        if (nextDays != Integer.MAX
+        if (nextDays != Integer.MAX_VALUE) {
+            take = currMax + nextDays;
+        }
+
+        return dp[i][dayTaken][max] = Math.min(take, dontTake);
