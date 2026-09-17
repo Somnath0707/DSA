@@ -1,0 +1,26 @@
+{
+  "title": "Find Two Non-overlapping Sub-arrays Each With Target Sum",
+  "titleSlug": "find-two-non-overlapping-sub-arrays-each-with-target-sum",
+  "frontendQuestionId": "1477",
+  "leetcodeUrl": "https://leetcode.com/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Dynamic Programming",
+    "Sliding Window"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-17T03:28:58.732Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-17T03:29:02.978Z"
+}
