@@ -1,0 +1,23 @@
+{
+  "title": "Minimum Difficulty of a Job Schedule",
+  "titleSlug": "minimum-difficulty-of-a-job-schedule",
+  "frontendQuestionId": "1335",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-17T13:27:48.874Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-17T13:27:49.459Z"
+}

@@ -1,0 +1,23 @@
+class Solution {
+
+    Integer dp[][][]; 
+    public int f(int i, int dayTaken, int max, int[] nums, int d) {
+        if (dayTaken == d) {
+            if (i == nums.length) return 0;
+            return Integer.MAX_VALUE;
+        }
+
+        if (i == nums.length) {
+            return Integer.MAX_VALUE;
+        }
+
+        if(dp[i][dayTaken][max] != null ) return dp[i][dayTaken][max];
+        int currMax = Math.max(nums[i], max); 
+
+        int dontTake = f(i + 1, dayTaken, currMax, nums, d); 
+
+        int take = Integer.MAX_VALUE; 
+        int nextDays = f(i + 1, dayTaken + 1, 0, nums, d);
+        
+
+        if (nextDays != Integer.MAX
