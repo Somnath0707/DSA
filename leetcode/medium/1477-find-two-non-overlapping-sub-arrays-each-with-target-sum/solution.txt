@@ -1,4 +1,27 @@
- int[list.size()][4];
+whos sum is target along with start and end
+
+        List<int[]> list = new ArrayList<>();
+
+        int n = arr.length;
+        int j = 0;
+        int currSum = 0;
+
+        for (int i = 0; i < n; i++) {
+            currSum += arr[i];
+
+            while (currSum > target) {
+                currSum -= arr[j];
+                j++;
+            }
+
+            if (currSum == target) {
+                list.add(new int[]{j, i, i - j + 1});
+            }
+        }
+
+        if (list.size() < 2) return -1;
+
+        int temp[][] = new int[list.size()][4];
 
         for (int i = list.size() - 1; i >= 0; i--) {
             // add the one with the min value or diff at the last filed till that point like suffix array
@@ -10,23 +33,4 @@
             if (i == list.size() - 1) {
                 temp[i][3] = temp[i][2];
             } else {
-                temp[i][3] = Math.min(temp[i][2], temp[i + 1][3]);
-            }
-        }
-
-        // then bianry serach each to find the minimum next non over lapping and return the answer
-
-        int ans = Integer.MAX_VALUE;
-
-        for (int i = 0; i < list.size(); i++) {
-            int currEnd = temp[i][1];
-            int currLen = temp[i][2];
-
-            int next = binarySearch(list, i + 1, list.size() - 1, currEnd);
-
-            if (next < list.size()) {
-                ans = Math.min(ans, currLen + temp[next][3]);
-            }
-        }
-
-        return ans == Integer.MAX_
+                temp[i][3] = Math.min(temp[i][2], temp[i + 1][3
