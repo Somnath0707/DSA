@@ -1,0 +1,23 @@
+{
+  "title": "Minimum Number of Days to Eat N Oranges",
+  "titleSlug": "minimum-number-of-days-to-eat-n-oranges",
+  "frontendQuestionId": "1553",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges/",
+  "difficulty": "Hard",
+  "topics": [
+    "Dynamic Programming",
+    "Memoization"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-18T03:10:39.837Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "HINT",
+  "helpLabel": "Needed hint",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-18T03:10:47.543Z"
+}

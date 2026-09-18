@@ -1,0 +1,24 @@
+class Solution {
+    Map<Integer,Integer> map ; 
+    public int f(int i) {
+        if (i < 0) return Integer.MAX_VALUE;
+        if (i == 0) return 0;
+        if(map.containsKey(i)) return map.get(i); 
+        int take1 = 0;
+        
+        take1 = 1 + Math.min(
+            i%2 + f(i/2),
+            i%3 + f(i/3)
+        );
+
+
+        map.put(i , take1); 
+        return take1; 
+    }
+
+    public int minDays(int n) {
+
+        map = new HashMap<>();
+        return f(n)-1;
+    }
+}
