@@ -1,0 +1,18 @@
+     }
+
+        return dp[i][diff][tight][leadZero][evenTaken][oddTaken][parity] = take; 
+    }
+
+    public long countBalanced(long low, long high) {
+        
+        curr = String.valueOf(high); 
+        dp = new Long[curr.length()][200][2][2][2][2][2];
+        long countMax = f(0, 100, 1, 1, 0, 0, 0);
+
+        curr = String.valueOf(low - 1);
+        dp = new Long[curr.length()][200][2][2][2][2][2];
+        long countMin = f(0, 100, 1, 1, 0, 0, 0); 
+
+        return countMax - countMin; 
+    }
+}

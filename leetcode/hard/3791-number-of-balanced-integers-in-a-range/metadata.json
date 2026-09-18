@@ -1,0 +1,22 @@
+{
+  "title": "Number of Balanced Integers in a Range",
+  "titleSlug": "number-of-balanced-integers-in-a-range",
+  "frontendQuestionId": "3791",
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-balanced-integers-in-a-range/",
+  "difficulty": "Hard",
+  "topics": [
+    "Dynamic Programming"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-18T13:37:40.536Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-18T13:37:45.707Z"
+}
