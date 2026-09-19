@@ -1,0 +1,25 @@
+{
+  "title": "Construct String with Minimum Cost",
+  "titleSlug": "construct-string-with-minimum-cost",
+  "frontendQuestionId": "3213",
+  "leetcodeUrl": "https://leetcode.com/problems/construct-string-with-minimum-cost/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Suffix Array"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-19T14:07:21.695Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-19T14:07:22.095Z"
+}

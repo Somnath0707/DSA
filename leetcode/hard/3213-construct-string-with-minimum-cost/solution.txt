@@ -1,0 +1,21 @@
+th.min(currentMinCost, costs[i]));
+        }
+
+
+        lengths = new int[lenToHashMap.size()];
+        int idx = 0;
+        for (int l : lenToHashMap.keySet()) lengths[idx++] = l;
+        Arrays.sort(lengths);
+
+
+        maps = new HashMap[lengths.length];
+        for (int k = 0; k < lengths.length; k++) {
+            maps[k] = lenToHashMap.get(lengths[k]);
+        }
+
+        dp = new int[n + 1];
+        Arrays.fill(dp, -1);
+
+        int ans = f(0, target, words, costs);
+
+        return ans == Integer.MAX_VAL
