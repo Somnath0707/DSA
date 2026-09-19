@@ -1,4 +1,30 @@
-(last >= 0 && arr.get(last).isEmpty()) {
+class DinnerPlates {
+    ArrayList<Stack<Integer>> arr;
+    TreeSet<Integer> set;
+    int cap;
+    int last = -1;
+
+    public DinnerPlates(int capacity) {
+        arr = new ArrayList<>();
+        set = new TreeSet<>();
+        cap = capacity;
+    }
+
+    public void push(int val) {
+        int index = 0;
+
+        if (set.isEmpty()) {
+            index = last + 1;
+
+            if (index == arr.size()) {
+                arr.add(new Stack<>());
+            }
+
+            last = index;
+        } else…   set.add(last);
+
+        while (last >= 0 && arr.get(last).isEmpty()) {
+            set.remove(last);
             last--;
         }
 
@@ -6,18 +32,15 @@
     }
 
     public int popAtStack(int index) {
-        if (index >= arr.size() || arr.get(index).isEmpty()) {
+        if (index < 0 || index > last || arr.get(index).isEmpty())
             return -1;
-        }
 
         int ans = arr.get(index).pop();
+        set.add(index);
 
-        map.put(index, index);
-
-        if (index == last && arr.get(index).isEmpty()) {
-            while (last >= 0 && arr.get(last).isEmpty()) {
-                last--;
-            }
+        while (last >= 0 && arr.get(last).isEmpty()) {
+            set.remove(last);
+            last--;
         }
 
         return ans;
