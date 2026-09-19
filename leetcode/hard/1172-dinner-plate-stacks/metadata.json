@@ -1,0 +1,25 @@
+{
+  "title": "Dinner Plate Stacks",
+  "titleSlug": "dinner-plate-stacks",
+  "frontendQuestionId": "1172",
+  "leetcodeUrl": "https://leetcode.com/problems/dinner-plate-stacks/",
+  "difficulty": "Hard",
+  "topics": [
+    "Hash Table",
+    "Stack",
+    "Design",
+    "Heap (Priority Queue)"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-19T03:50:30.041Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-19T03:50:30.394Z"
+}

@@ -1,0 +1,25 @@
+(last >= 0 && arr.get(last).isEmpty()) {
+            last--;
+        }
+
+        return ans;
+    }
+
+    public int popAtStack(int index) {
+        if (index >= arr.size() || arr.get(index).isEmpty()) {
+            return -1;
+        }
+
+        int ans = arr.get(index).pop();
+
+        map.put(index, index);
+
+        if (index == last && arr.get(index).isEmpty()) {
+            while (last >= 0 && arr.get(last).isEmpty()) {
+                last--;
+            }
+        }
+
+        return ans;
+    }
+}
