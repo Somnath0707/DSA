@@ -1,0 +1,23 @@
+{
+  "title": "Reverse Degree of a String",
+  "titleSlug": "reverse-degree-of-a-string",
+  "frontendQuestionId": "3498",
+  "leetcodeUrl": "https://leetcode.com/problems/reverse-degree-of-a-string/",
+  "difficulty": "Easy",
+  "topics": [
+    "String",
+    "Simulation"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-20T03:41:28.947Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-20T03:41:29.295Z"
+}
