@@ -1,0 +1,27 @@
+he start then end and then the sum we already do prefix sum too 
+
+        //first start is 0 end is 4 sum is 15 so we have hash map with start end sum 
+        // now we break we the if start and end break so we remove the start and now put the start as previuos end as curr-1 and get the preifx sum and put then and next same save the removed in the tree set first why ? cause we can get the lower and upper to curr to get the index reomved 
+        // for curr we are between some one 
+
+        // 
+
+        int n = nums.length;
+        long prefix[] = new long[n];
+        TreeMap<Integer, long[]> map = new TreeMap<>();
+
+        prefix[0] = nums[0];
+
+        for (int i = 1; i < n; i++) {
+            prefix[i] = prefix[i - 1] + nums[i];
+        }
+
+        TreeMap<Long, Integer> freqMap = new TreeMap<>();
+        long ans[] = new long[n];
+
+        // start -> {end, sum}
+        map.put(0, new long[]{n - 1, prefix[n - 1]});
+
+        freqMap.put(prefix[n - 1], 1);
+
+        for (int i = 0; i < 

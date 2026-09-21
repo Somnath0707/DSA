@@ -1,0 +1,25 @@
+{
+  "title": "Maximum Segment Sum After Removals",
+  "titleSlug": "maximum-segment-sum-after-removals",
+  "frontendQuestionId": "2382",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-segment-sum-after-removals/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Union-Find",
+    "Prefix Sum",
+    "Ordered Set"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-21T13:58:26.667Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-21T13:58:28.398Z"
+}
