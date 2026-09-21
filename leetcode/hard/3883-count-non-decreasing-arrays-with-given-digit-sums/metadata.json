@@ -1,0 +1,24 @@
+{
+  "title": "Count Non Decreasing Arrays With Given Digit Sums",
+  "titleSlug": "count-non-decreasing-arrays-with-given-digit-sums",
+  "frontendQuestionId": "3883",
+  "leetcodeUrl": "https://leetcode.com/problems/count-non-decreasing-arrays-with-given-digit-sums/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-21T01:30:50.816Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-21T01:31:10.979Z"
+}
