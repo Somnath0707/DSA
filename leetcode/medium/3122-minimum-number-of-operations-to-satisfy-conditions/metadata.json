@@ -1,0 +1,24 @@
+{
+  "title": "Minimum Number of Operations to Satisfy Conditions",
+  "titleSlug": "minimum-number-of-operations-to-satisfy-conditions",
+  "frontendQuestionId": "3122",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-satisfy-conditions/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-22T13:59:58.505Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-22T14:00:02.034Z"
+}

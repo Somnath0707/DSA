@@ -1,0 +1,22 @@
+t i , int prev , int grid[][]){
+        if(i == grid[0].length) return 0 ; 
+
+        if(dp[i][prev+1] != null)return dp[i][prev+1];
+        int ans = Integer.MAX_VALUE; 
+
+        for(int ind = 0 ; ind <= 9 ; ind++){
+            if(prev == ind) continue; 
+            int cost = 0 ; 
+            for(int j = 0 ; j < grid.length ; j++){
+                if(grid[j][i] != ind) cost++; 
+            }
+
+            ans = Math.min(ans , cost + f(i+1 , ind , grid));
+        }
+        return dp[i][prev+1] = ans; 
+    }
+    public int minimumOperations(int[][] grid) {
+        dp = new Integer[grid[0].length][11];
+        return f(0 , -1 , grid );
+    }
+}
