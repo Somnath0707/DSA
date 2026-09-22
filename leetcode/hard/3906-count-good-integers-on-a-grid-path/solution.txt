@@ -21,8 +21,4 @@ class Solution {
             int nextTight = (tight == 1 && ind == limit) ? 1 : 0;
 
             if (i == pathPos) {
-                if (ind >= prev) {
-                    ans += f(i + 1, j + 1, ind, nextTight, dir);
-                }
-            } else {
-                ans += f(i + 1, j, prev, 
+        
