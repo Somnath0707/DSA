@@ -1,0 +1,28 @@
+class Solution {
+    String curr;
+    Long[][][][] dp;
+
+    public long f(int i, int j, int prev, int tight, String dir) {
+        if (i == 16) return 1;
+
+        if (dp[i][j][prev][tight] != null) {
+            return dp[i][j][prev][tight];
+        }
+
+        long ans = 0;
+        int limit = (tight == 1) ? curr.charAt(i) - '0' : 9;
+
+        int pathPos = 0;
+        for (int k = 0; k < j; k++) {
+            pathPos += (dir.charAt(k) == 'D') ? 4 : 1;
+        }
+
+        for (int ind = 0; ind <= limit; ind++) {
+            int nextTight = (tight == 1 && ind == limit) ? 1 : 0;
+
+            if (i == pathPos) {
+                if (ind >= prev) {
+                    ans += f(i + 1, j + 1, ind, nextTight, dir);
+                }
+            } else {
+                ans += f(i + 1, j, prev, 

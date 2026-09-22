@@ -1,0 +1,22 @@
+{
+  "title": "Count Good Integers on a Grid Path",
+  "titleSlug": "count-good-integers-on-a-grid-path",
+  "frontendQuestionId": "3906",
+  "leetcodeUrl": "https://leetcode.com/problems/count-good-integers-on-a-grid-path/",
+  "difficulty": "Hard",
+  "topics": [
+    "Dynamic Programming"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-22T02:18:57.107Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-22T02:18:57.490Z"
+}
