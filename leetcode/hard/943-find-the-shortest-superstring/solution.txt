@@ -1,23 +1,38 @@
-sk] = ans;
-    }
+class Solution {
+    String dp[][];
+    int n;
 
-    public String shortestSuperstring(String[] words) {
+    public int overlap(String a, String b) {
+        int len = Math.min(a.length(), b.length());
 
-        n = words.length;
-
-        dp = new String[n][1 << n];
-
-        String ans = null;
-
-        for (int i = 0; i < n; i++) {
-
-            String curr = words[i] + f(i, 1 << i, words);
-
-            if (ans == null || curr.length() < ans.length()) {
-                ans = curr;
+        for (int k = len; k >= 0; k--) {
+            if (a.substring(a.length() - k).equals(b.substring(0, k))) {
+                return k;
             }
         }
 
-        return ans;
+        return 0;
     }
-}
+
+    public String f(int i, int mask, String words[]) {
+
+        if (mask == (1 << n) - 1) {
+            return "";
+        }
+
+        if (dp[i][mask] != null) {
+            return dp[i][mask];
+        }
+
+        String ans = null;
+
+        for (int ind = 0; ind < n; ind++) {
+
+            if ((mask & (1 << ind)) != 0)
+                continue;
+
+            int currInd = overlap(words[i], words[ind]);
+
+            String curr = words[ind].substring(currInd);
+
+           
