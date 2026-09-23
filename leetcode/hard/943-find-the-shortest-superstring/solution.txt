@@ -1,0 +1,23 @@
+sk] = ans;
+    }
+
+    public String shortestSuperstring(String[] words) {
+
+        n = words.length;
+
+        dp = new String[n][1 << n];
+
+        String ans = null;
+
+        for (int i = 0; i < n; i++) {
+
+            String curr = words[i] + f(i, 1 << i, words);
+
+            if (ans == null || curr.length() < ans.length()) {
+                ans = curr;
+            }
+        }
+
+        return ans;
+    }
+}
