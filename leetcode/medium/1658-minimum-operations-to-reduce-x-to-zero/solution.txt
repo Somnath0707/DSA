@@ -1,8 +1,21 @@
-t runningSum = 0 ; 
+for(int i = n-2 ; i >= 0 ; i--){
+            suffixSum[i] = suffixSum[i+1] + nums[i];
+        }
+        int ans = Integer.MAX_VALUE;
+        int check = find(x , 0 , n-1 , suffixSum) ; 
+        if(check != Integer.MAX_VALUE){
+            ans = n-check;
+        }
+        System.out.println(ans);
+
+        int runningSum = 0 ; 
 
         for(int i = 0 ; i < n-1 ; i++){
             int val = x - prefixSum[i];
-            if(val == 0) ans = Math.min(i+1 , ans);
+            if(val == 0) {
+                ans = Math.min(i+1 , ans);
+                break;
+                }
             if( val < 0)break; 
             int finder = find(val , i+1 , n-1 , suffixSum);
             int temp = Integer.MAX_VALUE;
