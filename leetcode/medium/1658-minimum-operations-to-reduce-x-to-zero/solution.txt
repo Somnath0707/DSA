@@ -1,0 +1,18 @@
+t runningSum = 0 ; 
+
+        for(int i = 0 ; i < n-1 ; i++){
+            int val = x - prefixSum[i];
+            if(val == 0) ans = Math.min(i+1 , ans);
+            if( val < 0)break; 
+            int finder = find(val , i+1 , n-1 , suffixSum);
+            int temp = Integer.MAX_VALUE;
+            if(finder != Integer.MAX_VALUE){
+                temp = n-finder+i+1;
+            }
+            ans = Math.min(ans , temp);
+        }
+
+        if( ans == Integer.MAX_VALUE) return-1; 
+        return ans ; 
+    }
+}
