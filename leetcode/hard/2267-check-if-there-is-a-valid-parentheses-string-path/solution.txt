@@ -1,18 +1,28 @@
-r][nc][totalOpen][newClose] = true;
-                        q.offer(new int[]{nr, nc, totalOpen, newClose});
-                    }
+   boolean down = false;
+        boolean right = false;
 
-                } else {
-                    int newOpen = totalOpen + 1;
-
-                    if (!vis[nr][nc][newOpen][totalClose]) {
-                        vis[nr][nc][newOpen][totalClose] = true;
-                        q.offer(new int[]{nr, nc, newOpen, totalClose});
-                    }
-                }
-            }
+        if (i + 1 < n) {
+            down = down || f(i + 1, j, net);
         }
 
-        return false;
+        if (j + 1 < m) {
+            right = right || f(i, j + 1, net);
+        }
+
+        return dp[i][j][net] = down || right;
+    }
+
+    public boolean hasValidPath(char[][] grid) {
+        this.grid = grid;
+        n = grid.length;
+        m = grid[0].length;
+
+        if (grid[0][0] == ')' || grid[n - 1][m - 1] == '(') {
+            return false;
+        }
+
+        dp = new Boolean[n][m][n + m + 1];
+
+        return f(0, 0, 0);
     }
 }
