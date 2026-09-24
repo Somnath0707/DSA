@@ -1,0 +1,34 @@
+nt curr[] = q.poll();
+
+            int currRow = curr[0];
+            int currCol = curr[1];
+            int totalOpen = curr[2];
+            int totalClose = curr[3];
+
+            int balance = totalOpen - totalClose;
+
+            if (currRow == n - 1 && currCol == m - 1) {
+                if (balance == 0) return true;
+                continue;
+            }
+
+            // Can't possibly close enough before reaching the end
+            // int remaining = (n - 1 - currRow) + (m - 1 - currCol);
+
+            // if (balance > remaining) continue;
+
+            for (int d[] : dir) {
+                int nr = currRow + d[0];
+                int nc = currCol + d[1];
+
+                if (nr >= n || nc >= m) continue;
+
+                char ch = grid[nr][nc];
+
+                if (ch == ')') {
+                    if (totalOpen <= totalClose) continue;
+
+                    int newClose = totalClose + 1;
+                    int newBalance = totalOpen - newClose;
+
+                    if (!vis[nr][n
