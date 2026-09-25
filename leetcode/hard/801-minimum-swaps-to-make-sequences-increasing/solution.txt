@@ -1,0 +1,27 @@
+swapped == 1){
+            if(nums2[i-1] < nums1[i] && nums1[i-1] < nums2[i]){
+               notSwap  =  f(i+1 , 0 , nums1 , nums2);
+            }
+             if(nums2[i-1] < nums2[i] && nums1[i-1] < nums1[i]){
+                swap = 1 + f(i+1 , 1 , nums1 , nums2) ; 
+             }
+        }
+        else{
+            if(nums1[i-1] < nums1[i] && nums2[i-1] < nums2[i]){
+                notSwap = f(i+1 , 0 , nums1 , nums2); 
+            }
+            if(nums1[i-1] < nums2[i] && nums2[i-1] < nums1[i]){
+                swap = 1 + f(i+1 , 1 , nums1 , nums2); 
+            }
+        }
+
+        return dp[i][swapped] = Math.min(swap , notSwap);
+
+    }
+    public int minSwap(int[] nums1, int[] nums2) {
+        // the simplest idea that is 10000000% wrong is start from right and swap every value that is < than prev 
+
+        // but is it possible to swap a value from num 1 to any value of num 2 if thats the case which surely is ig 
+
+        // cuse else that would be stupid 
+        int n = nums

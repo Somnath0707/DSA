@@ -1,0 +1,23 @@
+{
+  "title": "Minimum Swaps To Make Sequences Increasing",
+  "titleSlug": "minimum-swaps-to-make-sequences-increasing",
+  "frontendQuestionId": "801",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-25T14:43:22.002Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-25T14:43:28.966Z"
+}
