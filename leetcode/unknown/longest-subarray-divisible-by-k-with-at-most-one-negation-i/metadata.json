@@ -1,0 +1,20 @@
+{
+  "title": "longest-subarray-divisible-by-k-with-at-most-one-negation-i",
+  "titleSlug": "longest-subarray-divisible-by-k-with-at-most-one-negation-i",
+  "frontendQuestionId": null,
+  "leetcodeUrl": "https://leetcode.com/problems/longest-subarray-divisible-by-k-with-at-most-one-negation-i/",
+  "difficulty": "Unknown",
+  "topics": [],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-26T15:32:47.125Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-26T15:32:50.414Z"
+}
