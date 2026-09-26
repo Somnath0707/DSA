@@ -1,0 +1,25 @@
+{
+  "title": "Count Subarrays With Fixed Bounds",
+  "titleSlug": "count-subarrays-with-fixed-bounds",
+  "frontendQuestionId": "2444",
+  "leetcodeUrl": "https://leetcode.com/problems/count-subarrays-with-fixed-bounds/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Queue",
+    "Sliding Window",
+    "Monotonic Queue"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-26T04:30:23.627Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-26T04:30:26.030Z"
+}
