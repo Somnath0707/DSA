@@ -1,0 +1,20 @@
+{
+  "title": "maximum-equal-adjacent-pairs-after-at-most-one-replacement",
+  "titleSlug": "maximum-equal-adjacent-pairs-after-at-most-one-replacement",
+  "frontendQuestionId": null,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-equal-adjacent-pairs-after-at-most-one-replacement/",
+  "difficulty": "Unknown",
+  "topics": [],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-27T02:52:47.424Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-27T02:52:56.945Z"
+}

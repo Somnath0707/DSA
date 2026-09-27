@@ -1,0 +1,1 @@
+<h2><a href="https://leetcode.com/problems/maximum-equal-adjacent-pairs-after-at-most-one-replacement/">maximum-equal-adjacent-pairs-after-at-most-one-replacement</a></h2><h3>Unknown</h3><hr>Problem description not found.
