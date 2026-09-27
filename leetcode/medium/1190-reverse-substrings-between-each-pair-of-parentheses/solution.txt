@@ -1,0 +1,19 @@
+         else{
+                StringBuilder str = new StringBuilder() ; 
+                while(st.peek() != '('){
+                    str.append(st.pop());
+                }
+                st.pop(); 
+                for(int j = 0 ; j < str.length() ; j++){
+                    st.push(str.charAt(j));
+                }
+            }
+        }
+
+        StringBuilder str = new StringBuilder(); 
+        while(!st.isEmpty()){
+            str.append(st.pop()); 
+        }
+        return str.reverse().toString(); 
+    }
+}
