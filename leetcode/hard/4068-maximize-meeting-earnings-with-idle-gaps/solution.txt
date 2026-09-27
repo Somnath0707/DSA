@@ -1,0 +1,35 @@
+class Solution {
+    Long dp[][]; 
+
+    public int binarySearch(int nums[][], int start, int end) {
+        int left = start;
+        int right = nums.length - 1;
+        int ans = nums.length;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (nums[mid][0] >= end) {
+                ans = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return ans;
+    }
+
+    public long f(int i, int isFirst, int nums[][]) {
+        if (i == nums.length) return 0;
+        if (dp[i][isFirst] != null) return dp[i][isFirst]; 
+
+        long skip = 0;
+        long take = 0;
+
+        int start = nums[i][0];
+        int end = nums[i][1];
+
+        int findNext = binarySearch(nums, i + 1, end);
+
+        take
