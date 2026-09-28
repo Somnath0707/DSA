@@ -1,0 +1,23 @@
+{
+  "title": "Shortest Cycle in a Graph",
+  "titleSlug": "shortest-cycle-in-a-graph",
+  "frontendQuestionId": "2608",
+  "leetcodeUrl": "https://leetcode.com/problems/shortest-cycle-in-a-graph/",
+  "difficulty": "Hard",
+  "topics": [
+    "Breadth-First Search",
+    "Graph Theory"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-28T13:19:45.574Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-28T13:19:47.823Z"
+}
