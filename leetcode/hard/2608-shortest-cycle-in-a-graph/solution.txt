@@ -1,25 +1,20 @@
-nteger>> list = new ArrayList<>();
+t(currU)){
+                if(v == par) continue; 
 
-        for (int i = 0; i < n; i++) {
-            list.add(new ArrayList<>());
+                int newLen = len + 1; 
+
+                if(dist[v] != Integer.MAX_VALUE){
+                    min = Math.min(min , dist[v]+ newLen); 
+                    continue; 
+                }
+                dist[v] = newLen; 
+                q.offer(new int[]{v , newLen , currU});
+                // min = Math.min(min , newLen); 
+            }
         }
 
-        for (int e[] : edges) {
-            int u = e[0];
-            int v = e[1];
 
-            list.get(u).add(v);
-            list.get(v).add(u);
-        }
-
-        int ans = Integer.MAX_VALUE;
-
-        for (int i = 0; i < n; i++) {
-            ans = Math.min(ans, bfs(i, list, n));
-        }
-
-        if (ans == Integer.MAX_VALUE) return -1;
-
-        return ans;
+        return min ; 
     }
-}
+    public int findShortestCycle(int n, int[][] edges) {
+        List
