@@ -1,0 +1,29 @@
+class Solution {
+    public int bestRotation(int[] nums) {
+        int n = nums.length;
+        int diff[] = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            int curr = nums[i];
+
+            if (curr <= i) {
+                // no wrap: k in [0, i-curr]
+                int validEnd = i - curr;
+
+                diff[0]++;
+
+                if (validEnd < n - 1) {
+                    diff[validEnd + 1]--;
+                }
+            }
+
+            // wrap: k in [i+1, n+i-curr]
+            int validStartRight = i + 1;
+
+            if (validStartRight < n) {
+                int validEndRight = Math.min(n - 1, n + i - curr);
+
+                diff[validStartRight]++;
+
+                if (validEndRight < n - 1) {
+                    diff[validEndRig

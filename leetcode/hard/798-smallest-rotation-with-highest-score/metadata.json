@@ -1,0 +1,23 @@
+{
+  "title": "Smallest Rotation with Highest Score",
+  "titleSlug": "smallest-rotation-with-highest-score",
+  "frontendQuestionId": "798",
+  "leetcodeUrl": "https://leetcode.com/problems/smallest-rotation-with-highest-score/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-09-28T04:08:51.437Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-09-28T04:08:53.777Z"
+}
