@@ -1,0 +1,24 @@
+{
+  "title": "Valid Parentheses",
+  "titleSlug": "valid-parentheses",
+  "frontendQuestionId": "20",
+  "leetcodeUrl": "https://leetcode.com/problems/valid-parentheses/",
+  "difficulty": "Easy",
+  "topics": [
+    "String",
+    "Stack",
+    "Bracket Sequences"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-01T03:04:19.488Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-01T03:04:21.552Z"
+}

@@ -1,0 +1,16 @@
+ength() ;i++){
+            char curr = s.charAt(i); 
+
+            if(st.isEmpty() || curr == '(' || curr == '[' || curr == '{'){
+                st.push(curr); 
+            }else{
+                if(st.peek() == '(' && curr == ')') st.pop(); 
+                else if(st.peek() == '[' && curr == ']') st.pop(); 
+                else if(st.peek() == '{' && curr == '}') st.pop(); 
+                else return false; 
+            }
+        }
+        if(st.isEmpty()) return true; 
+        return false; 
+    }
+}
