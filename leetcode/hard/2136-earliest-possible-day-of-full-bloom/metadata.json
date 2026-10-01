@@ -1,0 +1,24 @@
+{
+  "title": "Earliest Possible Day of Full Bloom",
+  "titleSlug": "earliest-possible-day-of-full-bloom",
+  "frontendQuestionId": "2136",
+  "leetcodeUrl": "https://leetcode.com/problems/earliest-possible-day-of-full-bloom/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-01T04:05:56.965Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-01T04:05:59.079Z"
+}
