@@ -1,0 +1,26 @@
+{
+  "title": "Elevator Requests III",
+  "titleSlug": "elevator-requests-iii",
+  "frontendQuestionId": "4027",
+  "leetcodeUrl": "https://leetcode.com/problems/elevator-requests-iii/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Sorting",
+    "Bitmask"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-05T04:46:45.760Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-05T04:46:52.213Z"
+}

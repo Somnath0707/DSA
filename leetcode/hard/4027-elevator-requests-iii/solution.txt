@@ -1,0 +1,22 @@
+Time = Math.max(
+                        time + Math.abs(floor - curr),
+                        arvTime
+                    );
+
+                    int newMask = mask | (1 << ind);
+
+                    dp[newMask][ind] =
+                        Math.min(dp[newMask][ind], newTime);
+                }
+            }
+        }
+
+        long ans = Long.MAX_VALUE;
+
+        for(int last = 0 ; last < m ; last++){
+            ans = Math.min(ans, dp[total - 1][last]);
+        }
+
+        return ans;
+    }
+}
