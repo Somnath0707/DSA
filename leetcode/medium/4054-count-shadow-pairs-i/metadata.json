@@ -1,0 +1,24 @@
+{
+  "title": "Count Shadow Pairs I",
+  "titleSlug": "count-shadow-pairs-i",
+  "frontendQuestionId": "4054",
+  "leetcodeUrl": "https://leetcode.com/problems/count-shadow-pairs-i/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-05T15:36:32.487Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-05T15:36:37.760Z"
+}
