@@ -1,33 +1,30 @@
-class Solution {
-    int bs(int left, int right, int nums[], int val) {
-        int ans = -1; 
-        while(left <= right){
-            int mid = left + (right - left) / 2; 
-            if(nums[mid] < val){
-                ans = mid; 
-                left = mid + 1; 
-            } else {
-                right = mid - 1; 
-            }
-        }
-        
-        return ans + 1; 
-    }
-    
-    public long shadowPairs(int[] nums) {
+      // 1 2 3 4 
         long ans = 0; 
         int n = nums.length; 
         int monoStack[] = new int[n]; 
         int ind = -1; 
-        
+
         for(int i = 0 ; i < n ; i++){
             int curr = nums[i]; 
-            
+
             while(ind >= 0 && monoStack[ind] > curr){
-                int last = bs(0, ind, monoStack, monoStack[ind]); 
+                int last = bs(0 , ind , monoStack , monoStack[ind]); 
                 ans += last; 
+                monoStack[ind] = 0;
                 ind--; 
             }
-            
+
             ind++;
-            monoStack[i
+            monoStack[ind] = curr; 
+        }
+
+        while(ind >= 0){
+            int last = bs(0 , ind , monoStack , monoStack[ind]);
+            ans += last; 
+            monoStack[ind] = 0;
+            ind--; 
+        }
+
+        return ans; 
+    }
+}
