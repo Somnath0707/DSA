@@ -1,0 +1,24 @@
+{
+  "title": "Score of Parentheses",
+  "titleSlug": "score-of-parentheses",
+  "frontendQuestionId": "856",
+  "leetcodeUrl": "https://leetcode.com/problems/score-of-parentheses/",
+  "difficulty": "Medium",
+  "topics": [
+    "String",
+    "Stack",
+    "Bracket Sequences"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-05T04:42:33.178Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-05T04:42:35.221Z"
+}
