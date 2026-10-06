@@ -1,0 +1,26 @@
+{
+  "title": "Fair Distribution of Cookies",
+  "titleSlug": "fair-distribution-of-cookies",
+  "frontendQuestionId": "2305",
+  "leetcodeUrl": "https://leetcode.com/problems/fair-distribution-of-cookies/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-06T04:37:41.827Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-06T04:37:45.530Z"
+}
