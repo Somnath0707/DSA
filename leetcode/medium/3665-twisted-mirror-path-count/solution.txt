@@ -1,0 +1,29 @@
+class Solution {
+    int n; 
+    int m; 
+    int MOD = 1000000007; 
+    Integer dp[][][]; 
+
+    public int f(int i, int j, int prev, int grid[][]){
+        // System.out.println("i = " + i + ", j = " + j + ", prev = " + prev);
+        if(i >= n || i < 0 || j >= m || j < 0) return 0; 
+        if(i == n-1 && j == m-1){
+            return 1; 
+        }
+
+        if(dp[i][j][prev] != null) return dp[i][j][prev]; 
+        long down  = 0; 
+        long right = 0; 
+
+        // 0: down , 1 : right
+
+        if(grid[i][j] == 1 && prev == 2){
+            right = f(i, j+1, 0, grid); 
+            down = f(i+1, j, 1, grid); 
+        }
+
+        if(grid[i][j] == 1 && prev == 0){
+            right = f(i, j+1, 1, grid); 
+        }
+
+   
