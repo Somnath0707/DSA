@@ -1,25 +1,28 @@
- , int total , Map<Integer ,Integer> map , int []nums , int k ){
-        if(i == nums.length){// all taken return 
-            return total; 
+class Solution {
+    public int f(int i, int total, int[] map, int[] nums, int k) {
+        if(i == nums.length){
+            return total;
         }
 
-        int ans = Integer.MAX_VALUE; 
+        int ans = Integer.MAX_VALUE;
 
-        for(int ind = 1 ; ind <= k ; ind++){
-            // if taken skip 
+        for(int ind = 0; ind < k; ind++){
+            map[ind] += nums[i];
 
-            map.put(ind , map.getOrDefault(ind , 0) + nums[i] );
-            // maks it ; 
-            int newTotal = Math.max(total , map.get(ind)); 
-            ans = Math.min(ans , f(i+1, newTotal , map , nums , k));
-            
-            map.put(ind , map.get(ind)-nums[i] );
+            int newTotal = Math.max(total, map[ind]);
+
+            if(newTotal < ans){
+                ans = Math.min(ans, f(i + 1, newTotal, map, nums, k));
+            }
+
+            map[ind] -= nums[i];
+
+            if(map[ind] == 0)
+                break;
         }
 
-        return ans; 
+        return ans;
     }
 
     public int distributeCookies(int[] cookies, int k) {
-        return f(0 ,0 ,  new HashMap<>() , cookies , k);
-    }
-}
+        Arrays.sort(cookies);
