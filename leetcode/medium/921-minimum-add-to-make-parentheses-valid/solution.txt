@@ -1,0 +1,25 @@
+class Solution {
+    public int minAddToMakeValid(String s) {
+        int n = s.length(); 
+        Stack<Character> st = new Stack<>(); 
+        int ans = 0 ; 
+        for(char curr : s.toCharArray()){
+            if(st.isEmpty()){
+                if(curr == ')') ans++; 
+                else st.push(curr);
+            }
+            else if(curr == ')'){
+                if(st.isEmpty()) ans++; 
+                else st.pop(); 
+            }else{
+                st.push('(');
+            }
+        }
+
+        while(!st.isEmpty()){
+            ans ++;
+            st.pop(); 
+        }
+        return ans; 
+    }
+}
