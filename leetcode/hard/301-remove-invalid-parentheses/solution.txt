@@ -1,6 +1,20 @@
-!= null) return dp[i][total][remove]; 
+class Solution {
+    Set<String> list; 
+    int min; 
+    
+    Integer dp[][][];
+    public void f(int i, StringBuilder str, int total, int remove, String s){
+        if(total < 0) return;
+        if(remove > min) return ;  
+        
+        if(i == s.length()){
+            if(remove == min && total == 0){
+                list.add(str.toString()); 
+            }
+            return;
+        }
 
-        int skip = dfs(i+1, total, remove+1, s); 
+        f(i+1, str, total, remove+1, s); 
 
         char curr = s.charAt(i); 
 
@@ -11,23 +25,11 @@
             newTotal = total-1; 
         }
 
-        int take = dfs(i+1, newTotal, remove, s); 
 
-        return dp[i][total][remove] = Math.min(take, skip);
+        str.append(curr); 
+        f(i+1, str, newTotal, remove, s); 
+        str.setLength(str.length()-1);
     }
     
-    public List<String> removeInvalidParentheses(String s) {
-        int n = s.length() ; 
-        dp = new Integer[n][n][n]; 
-        min = dfs(0, 0, 0, s); 
-        list = new  HashSet<>(); 
-        List<String> ans = new ArrayList<>(); 
-
-        f(0, new StringBuilder(), 0, 0, s);
-        for(String str : list){
-            ans.add(str); 
-        }
-
-        return ans; 
-    }
-}
+    public int dfs(int i, int total, int remove, String s){
+        if(total < 0) return Integer.MAX_VALU
