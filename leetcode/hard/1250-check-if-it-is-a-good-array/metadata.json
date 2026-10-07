@@ -1,0 +1,28 @@
+{
+  "title": "Check If It Is a Good Array",
+  "titleSlug": "check-if-it-is-a-good-array",
+  "frontendQuestionId": "1250",
+  "leetcodeUrl": "https://leetcode.com/problems/check-if-it-is-a-good-array/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Math",
+    "Number Theory",
+    "Bézout's Lemma",
+    "Euclidean Algorithm",
+    "Greatest Common Divisor",
+    "Extended Euclidean Algorithm"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-07T13:34:24.211Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-07T13:34:26.579Z"
+}
