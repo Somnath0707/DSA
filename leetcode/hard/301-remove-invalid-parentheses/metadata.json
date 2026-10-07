@@ -1,0 +1,24 @@
+{
+  "title": "Remove Invalid Parentheses",
+  "titleSlug": "remove-invalid-parentheses",
+  "frontendQuestionId": "301",
+  "leetcodeUrl": "https://leetcode.com/problems/remove-invalid-parentheses/",
+  "difficulty": "Hard",
+  "topics": [
+    "String",
+    "Backtracking",
+    "Breadth-First Search"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-07T03:31:46.402Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-07T03:31:51.732Z"
+}
