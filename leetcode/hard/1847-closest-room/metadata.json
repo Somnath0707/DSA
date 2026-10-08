@@ -1,0 +1,25 @@
+{
+  "title": "Closest Room",
+  "titleSlug": "closest-room",
+  "frontendQuestionId": "1847",
+  "leetcodeUrl": "https://leetcode.com/problems/closest-room/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sorting",
+    "Ordered Set"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-08T14:25:31.413Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-08T14:25:38.363Z"
+}

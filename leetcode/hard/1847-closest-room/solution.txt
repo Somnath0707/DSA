@@ -1,0 +1,21 @@
+            ans[index] = upperClose;
+            }
+            else if(upperClose == null){
+                ans[index] = lowerClose;
+            }
+            else{
+                int lower = prefId - lowerClose;
+                int upper = upperClose - prefId;
+
+                if(lower <= upper){
+                    ans[index] = lowerClose;
+                }
+                else{
+                    ans[index] = upperClose;
+                }
+            }
+        }
+
+        return ans;
+    }
+}
