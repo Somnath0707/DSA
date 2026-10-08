@@ -1,0 +1,25 @@
+ution {
+    public String removeOuterParentheses(String s) {
+        Stack<Character> st = new Stack<>(); 
+        // int n = s.length(); 
+        StringBuilder str = new StringBuilder(); 
+
+        for(char curr : s.toCharArray()){
+            if(curr == '('){
+                st.push('(');
+                if(st.size() > 1){
+                    // st.push()
+                    str.append("(");
+                }
+            }else{
+                if(st.size() > 1){
+                    str.append(")");
+                    st.pop(); 
+                }else st.pop(); 
+            }
+        }
+        return str.toString(); 
+    }
+}
+
+// 
