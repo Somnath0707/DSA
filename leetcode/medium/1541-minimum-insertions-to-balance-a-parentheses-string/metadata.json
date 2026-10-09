@@ -1,0 +1,25 @@
+{
+  "title": "Minimum Insertions to Balance a Parentheses String",
+  "titleSlug": "minimum-insertions-to-balance-a-parentheses-string",
+  "frontendQuestionId": "1541",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/",
+  "difficulty": "Medium",
+  "topics": [
+    "String",
+    "Stack",
+    "Greedy",
+    "Bracket Sequences"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-09T03:11:38.809Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-09T03:11:44.901Z"
+}

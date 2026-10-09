@@ -1,0 +1,23 @@
+   else {
+                if(ch == '(') countOpen++; 
+                if(ch == ')') countClose++ ; 
+            }
+
+        }
+
+        // System.out.println(ans);
+        // System.out.println(countClose + " " + countOpen);
+
+        if(countOpen != 0){
+            ans += countOpen * 2 - countClose; 
+            return ans; 
+        }
+        if(countClose != 0 ){
+            if(countClose % 2 != 0){
+                ans += (countClose + 1) / 2;
+            }
+        }
+
+        return ans; 
+    }
+}
