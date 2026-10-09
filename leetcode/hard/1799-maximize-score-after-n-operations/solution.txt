@@ -1,4 +1,11 @@
-b;
+class Solution {
+    int n;
+    Integer dp[][];
+
+    public int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
             a = temp;
         }
         return a;
@@ -9,7 +16,7 @@ b;
             return 0;
         }
 
-        if (dp[mask] != null) return dp[mask];
+        if (dp[mask][currOp] != null) return dp[mask][currOp];
 
         int ans = 0;
 
@@ -27,12 +34,7 @@ b;
             }
         }
 
-        return dp[mask] = ans;
+        return dp[mask][currOp] = ans;
     }
 
-    public int maxScore(int[] nums) {
-        n = nums.length;
-        dp = new Integer[1 << n];
-        return f(0, 1, nums);
-    }
-}
+    public int
