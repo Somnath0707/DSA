@@ -1,0 +1,28 @@
+ size of array
+        // 1 10 100 100
+
+        // 1 7 8 21
+
+        Map<Integer,Integer> map = new HashMap<>(); 
+        
+
+        for(int i = 0 ; i < n ; i++){
+            if(map.containsKey(nums[i])) continue; 
+            list.add(nums[i]); 
+            map.put(nums[i], map.getOrDefault(nums[i] , 0 ) + 1) ; 
+        }
+        int ans = Integer.MAX_VALUE; 
+
+        for(int i = 0 ; i < list.size() ; i++){
+            int curr = list.get(i); 
+            int temp = bs(i , list.size()-1, list, n);
+            if(temp == -1){
+                ans = Math.min(ans , n-1+1); 
+            }else{
+                int totalEle = temp - i ; 
+                ans = Math.min((n-1) - totalEle , ans);
+            }
+        }
+        return ans; 
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Minimum Number of Operations to Make Array Continuous",
+  "titleSlug": "minimum-number-of-operations-to-make-array-continuous",
+  "frontendQuestionId": "2009",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Sliding Window"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-09T04:06:54.492Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-09T04:06:58.054Z"
+}
