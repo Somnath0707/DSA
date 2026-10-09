@@ -1,0 +1,28 @@
+{
+  "title": "Maximize Score After N Operations",
+  "titleSlug": "maximize-score-after-n-operations",
+  "frontendQuestionId": "1799",
+  "leetcodeUrl": "https://leetcode.com/problems/maximize-score-after-n-operations/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Number Theory",
+    "Bitmask"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-09T13:25:36.087Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-09T13:25:48.901Z"
+}
