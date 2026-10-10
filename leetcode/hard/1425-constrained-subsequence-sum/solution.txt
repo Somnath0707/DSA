@@ -1,0 +1,27 @@
+) {
+        // for pos value we can take all the +ve values in neg we have to smartly pick the closer value to 0 and if the og sum ever drops to -ve then just discard that shit 
+
+        // we have to take neg that give use little -ve to answer and take use th good range too 
+
+        int n = nums.length ; 
+        
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)->b[0]-a[0]);
+
+        int dp[] = new int[n]; 
+        Arrays.fill(dp , Integer.MIN_VALUE); 
+        int ans = Integer.MIN_VALUE ; 
+
+        for(int i = 0 ; i < n ; i++){
+            while(!pq.isEmpty() && pq.peek()[1] < i-k){
+                pq.poll(); 
+            }
+
+            dp[i] = nums[i]; 
+            if(!pq.isEmpty())
+                dp[i] = Math.max(dp[i] , nums[i] + pq.peek()[0]);
+            pq.offer(new int[]{dp[i] , i});
+            ans = Math.max(ans , dp[i]); 
+        }   
+        return ans; 
+    }
+}

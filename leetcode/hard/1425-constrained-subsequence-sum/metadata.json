@@ -1,0 +1,27 @@
+{
+  "title": "Constrained Subsequence Sum",
+  "titleSlug": "constrained-subsequence-sum",
+  "frontendQuestionId": "1425",
+  "leetcodeUrl": "https://leetcode.com/problems/constrained-subsequence-sum/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Queue",
+    "Sliding Window",
+    "Heap (Priority Queue)",
+    "Monotonic Queue"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-10T04:27:27.526Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-10T04:27:29.661Z"
+}
