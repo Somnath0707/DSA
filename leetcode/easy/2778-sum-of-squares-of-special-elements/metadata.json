@@ -1,0 +1,23 @@
+{
+  "title": "Sum of Squares of Special Elements ",
+  "titleSlug": "sum-of-squares-of-special-elements",
+  "frontendQuestionId": "2778",
+  "leetcodeUrl": "https://leetcode.com/problems/sum-of-squares-of-special-elements/",
+  "difficulty": "Easy",
+  "topics": [
+    "Array",
+    "Enumeration"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-11T02:29:59.677Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-11T02:30:05.936Z"
+}
