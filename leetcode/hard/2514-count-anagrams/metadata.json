@@ -1,0 +1,27 @@
+{
+  "title": "Count Anagrams",
+  "titleSlug": "count-anagrams",
+  "frontendQuestionId": "2514",
+  "leetcodeUrl": "https://leetcode.com/problems/count-anagrams/",
+  "difficulty": "Hard",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Combinatorics",
+    "Counting",
+    "Fermat's Little Theorem"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-12T04:16:11.352Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-12T04:16:24.556Z"
+}

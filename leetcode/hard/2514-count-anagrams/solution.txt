@@ -1,0 +1,21 @@
+ 0; i <= s.length(); i++) {
+            if (i < s.length() && s.charAt(i) != ' ') {
+                freq[s.charAt(i) - 'a']++;
+                len++;
+            } else if (len > 0) {
+                long ways = fact[len];
+
+                for (int count : freq) {
+                    ways = ways * invFact[count] % MOD;
+                }
+
+                ans = ans * ways % MOD;
+
+                freq = new int[26];
+                len = 0;
+            }
+        }
+
+        return (int) ans;
+    }
+}
