@@ -1,0 +1,25 @@
+{
+  "title": "Maximize Alternating Sum Using Swaps",
+  "titleSlug": "maximize-alternating-sum-using-swaps",
+  "frontendQuestionId": "3695",
+  "leetcodeUrl": "https://leetcode.com/problems/maximize-alternating-sum-using-swaps/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Union-Find",
+    "Sorting"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-12T13:19:57.305Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-12T13:19:59.345Z"
+}

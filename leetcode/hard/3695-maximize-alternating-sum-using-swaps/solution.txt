@@ -1,0 +1,20 @@
+  int parent = dsu.find(i);
+            if (i % 2 == 0) {
+                int val = map.get(parent).lastKey();
+                ans += val;
+                map.get(parent).put(val, map.get(parent).get(val) - 1);
+                if (map.get(parent).get(val) == 0) {
+                    map.get(parent).remove(val); 
+                }
+            }else{
+                int val = map.get(parent).firstKey(); 
+                ans -= val; 
+                map.get(parent).put(val, map.get(parent).get(val)- 1);
+                if (map.get(parent).get(val) == 0) {
+                    map.get(parent).remove(val); 
+                }
+            }
+        }
+        return ans; 
+    }
+}
