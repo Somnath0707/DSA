@@ -1,4 +1,15 @@
-nt f(int i, int j, int steps, int[][] mat) {
+ength)
+                continue;
+            if (temp[nr][nc] == 1)
+                temp[nr][nc] = 0;
+            else
+                temp[nr][nc] = 1;
+        }
+
+        return temp;
+    }
+
+    public int f(int i, int j, int steps, int[][] mat) {
         if (check(mat))
             return steps;
         if (i == mat.length)
@@ -7,7 +18,7 @@ nt f(int i, int j, int steps, int[][] mat) {
         int ans = Integer.MAX_VALUE;
 
         for (int ind = i; ind < mat.length; ind++) {
-            for (int k = j; k < mat[0].length; k++) {
+            for (int k = (ind == i ? j : 0); k < mat[0].length; k++) {
                 int nextI = ind;
                 int nextJ = k + 1;
 
@@ -26,7 +37,4 @@ nt f(int i, int j, int steps, int[][] mat) {
     }
 
     public int minFlips(int[][] mat) {
-        int ans = f(0, 0, 0, mat);
-        return ans == Integer.MAX_VALUE ? -1 : ans;
-    }
-}
+        int ans = f(0, 0, 0, mat
