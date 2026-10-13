@@ -1,5 +1,13 @@
-nge(ind, k, mat);
+nt f(int i, int j, int steps, int[][] mat) {
+        if (check(mat))
+            return steps;
+        if (i == mat.length)
+            return Integer.MAX_VALUE;
 
+        int ans = Integer.MAX_VALUE;
+
+        for (int ind = i; ind < mat.length; ind++) {
+            for (int k = j; k < mat[0].length; k++) {
                 int nextI = ind;
                 int nextJ = k + 1;
 
@@ -8,6 +16,7 @@ nge(ind, k, mat);
                     nextJ = 0;
                 }
 
+                int temp[][] = change(ind, k, mat);
                 int res = f(nextI, nextJ, steps + 1, temp);
                 ans = Math.min(ans, res);
             }
