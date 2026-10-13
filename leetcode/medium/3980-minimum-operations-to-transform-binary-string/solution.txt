@@ -1,0 +1,22 @@
+         } else if (ch == '1') {
+                if (i < n - 1) {
+                    char nextChar = arr[i + 1];
+                    if (nextChar == '0') {
+                        ans += 2;          // 0 -> 1, then "11" -> "00"
+                        arr[i + 1] = '0';  // ends up as '0'
+                    } else {
+                        ans += 1;          // already "11" -> "00"
+                        arr[i + 1] = '0';  // next char becomes '0'
+                    }
+                } else {
+                    ans += 2;
+                }
+            } else {
+                ans += 1;
+                arr[i] = '1';
+            }
+        }
+
+        return ans;
+    }
+}

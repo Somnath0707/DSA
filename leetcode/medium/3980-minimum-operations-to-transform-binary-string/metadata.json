@@ -1,0 +1,24 @@
+{
+  "title": "Minimum Operations to Transform Binary String",
+  "titleSlug": "minimum-operations-to-transform-binary-string",
+  "frontendQuestionId": "3980",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-transform-binary-string/",
+  "difficulty": "Medium",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-13T06:57:17.398Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-13T06:57:20.612Z"
+}
