@@ -1,0 +1,24 @@
+class Solution {
+    public long maxAlternatingSum(int[] nums) {
+        int arr[] = new int[nums.length]; 
+        int n = nums.length ; 
+        for(int i = 0 ; i < nums.length ; i++){
+            arr[i] = Math.abs(nums[i]);
+        }
+        Arrays.sort(arr);
+
+        int half = n-(n/2);
+        long ans = 0 ; 
+        if(n % 2 != 0) half = n - (n/2+1) ;
+
+        for(int i = n-1 ; i >= half ; i--){
+            ans += arr[i] * arr[i]; 
+        }
+
+        for(int i = 0 ; i < half ; i++){
+            ans -= arr[i] * arr[i]; 
+        }
+
+        return ans; 
+    }
+}
