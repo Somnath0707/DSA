@@ -1,0 +1,26 @@
+{
+  "title": "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
+  "titleSlug": "minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix",
+  "frontendQuestionId": "1284",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-13T13:37:19.043Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-13T13:37:27.231Z"
+}

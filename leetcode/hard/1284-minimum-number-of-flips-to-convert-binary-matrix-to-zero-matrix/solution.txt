@@ -1,0 +1,23 @@
+nge(ind, k, mat);
+
+                int nextI = ind;
+                int nextJ = k + 1;
+
+                if (nextJ == mat[0].length) {
+                    nextI++;
+                    nextJ = 0;
+                }
+
+                int res = f(nextI, nextJ, steps + 1, temp);
+                ans = Math.min(ans, res);
+            }
+        }
+
+        return ans;
+    }
+
+    public int minFlips(int[][] mat) {
+        int ans = f(0, 0, 0, mat);
+        return ans == Integer.MAX_VALUE ? -1 : ans;
+    }
+}
