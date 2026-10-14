@@ -1,0 +1,33 @@
+lic int find(int i) {
+        if (parent[i] != i) {
+            parent[i] = find(parent[i]); // Path compression
+        }
+        return parent[i];
+    }
+
+    public boolean union(int i, int j) {
+        int rootI = find(i), rootJ = find(j);
+        if (rootI == rootJ) return false;
+        if (rank[rootI] < rank[rootJ]) { int t = rootI; rootI = rootJ; rootJ = t; }
+        parent[rootJ] = rootI;
+        if (rank[rootI] == rank[rootJ]) rank[rootI]++;
+        count--;
+        return true;
+    }
+}
+class Solution {
+    public int findCircleNum(int[][] nums) {
+        int n = nums.length; 
+        DSU dsu = new DSU(n); 
+
+        for(int i = 0 ; i < n ; i++){
+            for(int j = 0 ; j < nums[0].length ; j++){
+                if(nums[i][j] == 1){
+                    dsu.union(i , j); 
+                }
+            }
+        }
+
+        return dsu.count; 
+    }
+}
