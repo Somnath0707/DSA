@@ -1,0 +1,25 @@
+{
+  "title": "Longest Strictly Increasing Subsequence With Non-Zero Bitwise AND",
+  "titleSlug": "longest-strictly-increasing-subsequence-with-non-zero-bitwise-and",
+  "frontendQuestionId": "3825",
+  "leetcodeUrl": "https://leetcode.com/problems/longest-strictly-increasing-subsequence-with-non-zero-bitwise-and/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-14T04:49:19.436Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "HINT",
+  "helpLabel": "Needed hint",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-14T04:49:27.517Z"
+}
