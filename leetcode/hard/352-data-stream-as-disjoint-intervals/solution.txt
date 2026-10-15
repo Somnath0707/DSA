@@ -1,0 +1,26 @@
+); 
+            map.putIfAbsent(parent , new TreeSet<>()); 
+            map.get(parent).add(val); 
+        }
+
+        int ans[][] = new int[map.size()][2];
+        int ind = 0 ; 
+        for(Map.Entry<Integer,TreeSet<Integer>> entry : map.entrySet()){
+            int key = entry.getKey(); 
+            TreeSet<Integer> val = entry.getValue(); 
+            ans[ind][0] = val.first(); 
+            ans[ind][1] = val.last(); 
+            ind++; 
+        }
+        Arrays.sort(ans , (a,b)-> a[0]-b[0]); 
+        return ans; 
+
+    }
+}
+
+/**
+ * Your SummaryRanges object will be instantiated and called as such:
+ * SummaryRanges obj = new SummaryRanges();
+ * obj.addNum(value);
+ * int[][] param_2 = obj.getIntervals();
+ */

@@ -1,0 +1,27 @@
+{
+  "title": "Data Stream as Disjoint Intervals",
+  "titleSlug": "data-stream-as-disjoint-intervals",
+  "frontendQuestionId": "352",
+  "leetcodeUrl": "https://leetcode.com/problems/data-stream-as-disjoint-intervals/",
+  "difficulty": "Hard",
+  "topics": [
+    "Hash Table",
+    "Binary Search",
+    "Union-Find",
+    "Design",
+    "Data Stream",
+    "Ordered Set"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-15T04:04:12.040Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-15T04:04:14.795Z"
+}
