@@ -1,0 +1,22 @@
+        int n = nums.size(); 
+        int ans = 0 ; 
+        for(int i =0 ; i < n ; i++){
+            int vis[] = new int[101]; 
+            int count = 0 ; 
+            for(int j = i ; j < n ; j++){
+                int val = nums.get(j); 
+                if(vis[val] == 1) {
+                    ans += count * count;  
+                    continue; 
+                }
+                else {
+                    vis[val] = 1 ; 
+                    count++; 
+                    ans += count * count; 
+                }
+            }
+            // ans += count*count; 
+        }
+        return ans; 
+    }
+}
