@@ -1,0 +1,25 @@
+{
+  "title": "Redundant Connection",
+  "titleSlug": "redundant-connection",
+  "frontendQuestionId": "684",
+  "leetcodeUrl": "https://leetcode.com/problems/redundant-connection/",
+  "difficulty": "Medium",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find",
+    "Graph Theory"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-17T14:05:52.501Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-17T14:05:55.951Z"
+}
