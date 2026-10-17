@@ -1,0 +1,38 @@
+ target) {
+                    return prob;
+                }
+                continue;
+            }
+
+            int children = 0;
+
+            for (int neighbor : adj.get(node)) {
+                if (!visited[neighbor]) {
+                    children++;
+                }
+            }
+
+            if (children == 0) {
+                if (node == target) {
+                    return prob;
+                }
+                continue;
+            }
+
+            double nextProb = prob / children;
+
+            for (int neighbor : adj.get(node)) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.offer(new double[]{
+                        neighbor,
+                        time + 1,
+                        nextProb
+                    });
+                }
+            }
+        }
+
+        return 0.0;
+    }
+}

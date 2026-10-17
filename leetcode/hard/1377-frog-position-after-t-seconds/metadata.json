@@ -1,0 +1,25 @@
+{
+  "title": "Frog Position After T Seconds",
+  "titleSlug": "frog-position-after-t-seconds",
+  "frontendQuestionId": "1377",
+  "leetcodeUrl": "https://leetcode.com/problems/frog-position-after-t-seconds/",
+  "difficulty": "Hard",
+  "topics": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph Theory"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-17T03:53:03.016Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-17T03:53:31.798Z"
+}
