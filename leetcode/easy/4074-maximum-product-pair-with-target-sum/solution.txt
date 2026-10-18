@@ -1,0 +1,20 @@
+class Solution {
+    public int[] maxProductPair(int[] nums, int target) {
+        int maxProd = Integer.MIN_VALUE 
+        ; 
+        int n = nums.length; 
+        int ans[] = new int[2]; 
+        ans[0] = -1; 
+        ans[1] = -1; 
+        for(int i = 0 ; i < n ; i++){
+            for(int j = 0 ;j < n ; j++){
+                if(nums[i] > nums[j] && nums[i] + nums[j] == target && nums[i] * nums[j] > maxProd){
+                    ans[0] = i ; 
+                    ans[1] = j ; 
+                    maxProd = nums[i] * nums[j]; 
+                }
+            }
+        }
+        return ans; 
+    }
+}
