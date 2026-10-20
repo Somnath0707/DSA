@@ -1,0 +1,24 @@
+int n = nums.length;
+
+        // 7 8 10 1 2 3
+        int sum = 0 ; 
+
+
+        for(int i = 1 ; i <= n ; i++){
+            if(n % i == 0 ){
+                if(checkCond(i , nums)){
+                    System.out.println(" sum till now : " + sum);
+                    sum += i ;
+                    System.out.println(sum);
+                }
+            }
+            // Divisor of n 
+            else{
+                continue;
+            }
+        }
+        return sum ; 
+    }
+}
+
+// 12,18,14 -> 12 
