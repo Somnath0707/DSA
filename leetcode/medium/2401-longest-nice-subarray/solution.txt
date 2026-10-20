@@ -1,0 +1,22 @@
+class Solution {
+    public int longestNiceSubarray(int[] nums) {
+        int n = nums.length;
+        int OR = 0;
+        int ans = 0;
+        int j = 0;
+
+        for (int i = 0; i < n; i++) {
+            int curr = nums[i];
+
+            while ((OR & curr) != 0) {
+                OR ^= nums[j];
+                j++;
+            }
+
+            OR |= curr;
+            ans = Math.max(ans, i - j + 1);
+        }
+
+        return ans;
+    }
+}

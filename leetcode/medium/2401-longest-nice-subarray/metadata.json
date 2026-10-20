@@ -1,0 +1,24 @@
+{
+  "title": "Longest Nice Subarray",
+  "titleSlug": "longest-nice-subarray",
+  "frontendQuestionId": "2401",
+  "leetcodeUrl": "https://leetcode.com/problems/longest-nice-subarray/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Bit Manipulation",
+    "Sliding Window"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-20T13:41:14.918Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-20T13:41:19.900Z"
+}
