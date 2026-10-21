@@ -1,0 +1,18 @@
+class Solution {
+    public String answerString(String word, int num) {
+        int n = word.length();
+        int max = n - num + 1;
+
+        PriorityQueue<String> pq = new PriorityQueue<>(Collections.reverseOrder());
+
+        if (num == 1) {
+            return word;
+        }
+
+        for (int i = 0; i < n; i++) {
+            pq.offer(word.substring(i, Math.min(n, i + max)));
+        }
+
+        return pq.peek();
+    }
+}
