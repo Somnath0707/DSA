@@ -1,0 +1,22 @@
+{
+  "title": "Minimum Operations to Sort a String",
+  "titleSlug": "minimum-operations-to-sort-a-string",
+  "frontendQuestionId": "3863",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-sort-a-string/",
+  "difficulty": "Medium",
+  "topics": [
+    "String"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-21T03:05:45.767Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-21T03:05:48.541Z"
+}

@@ -1,0 +1,19 @@
+d smallest int last palce if such appear we do 3 lmao lets see
+        char minChar = sorted[0];
+        char maxChar = sorted[n-1];
+
+        if(initial [0] == minChar || initial[n-1] == maxChar) return 1;
+        if(initial [0] == maxChar && initial[n-1] == minChar){
+    
+                int firstMin = s.indexOf(minChar);
+                int lastMax = s.lastIndexOf(maxChar);
+
+                if(firstMin == n-1 && lastMax == 0 ) return 3;
+            }
+    
+
+        
+
+        return 2 ; 
+    }
+}
