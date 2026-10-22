@@ -1,0 +1,23 @@
+         int k = (dropInd + 1 )%n;
+
+            // we can do left rotate or we can simulate the right by doing reverse then left n-k time 
+            int cost = Math.min(k , n- k +2);
+            min = Math.min(min , cost);
+        }
+
+
+        if(inc == 1){
+            int k = (incInd + 1 ) % n ;
+
+            int cost = Math.min(k+1 , n-k+1);
+
+            min = Math.min(min , cost);
+        }
+
+        if(min == Integer.MAX_VALUE) return -1 ; 
+        return min ; 
+        
+
+            
+    }
+}

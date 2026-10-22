@@ -1,0 +1,22 @@
+{
+  "title": "Minimum Operations to Sort a Permutation",
+  "titleSlug": "minimum-operations-to-sort-a-permutation",
+  "frontendQuestionId": "3942",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-22T03:19:17.097Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "NONE",
+  "helpLabel": "Solved solo",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-22T03:19:22.579Z"
+}
