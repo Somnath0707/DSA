@@ -1,4 +1,4 @@
-ion {
+class Solution {
     public int minOperations(String s1, String s2) {
         int n = s1.length(); 
         char temp[] = s1.toCharArray(); 
@@ -14,18 +14,4 @@ ion {
             char curr = temp[i];  
             char tar = s2.charAt(i); 
 
-            if(curr == tar ) continue; 
-            else if(curr == '1'){// curr is 1 but not same so we need 0 ; 
-                if(i < n-1){ 
-                    if(temp[i+1] == '0'){// 1 0 
-                        temp[i] = '0' ; 
-                        temp[i+1] = '0'; 
-                        ans+=2; 
-                    }else{
-                        ans++; 
-                        temp[i] = '0' ; 
-                        temp[i+1]='0' ; 
-                    }
-                }else{
-                    ans+= 2; 
-           
+            if(curr == tar
