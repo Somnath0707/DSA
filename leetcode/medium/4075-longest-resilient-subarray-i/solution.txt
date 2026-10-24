@@ -1,0 +1,22 @@
+   boolean valid = true;
+
+            for (int j = i; j < n; j++) {
+                sum += nums[j];
+
+                int curr = Math.floorMod(nums[j], k);
+
+                if (rem == -1) {
+                    rem = curr;
+                } else if (rem != curr) {
+                    valid = false;
+                }
+
+                if (valid && Math.floorMod(sum, k) == rem) {
+                    max = Math.max(max, j - i + 1);
+                }
+            }
+        }
+
+        return max;
+    }
+}
