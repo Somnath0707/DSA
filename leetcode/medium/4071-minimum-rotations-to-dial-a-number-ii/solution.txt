@@ -2,7 +2,8 @@ class Solution {
     public int minRotations(int n, String s) {
         // 1 4 5 2
         // 4 5 2 2
-
+ 
+ 
         //1 5 15 17 
         // 
 
@@ -15,4 +16,6 @@ class Solution {
         for(int i = 0 ; i < n ; i++){
             int curr = s.charAt(i)-'0';
             if(prev >= curr)
-                currMin = Math.min(Math.abs(curr-pr
+                currMin = Math.min(Math.abs(curr-prev), 10-prev+curr);
+            else 
+            currMin = Math.min(Math.abs(curr-prev), 10-curr+prev
