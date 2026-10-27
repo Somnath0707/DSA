@@ -1,0 +1,20 @@
+{
+  "title": "Create Grid With Exactly One Path",
+  "titleSlug": "create-grid-with-exactly-one-path",
+  "frontendQuestionId": "3963",
+  "leetcodeUrl": "https://leetcode.com/problems/create-grid-with-exactly-one-path/",
+  "difficulty": "Easy",
+  "topics": [],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-27T02:16:29.069Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-27T02:16:31.274Z"
+}
