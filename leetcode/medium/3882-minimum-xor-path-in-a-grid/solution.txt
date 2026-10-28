@@ -1,0 +1,18 @@
+[j][nextXor]){
+                    visited[i+1][j][nextXor] = true;
+                    q.offer(new int[]{i+1 , j , nextXor});
+                }
+            }
+
+            // move right 
+            if(j + 1 < n ){
+                int nextXor = currXor ^ grid[i][j+1];
+                if(!visited[i][j+1][nextXor]){
+                    visited[i][j+1][nextXor] = true;
+                    q.offer(new int[]{i , j+1 , nextXor});
+                }
+            }
+        }
+        return minXor;
+    }
+}

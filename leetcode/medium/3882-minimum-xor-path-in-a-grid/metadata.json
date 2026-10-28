@@ -1,0 +1,25 @@
+{
+  "title": "Minimum XOR Path in a Grid",
+  "titleSlug": "minimum-xor-path-in-a-grid",
+  "frontendQuestionId": "3882",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Matrix"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-28T03:56:22.938Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-28T03:56:25.283Z"
+}
