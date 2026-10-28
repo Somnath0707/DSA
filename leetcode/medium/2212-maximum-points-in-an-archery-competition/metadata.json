@@ -1,0 +1,25 @@
+{
+  "title": "Maximum Points in an Archery Competition",
+  "titleSlug": "maximum-points-in-an-archery-competition",
+  "frontendQuestionId": "2212",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-points-in-an-archery-competition/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-28T06:31:36.057Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-28T06:31:39.222Z"
+}

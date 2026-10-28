@@ -1,0 +1,20 @@
+ unused arrows in section 0
+        }
+
+        for (int j = start; j < 12; j++) {
+            int needed = alice[j] + 1;
+            if (i + needed <= total) {
+                bob[j] += needed;
+                f(j + 1, i + needed, total, alice, bob);
+                bob[j] -= needed;
+            }
+        }
+
+        return ans;
+    }
+
+    public int[] maximumBobPoints(int numArrows, int[] aliceArrows) {
+        int bob[] = new int[12];
+        return f(0, 0, numArrows, aliceArrows, bob);
+    }
+}
