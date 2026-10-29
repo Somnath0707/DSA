@@ -1,29 +1,21 @@
-         return true; 
+class Solution {
+    int ans[]; 
+    int max = -1; 
+
+    public boolean check(int bob[] , int alice[]){
+        int bobSum = 0 ; 
+        for(int i = 0 ; i < 12 ; i++){
+            if(bob[i] > 0 && bob[i] > alice[i]){
+                bobSum+= i; 
+            }
+        }
+        if(bobSum > max){
+            max = bobSum; 
+            return true; 
         }
         return false; 
     }
 
     public int[] f(int i , int total , int alice[] , int bob[]){
         if(i == 12 ){
-            if(check(bob , alice)){
-                ans = bob.clone(); 
-                ans[0] += total; 
-            }
-            return ans; 
-        }
-
-        int need = alice[i] + 1; 
-        if(total >= need){               
-            bob[i] += need; 
-            f(i+1 , total-need , alice , bob); 
-            bob[i] -= need;              
-        }
-        f(i+1 , total , alice , bob); 
-
-        return ans; 
-    }
-
-    public int[] maximumBobPoints(int numArrows, int[] aliceArrows) {
-        return f(0 , numArrows , aliceArrows , new int[12] );
-    }
-}
+            if(check(bo
