@@ -1,0 +1,37 @@
+[3];
+            int val = curr[4];
+
+            for (int d[] : dir) {
+                int nr = currRow + d[0];
+                int nc = currCol + d[1];
+
+                if (nr == prevRow && nc == prevCol) continue;
+
+                if (nr >= 0 && nc >= 0 && nr < n && nc < m
+                        && grid[nr][nc] == val) {
+                    if (vis[nr][nc]) return true;
+
+                    vis[nr][nc] = true;
+                    q.offer(new int[]{nr, nc, currRow, currCol, val});
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public boolean containsCycle(char[][] grid) {
+        int n = grid.length;
+        int m = grid[0].length;
+        boolean vis[][] = new boolean[n][m];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (!vis[i][j] && bfs(grid, i, j, vis)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}

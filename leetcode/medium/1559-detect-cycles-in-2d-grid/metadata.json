@@ -1,0 +1,26 @@
+{
+  "title": "Detect Cycles in 2D Grid",
+  "titleSlug": "detect-cycles-in-2d-grid",
+  "frontendQuestionId": "1559",
+  "leetcodeUrl": "https://leetcode.com/problems/detect-cycles-in-2d-grid/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union-Find",
+    "Matrix"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-10-29T13:14:30.016Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-10-29T13:14:36.035Z"
+}
