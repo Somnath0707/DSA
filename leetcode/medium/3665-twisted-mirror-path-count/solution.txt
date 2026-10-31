@@ -19,11 +19,4 @@ class Solution {
 
         if(grid[i][j] == 1 && prev == 2){
             right = f(i, j+1, 0, grid); 
-            down = f(i+1, j, 1, grid); 
-        }
-
-        if(grid[i][j] == 1 && prev == 0){
-            right = f(i, j+1, 1, grid); 
-        }
-
-   
+            
