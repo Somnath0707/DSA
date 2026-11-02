@@ -1,0 +1,28 @@
+{
+  "title": "Maximum Strength of a Group",
+  "titleSlug": "maximum-strength-of-a-group",
+  "frontendQuestionId": "2708",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-strength-of-a-group/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Greedy",
+    "Bit Manipulation",
+    "Sorting",
+    "Enumeration"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-11-02T13:04:05.467Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-11-02T13:04:11.238Z"
+}

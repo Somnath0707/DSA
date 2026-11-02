@@ -1,0 +1,18 @@
+class Solution {
+    public long f(int i , long val , int nums[]){
+        if(i == nums.length) return val; 
+        long take = -1000000 ; 
+
+        long newVal = (val == -10000) ? nums[i] : val * nums[i]; 
+
+        take = Math.max(take , f(i+1 , newVal , nums)); 
+
+        long skip = -100000; 
+        skip = Math.max(skip , f(i+1 , val , nums)); 
+
+        return Math.max(take , skip); 
+    }
+    public long maxStrength(int[] nums) {
+        return f(0, -10000 , nums); 
+    }
+}
