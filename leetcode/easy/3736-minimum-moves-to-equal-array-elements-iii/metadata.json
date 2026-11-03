@@ -1,0 +1,23 @@
+{
+  "title": "Minimum Moves to Equal Array Elements III",
+  "titleSlug": "minimum-moves-to-equal-array-elements-iii",
+  "frontendQuestionId": "3736",
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/",
+  "difficulty": "Easy",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-11-03T14:14:29.719Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-11-03T14:14:32.176Z"
+}
