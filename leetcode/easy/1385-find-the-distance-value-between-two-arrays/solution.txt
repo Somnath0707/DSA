@@ -1,0 +1,20 @@
+ndTheDistanceValue(int[] arr1, int[] arr2, int d) {
+        int count1 =0 ; 
+        int count = 0; 
+        
+
+        for(int i =0 ; i < arr1.length ; i++){
+            for(int j =0 ; j < arr2.length ; j++){
+                int diff = Math.abs(arr1[i] - arr2[j]);
+                if(diff <= d) count++; 
+            }
+            if(count >0) { 
+                count = 0; 
+                continue;
+                
+            }
+            else count1 ++;
+        }
+        return count1;
+    }
+}
