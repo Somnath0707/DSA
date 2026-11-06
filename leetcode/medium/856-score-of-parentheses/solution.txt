@@ -1,4 +1,4 @@
-
+class Solution {
     public int scoreOfParentheses(String s) {
         int total = 0;
         Stack<Integer> st = new Stack<>();
