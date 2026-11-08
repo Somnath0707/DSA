@@ -1,27 +1,9 @@
-he start then end and then the sum we already do prefix sum too 
+class Solution {
+    public long[] maximumSegmentSum(int[] nums, int[] removeQueries) {
+        // so once i delete at certain point i need to know which has deleted element next to it and beofre it cause that the only subarray that changes 
 
-        //first start is 0 end is 4 sum is 15 so we have hash map with start end sum 
-        // now we break we the if start and end break so we remove the start and now put the start as previuos end as curr-1 and get the preifx sum and put then and next same save the removed in the tree set first why ? cause we can get the lower and upper to curr to get the index reomved 
-        // for curr we are between some one 
+        // cause at each poin one subarray chages 
 
-        // 
-
-        int n = nums.length;
-        long prefix[] = new long[n];
-        TreeMap<Integer, long[]> map = new TreeMap<>();
-
-        prefix[0] = nums[0];
-
-        for (int i = 1; i < n; i++) {
-            prefix[i] = prefix[i - 1] + nums[i];
-        }
-
-        TreeMap<Long, Integer> freqMap = new TreeMap<>();
-        long ans[] = new long[n];
-
-        // start -> {end, sum}
-        map.put(0, new long[]{n - 1, prefix[n - 1]});
-
-        freqMap.put(prefix[n - 1], 1);
-
-        for (int i = 0; i < 
+        // 1 2 5 6 1 suppose I delete 2 i check which is delete befroe 2 none so we have 1 and 13 
+        // firrst we had start = 0 and end = 4 no we have 0 to 0 and 2 to 4 
+        //now suppose 1 0 5 6
