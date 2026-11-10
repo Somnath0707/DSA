@@ -1,0 +1,23 @@
+{
+  "title": "Climbing Stairs II",
+  "titleSlug": "climbing-stairs-ii",
+  "frontendQuestionId": "3693",
+  "leetcodeUrl": "https://leetcode.com/problems/climbing-stairs-ii/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-11-10T05:46:41.689Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-11-10T05:46:44.629Z"
+}

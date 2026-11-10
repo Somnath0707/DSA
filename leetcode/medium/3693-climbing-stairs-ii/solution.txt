@@ -1,0 +1,20 @@
+int two = Integer.MAX_VALUE;
+        int three = Integer.MAX_VALUE;
+
+        if (i + 1 <= n)
+            one = costs[i] + 1 + f(i + 1, n, costs);
+
+        if (i + 2 <= n)
+            two = costs[i + 1] + 4 + f(i + 2, n, costs);
+
+        if (i + 3 <= n)
+            three = costs[i + 2] + 9 + f(i + 3, n, costs);
+
+        return dp[i] = Math.min(one, Math.min(two, three));
+    }
+
+    public int climbStairs(int n, int[] costs) {
+        dp = new Integer[n + 1];
+        return f(0, n, costs);
+    }
+}
