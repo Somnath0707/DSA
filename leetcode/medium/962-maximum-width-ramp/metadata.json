@@ -10,16 +10,16 @@
     "Stack",
     "Monotonic Stack"
   ],
-  "language": "java",
+  "language": "Unknown",
   "verdict": "Accepted",
   "submissionId": null,
-  "submittedAt": "2026-08-27T10:43:09.738Z",
-  "runtimeMs": 22,
-  "memoryKb": 60826,
-  "totalCorrect": 101,
-  "totalTestcases": 101,
-  "helpType": "EDITORIAL",
-  "helpLabel": "Used editorial",
+  "submittedAt": "2026-11-11T05:26:52.924Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
   "focusSeconds": null,
-  "syncedAt": "2026-08-27T10:43:48.371Z"
+  "syncedAt": "2026-11-11T05:26:55.674Z"
 }
