@@ -1,0 +1,22 @@
+        ans++; 
+                    }else{
+                        if(evenPair > 0){
+                            evenPair--; 
+                            oddPair++; 
+                            ans++; 
+                        }
+                        else{
+                            break; 
+                        }
+                    }
+                }
+                else break ;
+
+            }
+        }
+        return ans; 
+    }
+}
+
+// ["abbb","ba","aa"] -> 4 4 
+// ["aab","bca"] -> 3 2 1 

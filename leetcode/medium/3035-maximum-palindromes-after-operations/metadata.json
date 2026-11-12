@@ -1,0 +1,27 @@
+{
+  "title": "Maximum Palindromes After Operations",
+  "titleSlug": "maximum-palindromes-after-operations",
+  "frontendQuestionId": "3035",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-palindromes-after-operations/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Sorting",
+    "Counting"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-11-12T05:09:42.641Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-11-12T05:09:44.694Z"
+}
