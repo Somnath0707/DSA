@@ -1,22 +1,17 @@
-        ans++; 
-                    }else{
-                        if(evenPair > 0){
-                            evenPair--; 
-                            oddPair++; 
-                            ans++; 
-                        }
-                        else{
-                            break; 
-                        }
-                    }
-                }
-                else break ;
+class Solution {
+    public int maxPalindromesAfterOperations(String[] words) {
+        // first sort the words based on the len of the string so we fill the smallest one first 
+        // we count each character and count 
+        // try making the smallest lenght first 
+        // for odd we take all even one odd for even we take all even 
+        // for count 1 we can take odd if no odd then we can take from even 
+        // 4 4-> 2 and then 2 and then 4 
+        // 2 , 2 , 1 -> 2 , 1 yep we can 
+        // 1 1 1 1 1 -> 
 
-            }
-        }
-        return ans; 
-    }
-}
+        // make even and odd from odd -= odd number from even -= even number but i dont know  like what should we do like remove the suppose 7 len is thnere we can remove 5 from odd and 2 from even or 3 from odd and 4 from even or 1 from odd and 6 from even ? 
+        // or do i have to do in the form of the indiviudal no i dont think so 
 
-// ["abbb","ba","aa"] -> 4 4 
-// ["aab","bca"] -> 3 2 1 
+        // ["rqfsx","kja","mx","r"]
+        //  2 1 1 1 2 1 1 1 1
+        // even = 4 and odd = 
