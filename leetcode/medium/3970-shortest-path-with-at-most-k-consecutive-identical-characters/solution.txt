@@ -1,19 +1,18 @@
- newCost = cost + nextCost ; 
-                if(newCost < dist[nextNode][newRun]){
-                    dist[nextNode][newRun] = newCost; 
-                    pq.offer(new int[]{newCost , nextNode , newRun});
-                }
-                
-                
-            }
+class Solution {
+    public int shortestPath(int n, int[][] edges, String labels, int k) {
+        List<List<int[]>> list = new ArrayList<>(); 
+
+        for(int i =0 ; i < n ; i++){
+            list.add(new ArrayList<>());
         }
 
-        int ans = Integer.MAX_VALUE; 
+        for(int e[] : edges){
+            int u = e[0]; 
+            int v = e[1]; 
+            int cost = e[2]; 
 
-        for(int i = 1 ; i <= k ; i++){
-            ans = Math.min(ans , dist[n-1][i]);
+            list.get(u).add(new int[]{v , cost});
         }
-        if(ans == Integer.MAX_VALUE) return -1 ; 
-        return ans; 
-    }
-}
+
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)-> a[0]-b[0]);
+        int dist
