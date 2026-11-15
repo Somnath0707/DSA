@@ -17,6 +17,4 @@ class Solution {
 
         // 0: down , 1 : right
 
-        if(grid[i][j] == 1 && prev == 2){
-            right = f(i, j+1, 0, grid); 
-            
+     
