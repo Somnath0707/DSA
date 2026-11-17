@@ -1,23 +1,16 @@
-         int k = (dropInd + 1 )%n;
+class Solution {
+    public int minOperations(int[] nums) {
+        // 1 0 2 -> 201 -> 0 1 2 
 
-            // we can do left rotate or we can simulate the right by doing reverse then left n-k time 
-            int cost = Math.min(k , n- k +2);
-            min = Math.min(min , cost);
-        }
+        // 1 0 1 2 -> 2 1 0 1 -> 1 0 1 2 -> 2 1 0 1
+        // keep a state where like if we have alrady visited that type dont do that 
+        // try permutaion and keep state once we try most all of them like bfs 
+        // we try the permutation of like first reverse eniterarray and then roatte left by one and put in something if we get the same we do not check that again 
 
+    // but the complexity will go off the roff 
 
-        if(inc == 1){
-            int k = (incInd + 1 ) % n ;
-
-            int cost = Math.min(k+1 , n-k+1);
-
-            min = Math.min(min , cost);
-        }
-
-        if(min == Integer.MAX_VALUE) return -1 ; 
-        return min ; 
-        
-
-            
-    }
-}
+    // there has to be some greedy trick to this 
+        // 0 2 1 
+        // 0 3 2 1 
+        //0 4 3 2 1 
+        // on one val
