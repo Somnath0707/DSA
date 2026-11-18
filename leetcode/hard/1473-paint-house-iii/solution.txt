@@ -21,7 +21,4 @@ class Solution {
                 if (prev == houses[i]) {
                     take = 1L * f(i + 1, houses[i], colonies, houses, cost, m, n, target);
                 } else {
-                    take = 1L * f(i + 1, houses[i], colonies + 1, houses, cost, m, n, target);
-                }
-            }
-  
+                    take = 1L * f(i + 1, houses[i], colonies + 1
