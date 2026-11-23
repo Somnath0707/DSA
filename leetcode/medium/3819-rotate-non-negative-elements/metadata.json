@@ -1,0 +1,23 @@
+{
+  "title": "Rotate Non Negative Elements",
+  "titleSlug": "rotate-non-negative-elements",
+  "frontendQuestionId": "3819",
+  "leetcodeUrl": "https://leetcode.com/problems/rotate-non-negative-elements/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-11-23T05:07:25.318Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-11-23T05:07:27.226Z"
+}
