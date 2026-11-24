@@ -1,20 +1,15 @@
-for(int i = 0 ; i <= power ; i++){
+class Solution {
+    public long[] minTimeMaxPower(int n, int[][] edges, int power, int[] cost, int source, int target) {
+        List<List<int[]>> list = new  ArrayList<>(); 
+        for(int i = 0 ; i < n; i++){
+            list.add(new ArrayList<>());
+        }
+        for(int num[] : edges){
+            int u = num[0]; 
+            int v = num[1]; 
+            int time = num[2];
 
-            if(dist[target][i] == Long.MAX_VALUE) continue; 
-
-            if(dist[target][i] < bestTime){
-                bestTime = dist[target][i]; 
-                bestPower = i ; 
-            }
-
-            else if(dist[target][i] == bestTime){
-                bestPower = Math.max(bestPower , (long)i);
-            }
+            list.get(u).add(new int[]{v , time});
         }
 
-        if(bestTime == Long.MAX_VALUE) return new long[]{-1,-1};
-
-        return new long[]{bestTime , bestPower};
-        
-    }
-}
+        PriorityQueue<long[]> pq = new PriorityQueue<
