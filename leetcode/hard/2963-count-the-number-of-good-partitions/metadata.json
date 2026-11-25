@@ -1,0 +1,25 @@
+{
+  "title": "Count the Number of Good Partitions",
+  "titleSlug": "count-the-number-of-good-partitions",
+  "frontendQuestionId": "2963",
+  "leetcodeUrl": "https://leetcode.com/problems/count-the-number-of-good-partitions/",
+  "difficulty": "Hard",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Combinatorics"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-11-25T06:00:08.998Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-11-25T06:00:10.981Z"
+}

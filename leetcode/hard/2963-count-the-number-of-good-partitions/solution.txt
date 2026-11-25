@@ -1,0 +1,16 @@
+// 3-2 = 1 ; 
+        // else total = n - last; 
+        // System.out.println(total); 
+        long ans = 1 ; 
+
+        for(int i = 0 ; i < total-1 ; i++){
+            ans = (1L * ans *2) % MOD;
+        }
+        return (int)ans; 
+    }
+}
+
+// 2 3 3 4 8 5 6 8 
+
+// curr = 1 window and window size is 1 to 2 next 
+// 3 yesh its in windo next 4 is in window max window size was 2 and curr = 3 so no it has next no so window = 3 next = 8 so window = 4 and size is 4 to 7  next is 5 no 6 no last 8 so no 
