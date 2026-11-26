@@ -1,0 +1,28 @@
+{
+  "title": "Distinct Echo Substrings",
+  "titleSlug": "distinct-echo-substrings",
+  "frontendQuestionId": "1316",
+  "leetcodeUrl": "https://leetcode.com/problems/distinct-echo-substrings/",
+  "difficulty": "Hard",
+  "topics": [
+    "String",
+    "Trie",
+    "Rolling Hash",
+    "Suffix Array",
+    "Hash Function",
+    "Suffix Automaton",
+    "Suffix Tree"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-11-26T06:30:28.154Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-11-26T06:30:30.477Z"
+}
