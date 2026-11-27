@@ -1,0 +1,24 @@
+{
+  "title": "Maximum Number of Items From Sale I",
+  "titleSlug": "maximum-number-of-items-from-sale-i",
+  "frontendQuestionId": "3946",
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-number-of-items-from-sale-i/",
+  "difficulty": "Medium",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "language": "Unknown",
+  "verdict": "Accepted",
+  "submissionId": null,
+  "submittedAt": "2026-11-27T05:38:07.023Z",
+  "runtimeMs": null,
+  "memoryKb": null,
+  "totalCorrect": null,
+  "totalTestcases": null,
+  "helpType": "PENDING_SELF_REPORT",
+  "helpLabel": "Pending self report",
+  "focusSeconds": null,
+  "syncedAt": "2026-11-27T05:38:10.919Z"
+}
